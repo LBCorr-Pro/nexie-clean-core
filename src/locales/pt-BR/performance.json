@@ -1,0 +1,77 @@
+
+{
+  "pageTitle": "Performance e Cache",
+  "pageDescription": "Ferramentas para limpar o cache da aplicação e otimizar a performance.",
+  "permissionDenied": "Você não tem permissão para acessar as ferramentas de performance.",
+  "dexieCard": {
+    "title": "Cache de Dados da Aplicação (Dexie)",
+    "description": "A aplicação armazena em cache configurações como aparência e menus no banco de dados local do seu navegador (IndexedDB/Dexie) para acelerar o carregamento. Limpar este cache força a aplicação a buscar os dados mais recentes do servidor na próxima carga.",
+    "buttonText": "Limpar Cache da Aplicação",
+    "alertTitle": "Esta é uma ação agressiva.",
+    "alertDescription": "Irá limpar todas as configurações cacheadas localmente (aparência, menus, etc.) para TODOS os usuários neste navegador. Use caso esteja enfrentando inconsistências de dados."
+  },
+  "browserCacheCard": {
+    "title": "Armazenamento do Navegador",
+    "description": "Gerencie dados armazenados diretamente no Local Storage e Session Storage do seu navegador.",
+    "appCacheTitle": "Cache Específico da Aplicação",
+    "appCacheDescription": "Limpa uma chave de cache específica usada pela aplicação ('<code>'{cacheKey}'</code>'). Esta é uma ação segura.",
+    "appCacheButton": "Limpar Chave da App",
+    "localStorageTitle": "LocalStorage Completo",
+    "localStorageAlertTitle": "Ação Destrutiva!",
+    "localStorageAlertDescription": "Isso irá limpar TODOS os dados armazenados por este domínio no Local Storage, incluindo sessões de login de outras abas.",
+    "localStorageButton": "Limpar Todo o Local Storage",
+    "sessionStorageTitle": "SessionStorage Completo",
+    "sessionStorageAlertTitle": "Ação Destrutiva!",
+    "sessionStorageAlertDescription": "Isso irá limpar TODOS os dados da sessão atual, o que pode causar comportamento inesperado em outras abas abertas.",
+    "sessionStorageButton": "Limpar Session Storage"
+  },
+  "filesCacheCard": {
+    "title": "Cache de Arquivos do Navegador",
+    "description": "Para garantir que você está vendo a versão mais recente dos arquivos da aplicação (como JavaScript e CSS), é recomendado realizar uma recarga forçada.",
+    "p1": "Esta ação limpa os arquivos cacheados pelo seu navegador, forçando-o a baixar as versões mais novas do servidor.",
+    "p2": "Use a funcionalidade nativa do seu navegador:",
+    "windowsLinux": "No Windows/Linux: '<code>'Ctrl'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "mac": "No macOS: '<code>'Cmd'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "p3": "Isso é útil após uma nova versão da aplicação ser implantada para garantir que você não está rodando código antigo."
+  },
+  "toasts": {
+    "dexie": {
+      "successTitle": "Cache da Aplicação Limpo",
+      "successDescription": "Todos os dados locais foram deletados com sucesso. Por favor, recarregue a página.",
+      "errorTitle": "Erro ao Limpar Cache",
+      "errorDescription": "Não foi possível limpar o banco de dados local da aplicação."
+    },
+    "appCache": {
+      "successTitle": "Chave de Cache da App Limpa",
+      "successDescription": "A chave específica '{cacheKey}' foi removida do Local Storage.",
+      "errorTitle": "Erro ao Limpar Chave"
+    },
+    "localStorage": {
+      "successTitle": "LocalStorage Limpo",
+      "successDescription": "Todos os dados do Local Storage para este domínio foram removidos. Você talvez precise fazer login novamente.",
+      "errorTitle": "Erro ao Limpar LocalStorage"
+    },
+    "sessionStorage": {
+      "successTitle": "SessionStorage Limpo",
+      "successDescription": "Todos os dados para esta sessão foram removidos.",
+      "errorTitle": "Erro ao Limpar SessionStorage"
+    }
+  },
+  "dialogs": {
+    "dexie": {
+      "title": "Confirmar Limpeza de Cache",
+      "description": "Isso irá deletar todos os dados em cache local para a aplicação, incluindo configurações de aparência e menu. Você será deslogado. Tem certeza?",
+      "actionText": "Sim, Limpar Tudo"
+    },
+    "localStorage": {
+      "title": "Confirmar Exclusão Completa",
+      "description": "Você está prestes a deletar TODOS os dados do Local Storage para este domínio. Isso irá deslogá-lo e pode afetar outras abas abertas. Prossiga com cautela.",
+      "actionText": "Sim, Excluir Tudo"
+    },
+    "sessionStorage": {
+      "title": "Confirmar Exclusão da Sessão",
+      "description": "Isso irá limpar todos os dados da sessão atual do navegador. Isso pode causar comportamento inesperado.",
+      "actionText": "Sim, Limpar Sessão"
+    }
+  }
+}

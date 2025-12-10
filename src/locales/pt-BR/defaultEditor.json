@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Editor de Texto Padrão (Global)",
+  "pageDescription": "Gerencie o editor de texto rico padrão e seus presets contextuais.",
+  "tabs": {
+    "config": "Configuração",
+    "presets": "Presets por Contexto"
+  },
+  "alerts": {
+    "instanceContextTitle": "Contexto de Instância",
+    "instanceContextDesc": "Esta é uma configuração global. Volte ao contexto Master para editar.",
+    "permissionDeniedTitle": "Permissão Negada",
+    "permissionDeniedDesc": "Você não tem permissão para editar esta configuração.",
+    "noEditorTitle": "Nenhum Editor Disponível",
+    "noEditorDesc": "Nenhum módulo de editor está ativo/importado. Vá para \"Gerenciar Módulos\" e verifique suas configurações."
+  },
+  "form": {
+    "defaultEditorLabel": "Editor Padrão",
+    "selectPlaceholder": "Selecione um editor...",
+    "defaultEditorDesc": "O editor selecionado será usado onde quer que um campo de texto rico seja necessário.",
+    "saveButton": "Salvar Preferência"
+  },
+  "presetsTab": {
+    "description": "Esta lista mostra todos os locais na aplicação que usam o componente de editor de texto rico. Você pode criar um preset de conteúdo padrão para cada um.",
+    "noEditorSelectedTitle": "Editor Padrão Não Definido",
+    "noEditorSelectedDesc": "É necessário selecionar e salvar um editor padrão na aba \"Configuração\" para gerenciar os presets.",
+    "editButton": "Editar Preset",
+    "createButton": "Criar Preset",
+    "contextIdLabel": "ID do Contexto",
+    "presetExists": "Preset Existe",
+    "presetMissing": "Não Existe"
+  },
+  "toasts": {
+    "saveSuccessTitle": "Configuração Salva",
+    "saveSuccessDesc": "O editor de texto padrão do sistema foi atualizado.",
+    "saveErrorTitle": "Erro ao Salvar"
+  }
+}

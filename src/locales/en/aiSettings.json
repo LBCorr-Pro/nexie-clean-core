@@ -1,0 +1,238 @@
+
+{
+  "title": "Artificial Intelligence",
+  "description": "Manage AI providers, models, assistants, and contexts for the application.",
+  "tabs": {
+    "settings": "Configurations",
+    "assistants": "Assistants",
+    "contexts": "Contexts",
+    "monitoring": "Monitoring",
+    "test": "Test",
+    "debug": "Debug"
+  },
+  "settingsTab": {
+    "title": "AI Engine Configurations",
+    "description": "Create and manage connections with different AI providers and their models.",
+    "addButton": "Add New Configuration",
+    "table": {
+      "name": "Name",
+      "provider": "Provider",
+      "model": "Model ID",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "noResults": "No AI configurations found.",
+    "actions": {
+      "edit": "Edit",
+      "duplicate": "Duplicate",
+      "delete": "Delete"
+    },
+    "formDialog": {
+      "titleCreate": "Create New AI Configuration",
+      "titleEdit": "Edit AI Configuration",
+      "description": "Define the connection details for an AI model.",
+      "nameLabel": "Configuration Name",
+      "namePlaceholder": "e.g., Gemini 1.5 Flash (Default)",
+      "nameDescription": "A friendly name to identify this setup.",
+      "providerLabel": "Provider",
+      "providerPlaceholder": "Select a provider...",
+      "providerOptions": {
+        "google": "Google AI",
+        "openai": "OpenAI (soon)"
+      },
+      "modelIdLabel": "Model ID",
+      "modelIdPlaceholder": "e.g., gemini-1.5-flash",
+      "modelIdDescription": "The specific identifier of the model from the provider.",
+      "statusLabel": "Active",
+      "saveButton": "Save Configuration",
+      "savingButton": "Saving...",
+      "zod": {
+        "nameRequired": "Configuration name is required.",
+        "providerRequired": "You must select a provider.",
+        "modelIdRequired": "Model ID is required.",
+        "apiKeyRequired": "A custom API Key is required if you are not using the default."
+      },
+      "useDefaultApiKeyLabel": "Use Default API Key?",
+      "useDefaultApiKeyDescription": "If enabled, it will use the key defined in the system environment variables.",
+      "apiKeyLabel": "Custom API Key",
+      "apiKeyPlaceholder": "Enter the specific API key...",
+      "apiKeyDescription": "Use this to override the system's default key."
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete the configuration \"{name}\"? Assistants using this configuration will stop working.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "toasts": {
+      "loadingError": "Error loading configurations.",
+      "duplicatingTitle": "Duplicating Configuration",
+      "duplicatingDescription": "The configuration for \"{name}\" is ready to be saved as a copy.",
+      "deleteSuccessTitle": "Configuration Deleted!",
+      "deleteSuccessDescription": "The configuration \"{name}\" has been removed.",
+      "deleteErrorTitle": "Error Deleting Configuration",
+      "saveSuccessTitle": "Configuration Saved!",
+      "saveSuccessDescription": "The AI configuration has been successfully saved.",
+      "saveErrorTitle": "Error Saving Configuration"
+    }
+  },
+  "assistantsTab": {
+    "title": "AI Assistants",
+    "description": "Create and manage your AI 'pilots'. Each assistant has a personality and a specific function.",
+    "addButton": "Add New Assistant",
+    "table": {
+      "headerIcon": "Icon",
+      "headerNameType": "Name / Type",
+      "headerEngine": "Engine",
+      "headerActions": "Actions",
+      "noResults": "No assistants created yet.",
+      "undefinedConfig": "Undefined"
+    },
+    "typeLabels": {
+      "text": "Text",
+      "image": "Image",
+      "video": "Video",
+      "speech": "Speech"
+    },
+    "actions": {
+      "edit": "Edit",
+      "duplicate": "Duplicate",
+      "delete": "Delete"
+    },
+    "formDialog": {
+      "titleCreate": "Create New Assistant",
+      "titleEdit": "Edit Assistant",
+      "description": "Define the personality, capabilities, and engine for this AI assistant.",
+      "nameLabel": "Assistant Name",
+      "namePlaceholder": "e.g., Support Chatbot, Post Copywriter",
+      "nicknameLabel": "Nickname (Optional)",
+      "nicknamePlaceholder": "e.g., G-Bot",
+      "typeLabel": "Assistant Type",
+      "typePlaceholder": "Select a type...",
+      "typeOptions": {
+        "text": "Text (Generates text)",
+        "image": "Image (Generates images)",
+        "video": "Video (Generates videos)",
+        "speech": "Speech (Generates audio)"
+      },
+      "typeDescription": "The type cannot be changed after creation.",
+      "configLabel": "AI Engine (Configuration)",
+      "configPlaceholder": "Select a configuration...",
+      "configDescription": "The AI model this assistant will use.",
+      "avatarLabel": "Avatar (Optional)",
+      "systemPromptLabel": "System Prompt / Personality",
+      "systemPromptRequired": " (required for text assistants)",
+      "systemPromptPlaceholderText": "You are a helpful and friendly assistant. You always answer in Portuguese...",
+      "systemPromptPlaceholderOther": "Describe the scene for the image/video or the characteristics of the voice...",
+      "contextFilesLabel": "Context Files (Soon)",
+      "contextFilesPlaceholder": "Functionality under development. Here you will be able to upload PDFs, tables, etc.",
+      "cancelButton": "Cancel",
+      "saveButton": "Save Assistant",
+      "savingButton": "Saving...",
+      "zod": {
+        "nameRequired": "Assistant name is required.",
+        "typeRequired": "You must select an assistant type.",
+        "configRequired": "You must select an AI engine configuration.",
+        "systemPromptRequired": "The system prompt is required for text-based assistants."
+      }
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete the assistant \"{name}\"? This may affect contexts that are using it.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "toasts": {
+      "loadingError": "Error loading assistants.",
+      "duplicatingTitle": "Duplicating Assistant",
+      "duplicatingDescription": "The assistant \"{name}\" is ready to be saved as a copy.",
+      "deleteSuccessTitle": "Assistant Deleted!",
+      "deleteSuccessDescription": "The assistant \"{name}\" has been removed.",
+      "deleteErrorTitle": "Error Deleting Assistant",
+      "saveSuccessTitle": "Assistant Saved!",
+      "saveSuccessDescription": "The AI assistant has been successfully saved.",
+      "saveErrorTitle": "Error Saving Assistant"
+    }
+  },
+  "contextsTab": {
+    "title": "AI Context Management",
+    "description": "Assign a specific AI Assistant to each context of use in the system. Configurations here override master settings.",
+    "defaultCategory": "General",
+    "saveButton": "Save Assignments",
+    "savingButton": "Saving...",
+    "selectPlaceholder": "Change assistant...",
+    "noAssistantOption": "None (System Default)",
+    "toasts": {
+      "loadingError": "Error loading data.",
+      "saveSuccessTitle": "Assignments Saved!",
+      "saveSuccessDescription": "The AI context assignments have been updated.",
+      "saveErrorTitle": "Error Saving Assignments"
+    }
+  },
+  "monitoringTab": {
+    "title": "Interaction Monitoring",
+    "description": "View the recent history of all calls made to the AI assistants.",
+    "searchPlaceholder": "Search by assistant, status, prompt...",
+    "table": {
+      "headerTimestamp": "Timestamp",
+      "headerAssistant": "Assistant",
+      "headerStatus": "Status",
+      "headerCost": "Cost",
+      "headerActions": "Actions",
+      "noResults": "No interaction logs found.",
+      "noResultsForSearch": "No logs match your search."
+    },
+    "actions": {
+      "viewDetails": "View Details"
+    },
+    "dialog": {
+      "title": "Log Details",
+      "description": "Viewing interaction of <strong>{assistant}</strong> at {timestamp}",
+      "userInput": "User Input (Prompt)",
+      "aiOutput": "AI Output",
+      "errorDetails": "Error Details",
+      "noDetailsAvailable": "No error details available.",
+      "closeButton": "Close"
+    }
+  },
+  "testTab": {
+    "title": "Test Assistants",
+    "description": "Run real-time tests with your configured assistants to check their responses, prompts, and settings.",
+    "assistantLabel": "Assistant",
+    "assistantPlaceholder": "Select...",
+    "loadingAssistants": "Loading assistants...",
+    "promptLabel": "User Prompt",
+    "promptPlaceholder": "Type your question or instruction here...",
+    "runButton": "Run Assistant",
+    "processingButton": "Processing...",
+    "resultTitle": "Execution Result",
+    "generatedMedia": "Generated Media:",
+    "unsupportedBrowser": "Your browser does not support the audio element.",
+    "errorTitle": "Error",
+    "errorExecuting": "Error running the assistant:",
+    "invalidInput": "Select an assistant and enter a prompt."
+  },
+  "debugTab": {
+    "title": "AI Debug Tab",
+    "description": "Use this section to run isolated diagnostic tests on the AI capabilities.",
+    "tts": {
+      "title": "Audio Generation Test (Text-to-Speech)",
+      "description": "Enter text and run tests to generate audio using different backend methods. This helps diagnose connectivity and configuration issues with TTS APIs.",
+      "label": "Text to Convert to Audio",
+      "genkitButton": "Test with Genkit",
+      "sdkButton": "Test with Google Cloud SDK",
+      "resultTitle": "Test Result",
+      "waiting": "Waiting...",
+      "error": "Error",
+      "noPrompt": "TTS prompt cannot be empty",
+      "testStart": "Starting test: {testName}",
+      "testComplete": "Test {testName} Completed",
+      "testCompleteDesc": "The result (audio or error) is displayed below.",
+      "testError": "Error in {testName} Test"
+    }
+  }
+}

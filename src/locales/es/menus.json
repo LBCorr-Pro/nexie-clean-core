@@ -1,0 +1,165 @@
+
+{
+  "title": "Menús y Diseño",
+  "description": "Gestiona la navegación de la aplicación, la estructura del menú y las secciones visuales.",
+  "subheading": "Esta sección es el panel de control para todo el flujo de navegación de la aplicación. Elige una subsección a continuación para gestionar una parte específica de la experiencia del usuario.",
+  "presets": {
+    "title": "Plantillas de Menú (Presets)",
+    "description": "Crea y gestiona estructuras de menú completas que se pueden aplicar a diferentes Niveles de Acceso.",
+    "link": "Gestionar Plantillas",
+    "createButton": "Crear Nueva Plantilla",
+    "dialog": {
+      "deleteTitle": "Confirmar Eliminación",
+      "deleteDescription": "¿Estás seguro de que quieres eliminar la plantilla \"{presetName}\"?_MULTI_LINE_STRING_qj9M5v",
+      "deleteAction": "Eliminar"
+    },
+    "noPresets": "Aún no hay presets guardados."
+  },
+  "groups": {
+    "title": "Grupos de Menú",
+    "description": "Organiza los elementos del menú lateral en secciones lógicas y plegables.",
+    "link": "Gestionar Grupos",
+    "createButton": "Crear Nuevo Grupo",
+    "noGroups": "Aún no se han creado grupos.",
+    "saveOrderButton": "Guardar Orden",
+    "editAction": "Editar",
+    "deleteAction": "Eliminar",
+    "inheritedLabel": "Heredado",
+    "dialog": {
+      "editTitle": "Editar Grupo",
+      "createTitle": "Crear Nuevo Grupo",
+      "description": "Define las propiedades para tu grupo de menú.",
+      "nameLabel": "Nombre del Grupo",
+      "slugLabel": "ID (Slug)",
+      "slugDescription": "Identificador único. No se puede cambiar después de la creación.",
+      "iconLabel": "Icono",
+      "suggestButton": "Sugerir Estilo con IA",
+      "validation": {
+        "nameMin": "Por favor, introduce un nombre con al menos 3 caracteres.",
+        "slugInUse": "Este slug ya está en uso. Por favor, elige otro."
+      },
+      "suggestionError": "Error al buscar sugerencia.",
+      "colorApplyTo": {
+        "label": "Aplicación del Color",
+        "description": "Define dónde se aplicará el color personalizado.",
+        "options": {
+          "none": "Ninguno (heredar del tema)",
+          "group_only": "Solo en el Título del Grupo",
+          "group_and_items": "En el Grupo y sus Elementos"
+        }
+      },
+      "isColorUnifiedLabel": "¿Usar el mismo color para icono y texto?",
+      "unifiedColorLabel": "Color Principal",
+      "iconColorLabel": "Color del Icono",
+      "textColorLabel": "Color del Texto"
+    },
+    "deleteDialog": {
+      "title": "Confirmar Eliminación",
+      "description": "¿Estás seguro de que quieres eliminar el grupo \"{groupName}\"? Los elementos asociados a este grupo quedarán desagrupados."
+    }
+  },
+  "items": {
+    "title": "Gestionar Elementos del Menú",
+    "description": "Configura la visibilidad, agrupación y orden de cada elemento en el menú de navegación lateral.",
+    "link": "Gestionar Elementos",
+    "createButton": "Crear Nuevo Elemento",
+    "saveOrderButton": "Guardar Orden",
+    "noItemsFound": "No se encontraron elementos de menú.",
+    "dialog": {
+      "createTitle": "Crear Nuevo Elemento de Menú",
+      "editTitle": "Editar Elemento de Menú",
+      "description": "Define las propiedades para el nuevo elemento de menú.",
+      "displayNameLabel": "Nombre para Mostrar",
+      "menuKeyLabel": "Clave del Menú (ID)",
+      "menuKeyDesc": "ID único, sin espacios ni caracteres especiales (ej: 'mi-nuevo-elemento'). No se puede cambiar después.",
+      "hrefLabel": "Ruta (URL)",
+      "hrefDesc": "La ruta de la aplicación, ej: '/dashboard' o '/settings/general'.",
+      "iconLabel": "Icono",
+      "groupLabel": "Grupo",
+      "groupPlaceholder": "Seleccione un grupo...",
+      "noGroup": "Sin Grupo (Nivel Superior)",
+      "parentLabel": "Elemento Padre (para Submenú)",
+      "parentPlaceholder": "Seleccione un elemento padre...",
+      "noParent": "Ninguno (Elemento Principal)",
+      "canBeInitialPage": "¿Puede ser página inicial?",
+      "canBeBottomBarItem": "¿Puede ir a la barra inferior?",
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    },
+    "toasts": {
+      "saveSuccess": "¡Elementos de Menú Guardados!",
+      "saveSuccessDesc": "La estructura del menú ha sido actualizada.",
+      "saveError": "Error al Guardar Elementos del Menú",
+      "createSuccessTitle": "¡Elemento Creado!",
+      "createSuccessDesc": "El elemento \"{itemName}\" ha sido creado.",
+      "createErrorTitle": "Error al Crear Elemento",
+      "keyExistsError": "Esta Clave de Menú ya está en uso."
+    }
+  },
+  "bottomBar": {
+    "title": "Configurar Barra Inferior",
+    "description": "Gestiona la estructura, pestañas y elementos que aparecen en la barra de navegación inferior en dispositivos móviles.",
+    "link": "Configurar Barra",
+    "createTabButton": "Crear Nueva Pestaña",
+    "tabsTitle": "Pestañas de la Barra Inferior",
+    "tabsDescription": "Crea y gestiona las pestañas de navegación. El orden aquí definirá la visualización.",
+    "noTabs": "Aún no se han creado pestañas.",
+    "editTab": "Editar Pestaña",
+    "deleteTab": "Eliminar Pestaña",
+    "generalConfig": {
+      "title": "Configuración General",
+      "enableOnDesktop": "¿Habilitar en Escritorios?",
+      "enableOnDesktopDesc": "Muestra la barra de navegación en pantallas más grandes (más de 768px).",
+      "desktopPosition": "Posición en Escritorio",
+      "positionBottom": "Inferior (Horizontal)",
+      "positionRight": "Derecha (Vertical)"
+    },
+    "tabsConfig": {
+      "enableTabs": "¿Habilitar Sistema de Pestañas?",
+      "enableTabsDesc": "Agrupa elementos del menú en diferentes secciones con pestañas.",
+      "showTitleOnSingleTab": "¿Mostrar 'oreja' con solo 1 pestaña?",
+      "tabsAlignment": "Alineación de Pestañas",
+      "alignStart": "Inicio",
+      "alignCenter": "Centro",
+      "alignEnd": "Fin",
+      "tabsDisplayMode": "Visualización del Contenido de la Pestaña",
+      "displayModes": {
+        "icon_and_text": "Icono y Texto",
+        "icon_only": "Solo Icono",
+        "text_only": "Solo Texto"
+      }
+    },
+    "dialog": {
+      "editTitle": "Editar Pestaña",
+      "createTitle": "Crear Nueva Pestaña",
+      "description": "Define las propiedades para esta pestaña de navegación.",
+      "nameLabel": "Nombre de la Pestaña",
+      "namePlaceholder": "Ej: Sistema, Módulos",
+      "iconLabel": "Icono de la Pestaña",
+      "enableScrollLabel": "Habilitar Desplazamiento",
+      "maxItemsLabel": "Máximo de Elementos Visibles",
+      "maxItemsDesc": "Los elementos excedentes no se mostrarán.",
+      "cancelButton": "Cancelar",
+      "saveButton": "Guardar"
+    },
+    "itemManager": {
+      "selectPlaceholder": "Selecciona un elemento para añadir...",
+      "noItemsAvailable": "No hay elementos disponibles para añadir.",
+      "addButton": "Añadir",
+      "noItemsAdded": "No se han añadido elementos a esta pestaña.",
+      "noItemSelected": "Ningún elemento seleccionado"
+    },
+    "toasts": {
+      "saveSuccess": "¡Configuración Guardada!",
+      "saveSuccessDesc": "La configuración de la barra inferior ha sido actualizada.",
+      "saveError": "Error al Guardar",
+      "saveErrorDesc": "No se pudo guardar la configuración.",
+      "updateSuccess": "¡Pestaña Actualizada!",
+      "updateSuccessDesc": "La pestaña \"{tabName}\" ha sido modificada.",
+      "createSuccess": "¡Pestaña Creada!",
+      "createSuccessDesc": "La pestaña \"{tabName}\" ha sido añadida.",
+      "deleteSuccess": "Pestaña Eliminada",
+      "deleteSuccessDesc": "La pestaña \"{tabName}\" ha sido eliminada."
+    }
+  }
+}

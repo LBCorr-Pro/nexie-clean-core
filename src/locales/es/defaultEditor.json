@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Editor de Texto Predeterminado (Global)",
+  "pageDescription": "Gestiona el editor de texto enriquecido predeterminado y sus presets contextuales.",
+  "tabs": {
+    "config": "Configuración",
+    "presets": "Presets por Contexto"
+  },
+  "alerts": {
+    "instanceContextTitle": "Contexto de Instancia",
+    "instanceContextDesc": "Esta es una configuración global. Vuelve al contexto Maestro para editar.",
+    "permissionDeniedTitle": "Permiso Denegado",
+    "permissionDeniedDesc": "No tienes permiso para editar esta configuración.",
+    "noEditorTitle": "Ningún Editor Disponible",
+    "noEditorDesc": "Ningún módulo de editor está activo/importado. Ve a \"Gestionar Módulos\" y comprueba tu configuración."
+  },
+  "form": {
+    "defaultEditorLabel": "Editor Predeterminado",
+    "selectPlaceholder": "Selecciona un editor...",
+    "defaultEditorDesc": "El editor seleccionado se usará siempre que se necesite un campo de texto enriquecido.",
+    "saveButton": "Guardar Preferencia"
+  },
+  "presetsTab": {
+    "description": "Esta lista muestra todos los lugares en la aplicación que utilizan el componente de editor de texto enriquecido. Puedes crear un preset de contenido predeterminado para cada uno.",
+    "noEditorSelectedTitle": "Editor Predeterminado no Definido",
+    "noEditorSelectedDesc": "Debes seleccionar y guardar un editor predeterminado en la pestaña \"Configuración\" para gestionar los presets.",
+    "editButton": "Editar Preset",
+    "createButton": "Crear Preset",
+    "contextIdLabel": "ID de Contexto",
+    "presetExists": "Preset Existe",
+    "presetMissing": "No Existe"
+  },
+  "toasts": {
+    "saveSuccessTitle": "¡Configuración Guardada!",
+    "saveSuccessDesc": "El editor de texto predeterminado del sistema ha sido actualizado.",
+    "saveErrorTitle": "Error al Guardar"
+  }
+}

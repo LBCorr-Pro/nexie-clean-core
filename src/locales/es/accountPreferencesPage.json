@@ -1,0 +1,12 @@
+
+{
+  "pageTitle": "Mis Preferencias",
+  "pageDescription": "Ajusta tus configuraciones de idioma y tema visual.",
+  "languageLabel": "Idioma",
+  "themeLabel": "Tema",
+  "toasts": {
+    "saveSuccessTitle": "¡Preferencias Guardadas!",
+    "saveSuccessDesc": "Tu configuración ha sido actualizada.",
+    "saveErrorTitle": "Error al Guardar"
+  }
+}

@@ -1,0 +1,34 @@
+
+{
+  "title": "Create Your Account",
+  "description": "Fill in the fields below to create your account.",
+  "emailLabel": "Email",
+  "emailPlaceholder": "your@email.com",
+  "passwordLabel": "Password",
+  "confirmPasswordLabel": "Confirm Your Password",
+  "submitButton": "Create Account",
+  "submitting": "Creating...",
+  "alreadyHaveAccount": "Already have an account?",
+  "loginLink": "Sign in",
+  "authDomainWarning": {
+    "title": "Authentication Not Configured",
+    "description": "For authentication to work, you must add your application's domain to the list of authorized domains in the <link>Firebase Console</link>."
+  },
+  "validation": {
+    "email": "Please enter a valid email address.",
+    "passwordLength": "The password must be at least 8 characters long.",
+    "passwordMismatch": "The passwords do not match."
+  },
+  "messages": {
+    "successTitle": "Account Created!",
+    "successDescription": "Your account has been successfully created.",
+    "verificationTitle": "Check Your Email",
+    "verificationText": "A verification link has been sent to your email address. Please check your inbox to continue."
+  },
+  "errors": {
+    "title": "Registration Error",
+    "email-already-in-use": "This email is already in use by another account.",
+    "weak-password": "The password is too weak. Please choose a stronger one.",
+    "default": "An unknown error occurred. Please try again."
+  }
+}

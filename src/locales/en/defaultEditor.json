@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Default Text Editor (Global)",
+  "pageDescription": "Manage the default rich text editor and its contextual presets.",
+  "tabs": {
+    "config": "Configuration",
+    "presets": "Presets by Context"
+  },
+  "alerts": {
+    "instanceContextTitle": "Instance Context",
+    "instanceContextDesc": "This is a global setting. Return to the Master context to edit.",
+    "permissionDeniedTitle": "Permission Denied",
+    "permissionDeniedDesc": "You do not have permission to edit this setting.",
+    "noEditorTitle": "No Editor Available",
+    "noEditorDesc": "No editor module is active/imported. Go to \"Manage Modules\" and check your settings."
+  },
+  "form": {
+    "defaultEditorLabel": "Default Editor",
+    "selectPlaceholder": "Select an editor...",
+    "defaultEditorDesc": "The selected editor will be used wherever a rich text field is needed.",
+    "saveButton": "Save Preference"
+  },
+  "presetsTab": {
+    "description": "This list shows all places in the application that use the rich text editor component. You can create a default content preset for each one.",
+    "noEditorSelectedTitle": "Default Editor Not Set",
+    "noEditorSelectedDesc": "You must select and save a default editor in the \"Configuration\" tab to manage presets.",
+    "editButton": "Edit Preset",
+    "createButton": "Create Preset",
+    "contextIdLabel": "Context ID",
+    "presetExists": "Preset Exists",
+    "presetMissing": "Does Not Exist"
+  },
+  "toasts": {
+    "saveSuccessTitle": "Settings Saved!",
+    "saveSuccessDesc": "The system's default text editor has been updated.",
+    "saveErrorTitle": "Error Saving"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "pageTitle": "Configure User Registration Fields",
+  "pageDescription": "Define the fields that will appear on the user registration and editing form.",
+  "addNewFieldButton": "Add New Field",
+  "saveButton": "Save Fields",
+  "revertButton": "Revert to Default",
+  "newFieldDefaultLabel": "New Custom Field",
+  "contextAlert": {
+    "masterTitle": "Editing Global Settings",
+    "masterDescription": "These are the default settings for the entire system.",
+    "instanceTitle": "Editing Instance Settings: {instanceName}",
+    "instanceDescription": "You are overriding the default settings for this instance.",
+    "subInstanceTitle": "Editing Sub-instance Settings",
+    "subInstanceDescription": "You are overriding the parent instance settings for this sub-instance.",
+    "inheritingFromMasterTitle": "Inheriting Settings from Master",
+    "saveToCustomizeDescription": "Changes will be saved as a custom configuration for this context."
+  },
+  "permissionNeededAlert": {
+    "title": "Permission Required",
+    "description": "You do not have permission ('{permissionId}') to edit these fields."
+  },
+  "fieldItem": {
+    "tooltipSystemField": "System Default Field (cannot be deleted)",
+    "tooltipRequired": "Required Field",
+    "tooltipOptional": "Optional Field",
+    "tooltipVisible": "Visible in Form",
+    "tooltipHidden": "Hidden from Form",
+    "menuEdit": "Edit Details",
+    "menuDelete": "Delete Field"
+  },
+  "fieldEditor": {
+    "labelLabel": "Label",
+    "fieldKeyLabel": "Field Key (ID)",
+    "fieldKeyDescription": "Do not change for predefined fields.",
+    "fieldTypeLabel": "Field Type",
+    "descriptionLabel": "Description (Optional)",
+    "descriptionPlaceholder": "Instruction for the user or a note.",
+    "visibleLabel": "Visible in Form?",
+    "requiredLabel": "Required Field?",
+    "uniqueLabel": "Unique Value?",
+    "validationLabel": "Enable Validation?",
+    "useOAuthPhotoLabel": "Use OAuth photo to fill?"
+  },
+  "revertDialog": {
+    "title": "Confirm Reversion",
+    "description": "Are you sure you want to revert the settings to the inherited default? Any customizations made in this context will be lost.",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "predefinedFieldLabels": {
+    "fullName": "Full Name",
+    "email": "E-mail",
+    "password": "Password",
+    "dateOfBirth": "Date of Birth",
+    "cpf": "Tax ID",
+    "gender": "Gender",
+    "nickname": "Nickname",
+    "whatsapp": "WhatsApp",
+    "profilePictureUrl": "Profile Picture",
+    "profilePictureUrlDescription": "If enabled, it will try to use the photo from Google/Facebook on initial login.",
+    "profileDescription": "Profile Description",
+    "language": "Language",
+    "timezone": "Timezone",
+    "currency": "Currency",
+    "address": "Address",
+    "socialLinks": "Social Networks",
+    "instances": "Instances",
+    "subInstances": "Sub-Instances"
+  },
+  "genderOptions": {
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "prefer_not_to_say": "Prefer not to say"
+  }
+}

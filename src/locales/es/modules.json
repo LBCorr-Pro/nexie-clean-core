@@ -1,0 +1,46 @@
+
+{
+    "pageTitle": "Gestionar Módulos",
+    "pageDescription": "Activa, desactiva, registra y edita los módulos disponibles en el sistema para el contexto actual.",
+    "syncButton": "Sincronizar Carpetas de Módulos",
+    "masterContextAlertTitle": "Contexto Maestro Global",
+    "masterContextAlertDescription": "Estás gestionando el estado global de los módulos. Los cambios aquí pueden afectar a todas las instancias que no tengan su propia configuración.",
+    "permissionDenied": "No tienes permiso para ver las definiciones de los módulos.",
+    "table": {
+        "header": {
+            "module": "Módulo",
+            "registration": "Registro",
+            "globalStatus": "Estado Global",
+            "instanceStatus": "Estado en Instancia",
+            "actions": "Acciones"
+        },
+        "body": {
+            "registered": "Registrado",
+            "notRegistered": "No Registrado",
+            "active": "Activo",
+            "inactive": "Inactivo",
+            "notApplicable": "N/A",
+            "openMenu": "Abrir menú"
+        }
+    },
+    "actions": {
+        "register": "Registrar Módulo",
+        "edit": "Editar Definición",
+        "configure": "Configurar",
+        "delete": "Eliminar Definición"
+    },
+    "deleteDialog": {
+        "title": "Confirmar Eliminación",
+        "description": "¿Estás seguro de que quieres eliminar la definición del módulo \"{moduleName}\"? Esta acción no se puede deshacer y eliminará el registro de Firestore.",
+        "confirm": "Eliminar"
+    },
+    "toasts": {
+        "statusUpdateSuccess": "¡Estado del Módulo Actualizado!",
+        "updateError": "Error al actualizar",
+        "syncPermissionError": "No tienes permiso para importar módulos.",
+        "syncSuccessTitle": "¡Módulos Sincronizados!",
+        "syncErrorTitle": "Sincronización Fallida",
+        "deleteSuccess": "¡Definición de Módulo Eliminada!",
+        "deleteError": "Error al eliminar"
+    }
+}

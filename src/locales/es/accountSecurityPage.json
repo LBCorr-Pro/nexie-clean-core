@@ -1,0 +1,51 @@
+
+{
+  "pageTitle": "Seguridad de la Cuenta",
+  "pageDescription": "Gestiona tu contraseña y correo electrónico.",
+  "passwordCard": {
+    "title": "Cambiar Contraseña",
+    "description": "Se recomienda utilizar una contraseña fuerte y única.",
+    "currentPasswordLabel": "Contraseña Actual",
+    "currentPasswordPlaceholder": "Ingresa tu contraseña actual",
+    "newPasswordLabel": "Nueva Contraseña",
+    "newPasswordPlaceholder": "Ingresa tu nueva contraseña",
+    "confirmPasswordLabel": "Confirmar Nueva Contraseña",
+    "confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
+    "saveButton": "Guardar Contraseña"
+  },
+  "emailCard": {
+    "title": "Cambiar Correo Electrónico",
+    "description": "Tu correo electrónico actual es <strong>{email}</strong>. Después de cambiarlo, necesitarás verificar la nueva dirección.",
+    "loadingEmail": "cargando...",
+    "newEmailLabel": "Nuevo Correo Electrónico",
+    "newEmailPlaceholder": "nuevo@email.com",
+    "currentPasswordLabel": "Contraseña Actual",
+    "currentPasswordPlaceholder": "Ingresa tu contraseña para confirmar",
+    "passwordDescription": "Por tu seguridad, por favor confirma tu contraseña para cambiar tu correo electrónico.",
+    "saveButton": "Guardar Nuevo Correo"
+  },
+  "validation": {
+    "currentPasswordRequired": "La contraseña actual es requerida.",
+    "newPasswordLength": "La nueva contraseña debe tener al menos 6 caracteres.",
+    "passwordsMismatch": "Las contraseñas no coinciden.",
+    "invalidEmailFormat": "Por favor, ingresa una dirección de correo electrónico válida.",
+    "passwordForEmailRequired": "Se requiere la contraseña para cambiar el correo electrónico."
+  },
+  "toast": {
+    "authErrorTitle": "Error de Autenticación",
+    "userNotAuthenticated": "Usuario no autenticado o sesión expirada.",
+    "passwordSuccessTitle": "¡Contraseña Actualizada!",
+    "passwordSuccessDesc": "Tu contraseña ha sido cambiada exitosamente.",
+    "passwordErrorGeneric": "Ocurrió un error desconocido al cambiar la contraseña.",
+    "passwordErrorWrong": "La contraseña actual que ingresaste es incorrecta.",
+    "tooManyRequests": "Demasiados intentos de inicio de sesión recientes. Por favor, inténtalo de nuevo más tarde.",
+    "passwordErrorTitle": "Error al Cambiar la Contraseña",
+    "emailWarningTitle": "Advertencia",
+    "emailIsSame": "La nueva dirección de correo electrónico es la misma que la actual.",
+    "emailVerificationTitle": "Verificación Requerida",
+    "emailVerificationDesc": "Se ha enviado un enlace de verificación a {newEmail}. Por favor, revisa tu bandeja de entrada (y la carpeta de spam).",
+    "emailErrorGeneric": "Ocurrió un error desconocido al cambiar el correo electrónico.",
+    "emailInUse": "Esta dirección de correo electrónico ya está en uso por otra cuenta.",
+    "emailErrorTitle": "Error al Cambiar el Correo Electrónico"
+  }
+}

@@ -1,0 +1,20 @@
+
+{
+  "title": "Verifica Tu Correo Electrónico",
+  "sentMessage": "Se ha enviado un enlace de verificación a tu dirección de correo: <strong>{email}</strong>. Por favor, revisa tu bandeja de entrada.",
+  "alreadyVerified": "Tu dirección de correo <strong>{email}</strong> ya está verificada. Ahora puedes iniciar sesión.",
+  "sentMessagePostRegistration": "Tu cuenta ha sido creada. Se envió un enlace de verificación a <strong>{email}</strong>.",
+  "genericSentMessage": "Se ha enviado un enlace de verificación. Por favor, revisa tu bandeja de entrada.",
+  "loadingMessage": "Verificando tu estado...",
+  "resendButton": "Reenviar Correo de Verificación",
+  "backToLoginButton": "Volver al Inicio de Sesión",
+  "toast": {
+    "notLoggedInTitle": "No has iniciado sesión",
+    "notLoggedInDescription": "Debes iniciar sesión para reenviar un correo de verificación.",
+    "alreadyVerifiedTitle": "Ya Verificado",
+    "resentSuccessTitle": "¡Correo de Verificación Reenviado!",
+    "resentSuccessDescription": "Se ha enviado un nuevo enlace de verificación a {email}.",
+    "resentErrorTitle": "Error al Reenviar Correo",
+    "resentErrorDescription": "No se pudo reenviar el correo de verificación. Por favor, inténtalo de nuevo más tarde."
+  }
+}

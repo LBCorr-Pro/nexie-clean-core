@@ -1,0 +1,296 @@
+
+{
+  "title": "Calc Genius",
+  "description": "Motor de cálculo genérico para consumir datos y aplicar fórmulas personalizadas.",
+  "errors": {
+    "masterOnlyTitle": "Acceso Denegado",
+    "masterOnlyDescription": "Este módulo es para configuración global y solo se puede acceder en el contexto 'Maestro'."
+  },
+  "tabs": {
+    "groups": "Grupos",
+    "fields": "Campos",
+    "formulas": "Fórmulas",
+    "analyzer": "Analizador",
+    "tests": "Pruebas"
+  },
+  "toasts": {
+    "permissionDenied": "No tienes permiso para realizar esta acción.",
+    "deleteSuccess": "Eliminado con éxito."
+  },
+  "zod": {
+    "validation": {
+      "idMin": "El ID debe tener al menos 3 caracteres.",
+      "idRegex": "El ID solo debe contener letras minúsculas y guiones bajos.",
+      "labelRequired": "La etiqueta es obligatoria.",
+      "expressionRequired": "La expresión es obligatoria.",
+      "nameMin": "El nombre del grupo debe tener al menos 3 caracteres.",
+      "slugMin": "El ID (slug) es obligatorio.",
+      "slugRegex": "El slug solo debe contener letras minúsculas, números, guiones y guiones bajos.",
+      "iconRequired": "El icono es obligatorio.",
+      "invalidColor": "Color inválido.",
+      "slugInUse": "Este slug ya está en uso. Por favor, elige otro."
+    },
+    "idInUse": "Este ID ya está en uso.",
+    "fieldIdInUse": "Este ID de Campo ya está en uso.",
+    "formulaIdInUse": "Este ID de Fórmula ya está en uso."
+  },
+  "groupsTab": {
+    "title": "Gestionar Grupos",
+    "description": "Crea, edita, ordena y personaliza los agrupadores para tus campos y fórmulas.",
+    "createButton": "Crear Nuevo Grupo",
+    "emptyState": "No hay grupos creados.",
+    "defaultBadge": "Predeterminado",
+    "saveOrderButton": "Guardar Orden",
+    "fieldsCount": "campos",
+    "actions": {
+      "edit": "Editar",
+      "viewFields": "Ver Campos",
+      "delete": "Eliminar"
+    },
+    "dialog": {
+      "editTitle": "Editar Grupo",
+      "createTitle": "Crear Nuevo Grupo",
+      "description": "Define las propiedades para tu grupo de menú.",
+      "style": {
+        "title": "Estilo"
+      },
+      "name": {
+        "label": "Nombre del Grupo",
+        "placeholder": "Ej: Costos Fijos, Métricas de Ventas"
+      },
+      "slug": {
+        "label": "ID (Slug)",
+        "placeholder": "Ej: costos_fijos",
+        "description": "Identificador único. No se puede cambiar después de la creación."
+      },
+      "icon": {
+        "label": "Icono"
+      },
+      "applyColorTo": {
+        "label": "Aplicación del Color",
+        "description": "Define dónde se aplicará el color personalizado.",
+        "options": {
+          "none": "Ninguno (heredar del tema)",
+          "groupOnly": "Solo en el Título del Grupo",
+          "groupAndItems": "En el Grupo y sus Elementos"
+        }
+      },
+      "unifiedColor": {
+        "label": "¿Usar el mismo color para icono y texto?",
+        "description": "Aplica un solo color tanto al icono como al texto.",
+        "colorLabel": "Color Principal"
+      },
+      "iconColor": {
+        "label": "Color del Icono"
+      },
+      "textColor": {
+        "label": "Color del Texto"
+      }
+    },
+    "styleSuggestion": {
+      "button": "Sugerir Estilo con IA",
+      "nameRequired": "Por favor, introduce un nombre con al menos 3 caracteres.",
+      "apiError": "Error al buscar sugerencia."
+    },
+    "deleteDialog": {
+      "title": "Confirmar Eliminación",
+      "description": "¿Estás seguro de que quieres eliminar el grupo \"{groupName}\"? Los campos asociados a este grupo quedarán desagrupados.",
+      "confirmButton": "Eliminar"
+    },
+    "toasts": {
+      "orderSaveSuccess": "¡Orden de los grupos guardado!",
+      "saveSuccessTitle": "¡Éxito!",
+      "saveSuccessDescription": "Grupo guardado con éxito.",
+      "createSuccessTitle": "¡Grupo Creado!",
+      "deleteSuccessTitle": "Grupo Eliminado",
+      "deleteSuccessDescription": "El grupo ha sido eliminado con éxito."
+    }
+  },
+  "fieldsTab": {
+    "title": "Gestionar Campos",
+    "description": "Crea, edita y organiza los campos que servirán de base para los cálculos.",
+    "createButton": "Crear Campo",
+    "loading": "Cargando...",
+    "emptyState": "No se encontraron campos.",
+    "table": {
+      "headers": {
+        "label": "Etiqueta",
+        "id": "ID",
+        "type": "Tipo",
+        "actions": "Acciones"
+      }
+    },
+    "item": {
+      "groupTooltip": "Grupo: {groupName}"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Eliminar"
+    },
+    "toolbar": {
+      "searchPlaceholder": "Buscar por nombre o ID...",
+      "selectAll": "Seleccionar todos",
+      "deleteSelected": "Eliminar ({count})",
+      "allGroups": "Todos los Grupos",
+      "noGroup": "Sin Grupo"
+    },
+    "deleteDialog": {
+      "title": "Confirmar Acción",
+      "description": "¿Estás seguro de que quieres eliminar {count, plural, one {este campo} other {# campos}}?",
+      "confirmButton": "Confirmar"
+    },
+    "dataType": {
+      "number": "Número",
+      "string": "Texto",
+      "boolean": "Booleano",
+      "date": "Fecha",
+      "datetime": "Fecha/Hora",
+      "time": "Hora"
+    },
+    "originType": {
+      "manual": "Entrada Manual",
+      "fixed": "Fijo",
+      "formula": "Fórmula",
+      "linked": "Vinculado",
+      "spreadsheet": "Hoja de Cálculo",
+      "json": "JSON",
+      "xml": "XML",
+      "api": "API"
+    }
+  },
+  "formulasTab": {
+    "title": "Fórmulas de Cálculo",
+    "description": "Crea y gestiona las expresiones que transforman tus campos en resultados.",
+    "createButton": "Crear Nueva Fórmula",
+    "emptyState": "No se encontraron fórmulas.",
+    "toolbar": {
+      "searchPlaceholder": "Buscar por nombre o ID...",
+      "groupFilterPlaceholder": "Filtrar por grupo...",
+      "allGroups": "Todos los Grupos",
+      "noGroup": "Sin Grupo",
+      "resultTypeFilterPlaceholder": "Filtrar por tipo de resultado...",
+      "allResultTypes": "Todos los Tipos"
+    },
+    "table": {
+      "headers": {
+        "label": "Etiqueta",
+        "id": "ID",
+        "resultType": "Tipo de Resultado",
+        "formulaType": "Tipo de Fórmula",
+        "groups": "Grupos",
+        "actions": "Acciones"
+      },
+      "emptyState": "Ninguna fórmula coincide con los filtros actuales."
+    },
+    "deleteDialog": {
+      "title": "Confirmar Eliminación",
+      "description_single": "¿Estás seguro de que quieres eliminar la fórmula \"{formulaName}\"?",
+      "description": "¿Estás seguro de que quieres eliminar {count, plural, one {esta fórmula} other {# fórmulas}}?"
+    },
+    "dataTypes": {
+      "number": "Número",
+      "string": "Texto",
+      "boolean": "Booleano (Sí/No)",
+      "date": "Fecha"
+    }
+  },
+  "fieldForm": {
+    "createTitle": "Crear Campo",
+    "editTitle": "Editar Campo",
+    "label": {
+      "label": "Etiqueta / Nombre",
+      "placeholder": "Ej: Horas Trabajadas, Costo Unitario"
+    },
+    "id": {
+      "label": "ID del Campo (para fórmulas)",
+      "placeholder": "Ej: horas_trabajadas",
+      "description": "ID único. Generado automáticamente a partir de la etiqueta."
+    },
+    "description": {
+      "label": "Descripción (Opcional)",
+      "placeholder": "Qué representa este campo."
+    },
+    "dataType": {
+      "label": "Tipo de Dato",
+      "options": {
+        "number": "Número",
+        "string": "Texto",
+        "boolean": "Booleano (Sí/No)",
+        "date": "Fecha",
+        "datetime": "Fecha y Hora",
+        "time": "Hora"
+      }
+    },
+    "originType": {
+      "label": "Origen del Dato",
+      "options": {
+        "manual": "Entrada Manual",
+        "spreadsheet": "Hoja de Cálculo",
+        "json": "JSON",
+        "xml": "XML",
+        "api": "API",
+        "fixed": "Valor Fijo",
+        "formula": "Fórmula",
+        "linked": "Campo Vinculado"
+      }
+    },
+    "groups": {
+      "label": "Grupos",
+      "placeholder": "Selecciona uno o más grupos..."
+    },
+    "mainGroup": {
+      "label": "Grupo Principal (para icono)",
+      "placeholder": "Selecciona un grupo principal...",
+      "description": "Selecciona un grupo principal si has elegido más de uno."
+    },
+    "editableByUser": {
+      "label": "¿Editable por el Usuario?",
+      "description": "Permite al usuario final cambiar este valor durante la simulación."
+    }
+  },
+  "formulaForm": {
+    "createTitle": "Crear Fórmula",
+    "editTitle": "Editar Fórmula",
+    "label": {
+      "label": "Etiqueta / Nombre"
+    },
+    "id": {
+      "label": "ID de la Fórmula"
+    },
+    "expression": {
+      "label": "Expresión"
+    },
+    "resultType": {
+      "label": "Tipo de Resultado"
+    },
+    "formulaType": {
+      "label": "Tipo de Fórmula"
+    },
+    "groups": {
+      "label": "Grupos"
+    }
+  },
+  "analyzerTab": {
+    "title": "Analizador de Archivos",
+    "description": "Sube un archivo XML, JSON, CSV o XLSX para inspeccionar sus campos y estructura.",
+    "fileUploadLabel": "Subir un archivo",
+    "selectedFile": "Archivo seleccionado",
+    "analyzeButton": "Analizar Archivo",
+    "analyzingButton": "Analizando...",
+    "analysisStarted": "Análisis iniciado...",
+    "analysisDescription": "Procesando el archivo en segundo plano.",
+    "analysisComplete": "¡Análisis completado!",
+    "errors": {
+      "invalidFileTypeTitle": "Tipo de Archivo Inválido",
+      "invalidFileTypeDescription": "Por favor, selecciona un archivo Excel válido (.xlsx o .xls)."
+    }
+  },
+  "testsTab": {
+    "title": "Entorno de Pruebas",
+    "description": "Selecciona campos, introduce valores y simula los cálculos de tus fórmulas.",
+    "explanation": "Esta sección está en construcción y te permitirá probar todo tu motor de cálculo.",
+    "runButton": "Ejecutar Pruebas",
+    "runningButton": "Ejecutando...",
+    "resultsTitle": "Resultados de la Prueba"
+  }
+}

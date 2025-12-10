@@ -1,0 +1,165 @@
+
+{
+  "title": "Menus e Layout",
+  "description": "Gerencie a navegação da aplicação, a estrutura de menus e as seções visuais.",
+  "subheading": "Esta seção é o painel de controle para todo o fluxo de navegação da aplicação. Escolha uma subseção abaixo para gerenciar uma parte específica da experiência do usuário.",
+  "presets": {
+    "title": "Modelos de Menu (Presets)",
+    "description": "Crie e gerencie estruturas completas de menu que podem ser aplicadas a diferentes Níveis de Acesso.",
+    "link": "Gerenciar Modelos",
+    "createButton": "Criar Novo Modelo",
+    "dialog": {
+      "deleteTitle": "Confirmar Exclusão",
+      "deleteDescription": "Tem certeza que deseja excluir o modelo \"{presetName}\"?",
+      "deleteAction": "Excluir"
+    },
+    "noPresets": "Nenhum preset salvo ainda."
+  },
+  "groups": {
+    "title": "Grupos de Menu",
+    "description": "Organize os itens do menu lateral em seções lógicas e recolhíveis.",
+    "link": "Gerenciar Grupos",
+    "createButton": "Criar Novo Grupo",
+    "noGroups": "Nenhum grupo criado ainda.",
+    "saveOrderButton": "Salvar Ordem",
+    "editAction": "Editar",
+    "deleteAction": "Excluir",
+    "inheritedLabel": "Herdado",
+    "dialog": {
+      "editTitle": "Editar Grupo",
+      "createTitle": "Criar Novo Grupo",
+      "description": "Defina as propriedades para o seu grupo de menu.",
+      "nameLabel": "Nome do Grupo",
+      "slugLabel": "ID (Slug)",
+      "slugDescription": "Identificador único. Não pode ser alterado após a criação.",
+      "iconLabel": "Ícone",
+      "suggestButton": "Sugerir Estilo com IA",
+      "validation": {
+        "nameMin": "Por favor, insira um nome com pelo menos 3 caracteres.",
+        "slugInUse": "Este slug já está em uso. Por favor, escolha outro."
+      },
+      "suggestionError": "Erro ao buscar sugestão.",
+      "colorApplyTo": {
+        "label": "Aplicação da Cor",
+        "description": "Define onde a cor personalizada será aplicada.",
+        "options": {
+          "none": "Nenhum (herdar do tema)",
+          "group_only": "Apenas no Título do Grupo",
+          "group_and_items": "No Grupo e em seus Itens"
+        }
+      },
+      "isColorUnifiedLabel": "Usar mesma cor para ícone e texto?",
+      "unifiedColorLabel": "Cor Principal",
+      "iconColorLabel": "Cor do Ícone",
+      "textColorLabel": "Cor do Texto"
+    },
+    "deleteDialog": {
+      "title": "Confirmar Exclusão",
+      "description": "Tem certeza que deseja excluir o grupo \"{groupName}\"? Itens associados a este grupo ficarão desagrupados."
+    }
+  },
+  "items": {
+    "title": "Gerenciar Itens de Menu",
+    "description": "Configure a visibilidade, agrupamento e ordem de cada item no menu de navegação lateral.",
+    "link": "Gerenciar Itens",
+    "createButton": "Criar Novo Item",
+    "saveOrderButton": "Salvar Ordem",
+    "noItemsFound": "Nenhum item de menu encontrado.",
+    "dialog": {
+      "createTitle": "Criar Novo Item de Menu",
+      "editTitle": "Editar Item de Menu",
+      "description": "Defina as propriedades para o novo item de menu.",
+      "displayNameLabel": "Nome de Exibição",
+      "menuKeyLabel": "Chave do Menu (ID)",
+      "menuKeyDesc": "ID único, sem espaços ou caracteres especiais (ex: 'meu-novo-item'). Não pode ser alterado depois.",
+      "hrefLabel": "Caminho (URL)",
+      "hrefDesc": "O caminho da aplicação, ex: '/dashboard' ou '/settings/general'.",
+      "iconLabel": "Ícone",
+      "groupLabel": "Grupo",
+      "groupPlaceholder": "Selecione um grupo...",
+      "noGroup": "Sem Grupo (Nível Raiz)",
+      "parentLabel": "Item Pai (para Submenu)",
+      "parentPlaceholder": "Selecione um item pai...",
+      "noParent": "Nenhum (Item Principal)",
+      "canBeInitialPage": "Pode ser página inicial?",
+      "canBeBottomBarItem": "Pode ir para barra inferior?",
+      "cancel": "Cancelar",
+      "save": "Salvar"
+    },
+    "toasts": {
+      "saveSuccess": "Itens de Menu Salvos!",
+      "saveSuccessDesc": "A estrutura do menu foi atualizada.",
+      "saveError": "Erro ao Salvar Itens do Menu",
+      "createSuccessTitle": "Item Criado!",
+      "createSuccessDesc": "O item \"{itemName}\" foi criado.",
+      "createErrorTitle": "Erro ao Criar Item",
+      "keyExistsError": "Esta Chave de Menu já está em uso."
+    }
+  },
+  "bottomBar": {
+    "title": "Configurar Barra Inferior",
+    "description": "Gerencie a estrutura, abas e itens que aparecem na barra de navegação inferior em dispositivos móveis.",
+    "link": "Configurar Barra",
+    "createTabButton": "Criar Nova Aba",
+    "tabsTitle": "Abas da Barra Inferior",
+    "tabsDescription": "Crie e gerencie as abas de navegação. A ordem aqui definirá a exibição.",
+    "noTabs": "Nenhuma aba criada ainda.",
+    "editTab": "Editar Aba",
+    "deleteTab": "Excluir Aba",
+    "generalConfig": {
+      "title": "Configurações Gerais",
+      "enableOnDesktop": "Habilitar em Desktops?",
+      "enableOnDesktopDesc": "Exibe a barra de navegação em telas maiores (acima de 768px).",
+      "desktopPosition": "Posição no Desktop",
+      "positionBottom": "Inferior (Horizontal)",
+      "positionRight": "Direita (Vertical)"
+    },
+    "tabsConfig": {
+      "enableTabs": "Habilitar Sistema de Abas?",
+      "enableTabsDesc": "Agrupe itens de menu em diferentes seções com abas.",
+      "showTitleOnSingleTab": "Exibir \"orelha\" com apenas 1 aba?",
+      "tabsAlignment": "Alinhamento das Abas",
+      "alignStart": "Início",
+      "alignCenter": "Centro",
+      "alignEnd": "Fim",
+      "tabsDisplayMode": "Exibição do Conteúdo da Aba",
+      "displayModes": {
+        "icon_and_text": "Ícone e Texto",
+        "icon_only": "Apenas Ícone",
+        "text_only": "Apenas Texto"
+      }
+    },
+    "dialog": {
+      "editTitle": "Editar Aba",
+      "createTitle": "Criar Nova Aba",
+      "description": "Defina as propriedades para esta aba de navegação.",
+      "nameLabel": "Nome da Aba",
+      "namePlaceholder": "Ex: Sistema, Módulos",
+      "iconLabel": "Ícone da Aba",
+      "enableScrollLabel": "Habilitar Rolagem",
+      "maxItemsLabel": "Máximo de Itens Visíveis",
+      "maxItemsDesc": "Itens excedentes não serão exibidos.",
+      "cancelButton": "Cancelar",
+      "saveButton": "Salvar"
+    },
+    "itemManager": {
+      "selectPlaceholder": "Selecione um item para adicionar...",
+      "noItemsAvailable": "Nenhum item disponível para adicionar.",
+      "addButton": "Adicionar",
+      "noItemsAdded": "Nenhum item adicionado a esta aba.",
+      "noItemSelected": "Nenhum item selecionado"
+    },
+    "toasts": {
+      "saveSuccess": "Configurações Salvas!",
+      "saveSuccessDesc": "As configurações da barra inferior foram atualizadas.",
+      "saveError": "Erro ao Salvar",
+      "saveErrorDesc": "Não foi possível salvar as configurações.",
+      "updateSuccess": "Aba Atualizada!",
+      "updateSuccessDesc": "A aba \"{tabName}\" foi modificada.",
+      "createSuccess": "Aba Criada!",
+      "createSuccessDesc": "A aba \"{tabName}\" foi adicionada.",
+      "deleteSuccess": "Aba Removida",
+      "deleteSuccessDesc": "A aba \"{tabName}\" foi removida."
+    }
+  }
+}

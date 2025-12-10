@@ -1,0 +1,23 @@
+{
+  "save": "Save",
+  "cancel": "Cancel",
+  "back": "Back",
+  "goBackLabel": "Go back",
+  "manage": "Manage",
+  "edit": "Edit",
+  "delete": "Delete",
+  "confirm": "Confirm",
+  "noResults": "No results found.",
+  "accessDenied": {
+    "title": "Access Denied",
+    "description": "You do not have permission to access this page."
+  },
+  "statusActive": "Active",
+  "statusInactive": "Inactive",
+  "notAvailable": "N/A",
+  "saving": "Saving...",
+  "deleting": "Deleting...",
+  "upload": "Upload",
+  "sending": "Sending...",
+  "uploadDisabled": "File upload is disabled in the storage module settings."
+}

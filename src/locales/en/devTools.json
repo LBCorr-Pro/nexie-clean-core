@@ -1,0 +1,65 @@
+
+{
+  "access": {
+    "restrictedTitle": "Restricted Access",
+    "masterContextRequiredTitle": "Master Global Context Required",
+    "masterContextRequiredDescription": "This feature is exclusive to the Master context. To edit, please return to the Master Global context (without acting as an instance).",
+    "permissionNeededTitle": "Permission Required",
+    "permissionNeededDescription": "You do not have permission to access these tools."
+  },
+  "debugCard": {
+    "title": "Debug & Development",
+    "description": "Tools and options for developers. These controls will not be visible in a production environment.",
+    "actingBarLabel": "Show Context Switching Bar",
+    "logWindowLabel": "Show Log Window"
+  },
+  "actionsCard": {
+    "title": "System Actions",
+    "warning": "Warning:",
+    "description": "The actions below directly modify the database or system files and should be used with extreme caution."
+  },
+  "syncModules": {
+    "title": "Sync/Import Modules",
+    "description": "This action reads the 'src/modules' directory and updates the system's manual manifest ('known-module-folders.ts'). Use this after adding a new module folder to make it available for registration.",
+    "button": "Sync Module Folders",
+    "permissionNeeded": "You do not have permission to import modules."
+  },
+  "seedPresets": {
+    "title": "Seed Default Editor Presets",
+    "description": "Populates the database with the default content presets for the rich text editors (Lexical and TipTap). This is useful for initial setup or for restoring default content templates.",
+    "button": "Seed Editor Presets",
+    "dialogTitle": "Confirm Seeding",
+    "dialogDescription": "This will add or overwrite default editor presets. Are you sure?",
+    "dialogAction": "Confirm Seeding"
+  },
+  "seedManual": {
+    "title": "Seed Default Manual Articles",
+    "description": "Populates the database with the default articles for the user manual. This action can be used to set up the help documentation for the first time.",
+    "button": "Seed Manual Articles",
+    "dialogTitle": "Confirm Seeding",
+    "dialogDescription": "This will add or overwrite default manual articles. Are you sure?",
+    "dialogAction": "Confirm Seeding"
+  },
+  "cleanupModules": {
+    "title": "Cleanup Module Definitions",
+    "destructiveAction": "Destructive Action!",
+    "description": "This action scans all module definitions and removes duplicates or obsolete documents, consolidating them into a clean state based on their unique ID (slug).",
+    "button": "Clean and Consolidate",
+    "dialogTitle": "Confirm Cleanup",
+    "dialogDescription": "This will permanently delete duplicate or old module definitions. This action cannot be undone.",
+    "dialogAction": "Yes, Consolidate"
+  },
+  "confirmDialog": {
+    "defaultActionText": "Confirm",
+    "cancel": "Cancel"
+  },
+  "toasts": {
+    "permissionDenied": "Permission Denied",
+    "syncSuccessTitle": "Modules Synced!",
+    "syncErrorTitle": "Sync Failed",
+    "cleanupSuccessTitle": "Cleanup Complete!",
+    "cleanupErrorTitle": "Cleanup Failed",
+    "seedSuccessTitle": "Seeding Successful!",
+    "seedErrorTitle": "Seeding Failed"
+  }
+}

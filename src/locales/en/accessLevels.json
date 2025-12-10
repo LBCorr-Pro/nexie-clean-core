@@ -1,0 +1,55 @@
+
+{
+  "pageTitle": "Access Levels (Global Templates)",
+  "pageDescription": "Manage user access level templates for the system.",
+  "createButton": "Create New Level",
+  "permissionNeeded": "Permission Required",
+  "permissionDenied": "You do not have permission to manage access level templates.",
+  "noTemplates": "No access levels created.",
+  "editAction": "Edit",
+  "deleteAction": "Delete",
+  "dialog": {
+    "editTitle": "Edit Access Level",
+    "createTitle": "Create New Access Level",
+    "description": "Define the name, description, and permissions for this level.",
+    "nameLabel": "Level Name",
+    "namePlaceholder": "e.g., Instance Manager",
+    "descriptionLabel": "Description (Optional)",
+    "descriptionPlaceholder": "Describe the responsibilities of this level.",
+    "systemLevelLabel": "Is it a system level (cannot be deleted)?",
+    "permissionsTitle": "Permissions:",
+    "menuPresetLabel": "Applied Menu Template (Preset)",
+    "menuPresetPlaceholder": "Select a menu template...",
+    "menuPresetDescription": "Defines the base menu structure for this access level. The page to manage these templates will be created soon.",
+    "menuPresetNone": "None (will use the full menu, hidden by permission)"
+  },
+  "deleteDialog": {
+    "title": "Confirm Deletion",
+    "description": "Are you sure you want to delete the template \"{templateName}\"?"
+  },
+  "toasts": {
+    "loadError": "Error loading templates",
+    "permissionDenied": "Action not allowed",
+    "saveError": "Error Saving",
+    "updateSuccess": "Template Updated",
+    "updateSuccessDesc": "The template \"{templateName}\" has been updated.",
+    "createSuccess": "Template Created",
+    "createSuccessDesc": "The template \"{templateName}\" has been created.",
+    "slugInUse": "This slug is already in use.",
+    "deleteSuccess": "Template Deleted",
+    "deleteSuccessDesc": "The template \"{templateName}\" has been deleted.",
+    "deleteError": "Error Deleting",
+    "systemLevelDeleteError": "System-level templates cannot be deleted."
+  },
+  "permissionCategory": {
+    "master": "Master",
+    "instance": "Instance",
+    "module": "Module",
+    "subinstance": "Sub-instance",
+    "general": "General"
+  },
+  "contextAlert": {
+    "title": "Master Global Context Required",
+    "description": "This is a global setting and affects the entire system. To edit, please return to the Master Global context (without acting as an instance)."
+  }
+}

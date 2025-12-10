@@ -1,0 +1,35 @@
+{
+  "pageTitle": "Comportamiento de la Página de Inicio de Sesión",
+  "pageDescription": "Controla el flujo de acceso y la página de destino predeterminada después del inicio de sesión.",
+  "common": {
+    "save": "Guardar Cambios"
+  },
+  "form": {
+    "loginPageActive": {
+      "label": "¿Página de Inicio de Sesión Activa?",
+      "description": "Si está inactiva, los usuarios serán redirigidos a la URL de Respaldo."
+    },
+    "fallbackPageUrl": {
+      "label": "URL de Respaldo",
+      "description": "Página a la que se lleva al usuario si la página de inicio de sesión está inactiva.",
+      "loading": "Cargando páginas...",
+      "placeholder": "Seleccione una página...",
+      "noPages": "Ninguna página configurada"
+    }
+  },
+  "infoBox": "Estas configuraciones afectan directamente el flujo de autenticación y el primer acceso del usuario.",
+  "toasts": {
+    "loadError": "Error al cargar la configuración.",
+    "saveSuccessTitle": "¡Configuración Guardada!",
+    "saveSuccessDescription": "El comportamiento de la página de inicio de sesión ha sido actualizado.",
+    "saveErrorTitle": "Error al Guardar"
+  },
+  "contextAlert": {
+    "instanceTitle": "Editando Configuración de la Instancia",
+    "instanceDescription": "Estás sobrescribiendo la configuración predeterminada para esta instancia.",
+    "subInstanceTitle": "Editando Configuración de la Sub-instancia",
+    "subInstanceDescription": "Estás sobrescribiendo la configuración de la instancia padre para esta sub-instancia.",
+    "inheritingFromMasterTitle": "Heredando Configuración del Master",
+    "saveToCustomizeDescription": "Los cambios se guardarán como una configuración personalizada para este contexto."
+  }
+}

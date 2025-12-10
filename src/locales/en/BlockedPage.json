@@ -1,0 +1,20 @@
+{
+    "instanceInactive": {
+        "title": "Instance Access Restricted",
+        "description": "Access to the instance '{instanceName}' has been temporarily suspended due to administrative or billing issues.\n\nTo restore access, please contact your instance administrator at: {contactEmail}"
+    },
+    "userInactive": {
+        "title": "Your Subscription is Inactive",
+        "description": "Your personal subscription for the instance '{instanceName}' is not active. To reactivate your access, please renew your subscription or contact instance support at: {contactEmail}"
+    },
+    "noProfile": {
+        "title": "User Profile Not Found",
+        "description": "We couldn\'t find a user profile associated with your account. This might be a configuration error. Please try signing out and back in."
+    },
+    "unknown": {
+        "title": "Access Denied",
+        "description": "An unexpected error occurred while verifying your access. Please try again."
+    },
+    "tryAgainButton": "Try Again",
+    "logoutButton": "Logout"
+}

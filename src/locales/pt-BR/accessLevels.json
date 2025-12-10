@@ -1,0 +1,65 @@
+
+{
+  "pageTitle": "Níveis de Acesso (Templates Globais)",
+  "pageDescription": "Gerencie os templates de níveis de acesso para usuários no sistema.",
+  "createButton": "Criar Novo Nível",
+  "systemLevelLabel": "Sistema",
+  "permissionNeeded": "Permissão Necessária",
+  "permissionDenied": "Você não tem permissões para gerenciar templates de níveis de acesso.",
+  "noTemplates": "Nenhum nível de acesso criado.",
+  "noDescription": "Sem descrição.",
+  "editAction": "Editar",
+  "deleteAction": "Excluir",
+  "moduleLabel": "(Módulo: {moduleName})",
+  "dialog": {
+    "editTitle": "Editar Nível de Acesso",
+    "createTitle": "Criar Novo Nível de Acesso",
+    "description": "Defina nome, descrição e permissões para este nível.",
+    "nameLabel": "Nome do Nível",
+    "namePlaceholder": "Ex: Gerente de Instâncias",
+    "descriptionLabel": "Descrição (Opcional)",
+    "descriptionPlaceholder": "Descreva as responsabilidades deste nível.",
+    "systemLevelLabel": "É um nível de sistema (não pode ser excluído)?",
+    "permissionsTitle": "Permissões:",
+    "menuPresetLabel": "Modelo de Menu Aplicado (Preset)",
+    "menuPresetPlaceholder": "Selecione um modelo de menu...",
+    "menuPresetDescription": "Define a estrutura base de menus para este nível de acesso. A página para gerenciar estes modelos será criada em breve.",
+    "menuPresetNone": "Nenhum (usará o menu completo, oculto por permissão)"
+  },
+  "deleteDialog": {
+    "title": "Confirmar Exclusão",
+    "description": "Tem certeza que deseja excluir o template \"{templateName}\"?"
+  },
+  "toasts": {
+    "loadError": "Erro ao carregar templates",
+    "loadModuleDefinitionsError": "Erro ao carregar definições de módulos",
+    "permissionDenied": "Ação não permitida",
+    "genericPermissionError": "Você não tem permissão para realizar esta ação.",
+    "saveError": "Erro ao Salvar",
+    "updateSuccess": "Template Atualizado",
+    "updateSuccessDesc": "O template \"{templateName}\" foi atualizado.",
+    "createSuccess": "Template Criado",
+    "createSuccessDesc": "O template \"{templateName}\" foi criado.",
+    "slugInUse": "Este slug já está em uso.",
+    "deleteSuccess": "Template Excluído",
+    "deleteSuccessDesc": "O template \"{templateName}\" foi excluído.",
+    "deleteError": "Erro ao Excluir",
+    "systemLevelDeleteError": "Templates de sistema não podem ser excluídos."
+  },
+  "form": {
+    "validation": {
+      "templateNameMin": "Nome do template é obrigatório (mín. 3 caracteres)."
+    }
+  },
+  "permissionCategory": {
+    "master": "Master",
+    "instance": "Instância",
+    "module": "Módulo",
+    "subinstance": "Sub-instância",
+    "general": "Geral"
+  },
+  "contextAlert": {
+    "title": "Contexto Master Global Necessário",
+    "description": "Esta configuração é global e afeta todo o sistema. Para editar, por favor, retorne ao contexto Master Global (sem estar atuando como uma instância)."
+  }
+}

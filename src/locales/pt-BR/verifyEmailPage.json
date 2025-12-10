@@ -1,0 +1,19 @@
+{
+  "title": "Verifique seu E-mail",
+  "sentMessage": "Um link de verificação foi enviado para o seu endereço de e-mail: <strong>{email}</strong>. Por favor, verifique sua caixa de entrada.",
+  "alreadyVerified": "Seu endereço de e-mail <strong>{email}</strong> já está verificado. Você já pode fazer login.",
+  "sentMessagePostRegistration": "Sua conta foi criada. Um link de verificação foi enviado para <strong>{email}</strong>.",
+  "genericSentMessage": "Um link de verificação foi enviado. Por favor, verifique sua caixa de entrada.",
+  "loadingMessage": "Verificando seu status...",
+  "resendButton": "Reenviar E-mail de Verificação",
+  "backToLoginButton": "Voltar para o Login",
+  "toast": {
+    "notLoggedInTitle": "Não Autenticado",
+    "notLoggedInDescription": "Você precisa estar logado para reenviar um e-mail de verificação.",
+    "alreadyVerifiedTitle": "Já Verificado",
+    "resentSuccessTitle": "E-mail de Verificação Reenviado!",
+    "resentSuccessDescription": "Um novo link de verificação foi enviado para {email}.",
+    "resentErrorTitle": "Erro ao Reenviar E-mail",
+    "resentErrorDescription": "Não foi possível reenviar o e-mail de verificação. Por favor, tente novamente mais tarde."
+  }
+}

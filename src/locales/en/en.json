@@ -1,0 +1,74 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "goBackLabel": "Go back",
+    "manage": "Manage"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "menus": {
+    "items": {
+      "title": "Manage Menu Items",
+      "description": "Configure the visibility, grouping, and order of each item in the side navigation menu.",
+      "createButton": "Create New Item",
+      "searchPlaceholder": "Search by name or key...",
+      "sortByLabel": "Sort by:",
+      "sortOptions": {
+        "displayOrder": "Display Order",
+        "nameAsc": "Name (A-Z)",
+        "nameDesc": "Name (Z-A)"
+      },
+      "noItemsFound": "No menu items found.",
+      "form": {
+        "displayNameLabel": "Display Name",
+        "groupLabel": "Group",
+        "groupPlaceholder": "Select a group...",
+        "noGroup": "No Group",
+        "orderLabel": "Order",
+        "visibleLabel": "Visible in Menu",
+        "canBeInitialPageLabel": "Can be Initial Page?",
+        "canBeBottomBarItemLabel": "Can be Bottom Bar Item?"
+      },
+      "dialog": {
+        "title": "Create New Menu Item",
+        "description": "Define the properties for the new menu item.",
+        "displayNameLabel": "Display Name",
+        "menuKeyLabel": "Menu Key (ID)",
+        "menuKeyDesc": "Unique ID, without spaces or special characters (e.g., 'my-new-item'). Cannot be changed later.",
+        "hrefLabel": "Path (URL)",
+        "hrefDesc": "The application path, e.g., '/dashboard' or '/settings/general'.",
+        "iconLabel": "Icon",
+        "suggestIcon": "Suggest Icon with AI",
+        "groupLabel": "Group",
+        "groupPlaceholder": "Select a group...",
+        "noGroup": "No Group (Top Level)",
+        "parentLabel": "Parent Item (for Submenu)",
+        "parentPlaceholder": "Select a parent item...",
+        "noParent": "None (Top Level Item)",
+        "canBeInitialPage": "Can be initial page?",
+        "canBeBottomBarItem": "Can go to bottom bar?",
+        "cancel": "Cancel",
+        "save": "Save",
+        "validation": {
+          "nameMin": "Please enter a name with at least 3 characters."
+        },
+        "suggestionError": "Error fetching suggestion."
+      },
+      "toasts": {
+        "configError": "Configuration context not found.",
+        "saveSuccess": "Menu Items Saved!",
+        "saveSuccessDesc": "The menu structure has been updated.",
+        "saveError": "Error Saving Menu Items",
+        "createErrorTitle": "Error Creating Item",
+        "keyExistsError": "This Menu Key is already in use.",
+        "createSuccessTitle": "Item Created!",
+        "createSuccessDesc": "The item \"{itemName}\" has been created."
+      }
+    }
+  }
+}

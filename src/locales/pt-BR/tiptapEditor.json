@@ -1,0 +1,103 @@
+
+{
+  "title": "Módulo Editor TipTap",
+  "description": "Configure a barra de ferramentas e teste o editor de texto rico TipTap.",
+  "configureToolbar": "Configurar Barra de Ferramentas",
+  "toolbarAccordionTitle": "Ferramentas da Barra",
+  "addSeparatorButton": "Adicionar Separador",
+  "separatorLabel": "Separador",
+  "saveDefaultConfigButton": "Salvar Configuração Padrão",
+  "previewTitle": "Pré-visualização do Editor",
+  "placeholder": "Comece a escrever aqui para testar...",
+  "configureDenied": "Você não tem permissão para configurar a barra de ferramentas.",
+  "presets": {
+    "accordionTitle": "Gerenciar Presets",
+    "savePresetButton": "Salvar como Preset",
+    "noPresetsMessage": "Nenhum preset salvo.",
+    "loadPreset": "Carregar Preset",
+    "actions": {
+      "srLabel": "Ações para {presetName}",
+      "load": "Carregar",
+      "overwrite": "Sobrescrever com Atual",
+      "delete": "Excluir"
+    }
+  },
+  "dialogs": {
+    "savePreset": {
+      "title": "Salvar Configuração como Preset",
+      "description": "Dê um nome para a configuração atual da barra de ferramentas.",
+      "label": "Nome do Preset",
+      "cancelButton": "Cancelar",
+      "savingButton": "Salvando..."
+    },
+    "deletePreset": {
+      "title": "Confirmar Exclusão",
+      "description": "Tem certeza que deseja excluir o preset \"{name}\"? Esta ação não pode ser desfeita.",
+      "cancelButton": "Cancelar",
+      "deleteButton": "Excluir"
+    },
+    "overwritePreset": {
+      "title": "Sobrescrever Preset?",
+      "description": "Já existe um preset com o nome \"{name}\". Deseja substituí-lo com a configuração atual?",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sobrescrever"
+    }
+  },
+  "toasts": {
+    "loadConfigErrorTitle": "Erro ao Carregar Configuração",
+    "loadConfigErrorDesc": "Usando configurações padrão.",
+    "saveConfigSuccessTitle": "Configuração Padrão Salva!",
+    "saveConfigSuccessDesc": "A barra de ferramentas do editor foi atualizada.",
+    "saveConfigErrorTitle": "Erro ao Salvar",
+    "savePresetSuccessTitle": "Preset Salvo!",
+    "savePresetSuccessDesc": "O preset \"{name}\" foi salvo com sucesso.",
+    "invalidPresetNameTitle": "Nome Inválido",
+    "invalidPresetNameDesc": "Por favor, insira um nome para o preset.",
+    "savePresetErrorTitle": "Erro ao Salvar Preset",
+    "loadPresetsErrorTitle": "Erro",
+    "loadPresetsErrorDesc": "Não foi possível carregar os presets.",
+    "loadPresetSuccessTitle": "Preset Carregado",
+    "loadPresetSuccessDesc": "A configuração \"{name}\" foi aplicada. Clique em 'Salvar Padrão' para confirmar.",
+    "deletePresetSuccessTitle": "Preset Excluído!",
+    "deletePresetErrorTitle": "Erro ao Excluir"
+  },
+  "initialContent": {
+    "h2": "Olá! Este é o Editor TipTap.",
+    "p1": "Este é um editor de texto rico <strong>(WYSIWYG)</strong> moderno e extensível, construído sobre o Prosemirror.",
+    "li1": "Fácil de usar e configurar.",
+    "li2": "Suporta listas, títulos, links e muito mais.",
+    "li3": "Ative/desative funcionalidades na barra de ferramentas.",
+    "p2": "Sinta-se à vontade para testar as funcionalidades e explorar o que ele pode fazer!"
+  },
+  "toolbar": {
+    "undo": "Desfazer",
+    "redo": "Refazer",
+    "bold": "Negrito",
+    "italic": "Itálico",
+    "underline": "Sublinhado",
+    "strike": "Tachado",
+    "code": "Código em Linha",
+    "h1": "Título 1",
+    "h2": "Título 2",
+    "h3": "Título 3",
+    "normalText": "Texto Normal",
+    "stylePlaceholder": "Estilo",
+    "alignLeft": "Alinhar à Esquerda",
+    "alignCenter": "Centralizar",
+    "alignRight": "Alinhar à Direita",
+    "alignJustify": "Justificar",
+    "bulletList": "Lista com Marcadores",
+    "orderedList": "Lista Numerada",
+    "taskList": "Lista de Tarefas",
+    "blockquote": "Citação",
+    "codeBlock": "Bloco de Código",
+    "horizontalRule": "Linha Horizontal",
+    "link": "Inserir Link",
+    "image": "Inserir Imagem",
+    "highlight": "Realce",
+    "color": "Cor",
+    "heading-1": "Título 1",
+    "heading-2": "Título 2",
+    "heading-3": "Título 3"
+  }
+}

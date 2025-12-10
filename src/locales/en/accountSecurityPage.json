@@ -1,0 +1,51 @@
+
+{
+  "pageTitle": "Account Security",
+  "pageDescription": "Manage your password and email.",
+  "passwordCard": {
+    "title": "Change Password",
+    "description": "It is recommended to use a strong and unique password.",
+    "currentPasswordLabel": "Current Password",
+    "currentPasswordPlaceholder": "Enter your current password",
+    "newPasswordLabel": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmPasswordLabel": "Confirm New Password",
+    "confirmPasswordPlaceholder": "Confirm your new password",
+    "saveButton": "Save Password"
+  },
+  "emailCard": {
+    "title": "Change Email",
+    "description": "Your current email is <strong>{email}</strong>. After changing, you will need to verify the new address.",
+    "loadingEmail": "loading...",
+    "newEmailLabel": "New Email",
+    "newEmailPlaceholder": "new@email.com",
+    "currentPasswordLabel": "Current Password",
+    "currentPasswordPlaceholder": "Enter your password to confirm",
+    "passwordDescription": "For your security, please confirm your password to change your email.",
+    "saveButton": "Save New Email"
+  },
+  "validation": {
+    "currentPasswordRequired": "Current password is required.",
+    "newPasswordLength": "New password must be at least 6 characters long.",
+    "passwordsMismatch": "Passwords do not match.",
+    "invalidEmailFormat": "Please enter a valid email address.",
+    "passwordForEmailRequired": "Password is required to change email."
+  },
+  "toast": {
+    "authErrorTitle": "Authentication Error",
+    "userNotAuthenticated": "User not authenticated or session expired.",
+    "passwordSuccessTitle": "Password Updated!",
+    "passwordSuccessDesc": "Your password has been successfully changed.",
+    "passwordErrorGeneric": "An unknown error occurred while changing the password.",
+    "passwordErrorWrong": "The current password you entered is incorrect.",
+    "tooManyRequests": "Too many recent login attempts. Please try again later.",
+    "passwordErrorTitle": "Error Changing Password",
+    "emailWarningTitle": "Warning",
+    "emailIsSame": "The new email address is the same as the current one.",
+    "emailVerificationTitle": "Verification Required",
+    "emailVerificationDesc": "A verification link has been sent to {newEmail}. Please check your inbox (and spam folder).",
+    "emailErrorGeneric": "An unknown error occurred while changing the email.",
+    "emailInUse": "This email address is already in use by another account.",
+    "emailErrorTitle": "Error Changing Email"
+  }
+}

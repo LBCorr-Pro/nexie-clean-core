@@ -1,0 +1,57 @@
+{
+  "module_id_slug": "ai-settings",
+  "description": "Firestore structure for the unified AI Settings module.",
+  "ia_configurations": {
+    "collection_path": "/Global/master/config/modules/ai-settings/configurations/providers",
+    "description": "Stores AI provider configurations (the 'Engines'). Each document represents a specific model setup.",
+    "document_id_example": "auto_generated_config_id",
+    "fields": {
+      "name": { "type": "string", "description": "User-friendly name, e.g., 'Gemini 1.5 Flash (Default)'" },
+      "providerId": { "type": "string", "enum": ["google-ai", "openai"], "description": "Identifier for the AI provider." },
+      "modelId": { "type": "string", "description": "Specific model name, e.g., 'gemini-1.5-flash-latest'" },
+      "apiKey": { "type": "string", "description": "The API key for the provider (should be stored securely)." },
+      "isActive": { "type": "boolean", "default": true, "description": "Whether this configuration can be used." },
+      "isDefault": { "type": "boolean", "default": false, "description": "If this is the fallback configuration for the system." }
+    }
+  },
+  "ai_assistants": {
+    "collection_path": "/Global/master/config/modules/ai-settings/assistants/definitions",
+    "description": "Stores AI Assistant definitions (the 'Pilots').",
+    "document_id_example": "auto_generated_assistant_id",
+    "fields": {
+      "name": { "type": "string" },
+      "assistantType": { "type": "string", "enum": ["text", "image", "video", "speech"], "description": "Defines the assistant's primary function." },
+      "nickname": { "type": "string", "optional": true },
+      "avatarUrl": { "type": "string", "optional": true },
+      "systemPrompt": { "type": "string", "description": "The core personality and instructions for the assistant." },
+      "contextFileUrls": { "type": "array", "items": "string", "description": "Array of URLs to context files (e.g., PDFs in Firebase Storage)." },
+      "contextUrls": { "type": "array", "items": "string", "description": "Array of external URLs for context." },
+      "configurationId": { "type": "string", "description": "Reference ID to a document in the 'ia_configurations' collection." }
+    }
+  },
+  "ai_context_assignments": {
+    "document_path": "/Global/master/config/modules/ai-settings/context_assignments",
+    "description": "A single document mapping application contexts (slots) to specific assistant IDs.",
+    "fields": {
+      "assignments": {
+        "type": "map",
+        "description": "A map where the key is the context ID (e.g., 'summarize_report') and the value is the assistant ID."
+      }
+    }
+  },
+  "ai_monitoring_logs": {
+    "collection_path": "/Global/master/ai_module_data/data/logs",
+    "description": "Stores logs of every AI interaction for monitoring and debugging.",
+    "document_id_example": "auto_generated_log_id",
+    "fields": {
+      "timestamp": { "type": "timestamp" },
+      "assistantId": { "type": "string" },
+      "assistantName": { "type": "string", "optional": true },
+      "userInput": { "type": "string" },
+      "aiOutput": { "type": "string" },
+      "status": { "type": "string", "enum": ["success", "error"] },
+      "errorDetails": { "type": "string", "optional": true },
+      "cost": { "type": "number", "optional": true }
+    }
+  }
+}

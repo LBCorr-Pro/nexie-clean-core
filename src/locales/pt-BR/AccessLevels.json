@@ -1,0 +1,25 @@
+{
+  "templates": {
+    "pageTitle": "Templates de Nível de Acesso",
+    "pageDescription": "Crie e gerencie modelos de permissões que podem ser atribuídos aos usuários.",
+    "createButton": "Criar Novo Template",
+    "filterPlaceholder": "Filtrar por nome...",
+    "noResults": "Nenhum resultado encontrado."
+  },
+  "columns": {
+    "name": "Nome",
+    "description": "Descrição",
+    "noDescription": "Nenhuma descrição fornecida"
+  },
+  "form": {
+    "createTitle": "Criar Novo Template",
+    "editTitle": "Editar Template",
+    "nameLabel": "Nome do Template",
+    "namePlaceholder": "Ex: Administrador da Instância",
+    "descriptionLabel": "Descrição",
+    "descriptionPlaceholder": "Ex: Concede acesso total à gestão de uma instância",
+    "saveButton": "Salvar Template",
+    "permissionsTitle": "Permissões do Template",
+    "cancelButton": "Cancelar"
+  }
+}

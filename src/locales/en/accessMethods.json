@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Access Methods",
+  "pageDescription": "Control how users can register and log in to the system.",
+  "common": {
+    "save": "Save Changes"
+  },
+  "fields": {
+    "allowInvitation": {
+      "label": "Allow Registration by Invitation",
+      "description": "If active, users can register using an invitation code."
+    },
+    "allowPublicRegistration": {
+      "label": "Allow Public Registration",
+      "description": "If active, anyone with a valid account (e.g., Google) can sign in and create a user profile in the system. If disabled, only pre-registered users can log in."
+    },
+    "allowEmailLogin": {
+      "label": "Allow Login with Email/Password",
+      "description": "Allows the traditional login method with email and password."
+    },
+    "allowPhoneLogin": {
+      "label": "Allow Login with Phone",
+      "description": "Enables authentication via SMS or phone call."
+    },
+    "allowGoogleLogin": {
+      "label": "Allow Login with Google",
+      "description": "Allows users to log in with their Google accounts."
+    },
+    "allowAppleLogin": {
+      "label": "Allow Login with Apple",
+      "description": "Enables authentication with Apple ID."
+    },
+    "allowFacebookLogin": {
+      "label": "Allow Login with Facebook",
+      "description": "Allows login through Facebook accounts."
+    }
+  },
+  "contextAlert": {
+    "masterTitle": "Editing Global Settings",
+    "masterDescription": "These are the default settings for the entire system.",
+    "instanceTitle": "Editing Instance Settings: {instanceName}",
+    "instanceDescription": "You are overriding the default settings for this instance.",
+    "subInstanceTitle": "Editing Sub-instance Settings",
+    "subInstanceDescription": "You are overriding the parent instance settings for this sub-instance.",
+    "inheritingFromMasterTitle": "Inheriting Settings from Master",
+    "inheritingFromInstanceTitle": "Inheriting Settings from Instance",
+    "saveToCustomizeDescription": "Changes will be saved as a custom configuration for this context."
+  },
+  "revertButton": "Revert to Default",
+  "revertDialog": {
+    "title": "Confirm Reversion",
+    "description": "Are you sure you want to revert the settings to the inherited default? Customizations made for {contextName} will be lost.",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "toasts": {
+    "loadError": "Error loading settings.",
+    "saveSuccess": "Settings saved successfully!",
+    "saveError": "Error saving settings.",
+    "revertSuccess": "Settings reverted to default!",
+    "revertError": "Error reverting settings."
+  },
+  "sourceNameMaster": "Master",
+  "sourceNameInstance": "Instance"
+}

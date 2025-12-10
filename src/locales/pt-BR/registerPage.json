@@ -1,0 +1,34 @@
+
+{
+  "title": "Crie sua Conta",
+  "description": "Preencha os campos abaixo para criar sua conta.",
+  "emailLabel": "E-mail",
+  "emailPlaceholder": "seu@email.com",
+  "passwordLabel": "Senha",
+  "confirmPasswordLabel": "Confirme sua Senha",
+  "submitButton": "Criar Conta",
+  "submitting": "Criando...",
+  "alreadyHaveAccount": "Já tem uma conta?",
+  "loginLink": "Faça login",
+  "authDomainWarning": {
+    "title": "Autenticação Não Configurada",
+    "description": "Para que a autenticação funcione, você deve adicionar o domínio da sua aplicação à lista de domínios autorizados no <link>Console do Firebase</link>."
+  },
+  "validation": {
+    "email": "Por favor, insira um endereço de e-mail válido.",
+    "passwordLength": "A senha deve ter pelo menos 8 caracteres.",
+    "passwordMismatch": "As senhas não coincidem."
+  },
+  "messages": {
+    "successTitle": "Conta Criada!",
+    "successDescription": "Sua conta foi criada com sucesso.",
+    "verificationTitle": "Verifique seu E-mail",
+    "verificationText": "Um link de verificação foi enviado para o seu endereço de e-mail. Por favor, verifique sua caixa de entrada para continuar."
+  },
+  "errors": {
+    "title": "Erro no Cadastro",
+    "email-already-in-use": "Este e-mail já está em uso por outra conta.",
+    "weak-password": "A senha é muito fraca. Por favor, escolha uma mais forte.",
+    "default": "Ocorreu um erro desconhecido. Por favor, tente novamente."
+  }
+}

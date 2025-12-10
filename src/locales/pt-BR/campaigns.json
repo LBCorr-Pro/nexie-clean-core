@@ -1,0 +1,98 @@
+
+{
+  "title": "Campanhas de Splash Screen",
+  "description": "Crie e gerencie campanhas de tela de abertura para exibir aos usuários.",
+  "createButton": "Criar Nova Campanha",
+  "noCampaigns": "Nenhuma campanha criada.",
+  "table": {
+    "campaign": "Campanha",
+    "type": "Tipo",
+    "status": "Status",
+    "period": "Período",
+    "actions": "Ações"
+  },
+  "types": {
+    "app_opening": "Abertura de App",
+    "banner": "Banner"
+  },
+  "status": {
+    "active": "Ativa",
+    "inactive": "Inativa",
+    "draft": "Rascunho",
+    "archived": "Arquivada"
+  },
+  "actions": {
+    "report": "Relatório",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "dialog": {
+    "editTitle": "Editar Campanha",
+    "createTitle": "Criar Nova Campanha",
+    "description": "Preencha os detalhes da sua campanha de splash screen.",
+    "deleteTitle": "Confirmar Exclusão",
+    "deleteDescription": "Tem certeza de que deseja excluir a campanha \"{campaignName}\"? Esta ação não pode ser desfeita."
+  },
+  "form": {
+    "name": "Nome da Campanha",
+    "description": "Descrição (uso interno)",
+    "startDate": "Data de Início",
+    "endDate": "Data de Fim",
+    "status": "Status",
+    "birthdayCampaign": "É uma campanha de aniversário?",
+    "mainElementType": "Elemento Principal",
+    "mainElementTypes": {
+      "image": "Imagem",
+      "video": "Vídeo",
+      "text": "Texto"
+    },
+    "mainElementSource": "Fonte do Elemento Principal (URL ou Texto)",
+    "backgroundType": "Tipo de Fundo",
+    "backgroundTypes": {
+      "color": "Cor Sólida",
+      "gradient": "Gradiente",
+      "image": "Imagem",
+      "video": "Vídeo"
+    },
+    "backgroundColor": "Cor de Fundo",
+    "gradientFrom": "Cor 1 do Gradiente",
+    "gradientTo": "Cor 2 do Gradiente",
+    "backgroundSourceUrl": "URL da Imagem/Vídeo de Fundo",
+    "totalDuration": "Duração Total (segundos)",
+    "destinationPage": "Página de Destino",
+    "audienceType": "Público-Alvo",
+    "audienceTypes": {
+      "public": "Público (todos)",
+      "allLoggedIn": "Todos Logados",
+      "specificGroups": "Grupos Específicos"
+    },
+    "accessLevels": "Níveis de Acesso"
+  },
+  "reportDialog": {
+    "title": "Relatório de Visualizações",
+    "description": "Visualizações para a campanha \"{campaignName}\".",
+    "noViews": "Nenhuma visualização registrada ainda.",
+    "table": {
+      "user": "Usuário",
+      "viewedAt": "Visto em"
+    }
+  },
+  "tabs": {
+    "details": "Detalhes",
+    "content": "Conteúdo",
+    "audience": "Público-Alvo"
+  },
+  "toasts": {
+    "contextErrorTitle": "Erro de Contexto",
+    "contextErrorDesc": "Contexto de instância inválido para criar campanha.",
+    "loadError": "Erro ao carregar campanhas",
+    "updateSuccess": "Campanha atualizada com sucesso!",
+    "createSuccess": "Campanha criada com sucesso!",
+    "saveError": "Erro ao salvar a campanha",
+    "deleteSuccess": "Campanha excluída com sucesso!",
+    "deleteError": "Erro ao excluir a campanha",
+    "reportErrorTitle": "Erro no Relatório",
+    "reportGenericError": "Falha ao carregar dados do relatório.",
+    "reportErrorDesc": "Não foi possível carregar o relatório de visualizações."
+  }
+}

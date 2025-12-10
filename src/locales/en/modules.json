@@ -1,0 +1,46 @@
+
+{
+    "pageTitle": "Manage Modules",
+    "pageDescription": "Activate, deactivate, register, and edit the modules available in the system for the current context.",
+    "syncButton": "Sync Module Folders",
+    "masterContextAlertTitle": "Master Global Context",
+    "masterContextAlertDescription": "You are managing the global status of the modules. Changes here may affect all instances that do not have their own configuration.",
+    "permissionDenied": "You do not have permission to view module definitions.",
+    "table": {
+        "header": {
+            "module": "Module",
+            "registration": "Registration",
+            "globalStatus": "Global Status",
+            "instanceStatus": "Instance Status",
+            "actions": "Actions"
+        },
+        "body": {
+            "registered": "Registered",
+            "notRegistered": "Not Registered",
+            "active": "Active",
+            "inactive": "Inactive",
+            "notApplicable": "N/A",
+            "openMenu": "Open menu"
+        }
+    },
+    "actions": {
+        "register": "Register Module",
+        "edit": "Edit Definition",
+        "configure": "Configure",
+        "delete": "Delete Definition"
+    },
+    "deleteDialog": {
+        "title": "Confirm Deletion",
+        "description": "Are you sure you want to delete the module definition \"{moduleName}\"? This action cannot be undone and will remove the record from Firestore.",
+        "confirm": "Delete"
+    },
+    "toasts": {
+        "statusUpdateSuccess": "Module Status Updated!",
+        "updateError": "Error updating",
+        "syncPermissionError": "You do not have permission to import modules.",
+        "syncSuccessTitle": "Modules Synced!",
+        "syncErrorTitle": "Sync Failed",
+        "deleteSuccess": "Module Definition Deleted!",
+        "deleteError": "Error deleting"
+    }
+}

@@ -1,0 +1,466 @@
+
+{
+  "pageTitle": "Configurações de Aparência",
+  "pageDescription": "Personalize a aparência do sistema para corresponder à sua marca.",
+  "tabs": {
+    "identity": "Identidade",
+    "mainColors": "Cores Principais",
+    "background": "Fundo",
+    "typography": "Tipografia",
+    "components": "Componentes",
+    "shapesAndStyles": "Formas e Estilos",
+    "layoutAndEffects": "Layout e Efeitos",
+    "leftSidebar": "Barra Lateral Esquerda",
+    "topBar": "Barra Superior",
+    "bottomBar": "Barra Inferior"
+  },
+  "themePresets": {
+    "label": "Presets de Tema",
+    "placeholder": "Carregar um preset..."
+  },
+  "colorPresets": {
+    "label": "Presets de Cor",
+    "placeholder": "Carregar preset de cor...",
+    "placeholderEmpty": "Nenhum preset de cor salvo"
+  },
+  "toasts": {
+    "presetLoadedTitle": "Preset Carregado",
+    "presetLoadedDesc": "O preset foi carregado no formulário. Salve para aplicar.",
+    "cancelledTitle": "Ação Cancelada",
+    "cancelledDesc": "Nenhum preset foi salvo.",
+    "presetSavedTitle": "Preset Salvo",
+    "presetSavedDesc": "O preset \"{presetName}\" foi salvo com sucesso.",
+    "presetSaveErrorTitle": "Erro ao Salvar Preset",
+    "validationErrorTitle": "Erro de Validação",
+    "validationErrorDesc": "Por favor, corrija os erros no formulário.",
+    "saveSuccessTitle": "Aparência Salva",
+    "saveSuccessDesc": "Suas configurações de aparência foram salvas.",
+    "saveErrorTitle": "Erro ao Salvar"
+  },
+  "dialogs": {
+    "presetNamePrompt": "Digite um nome para este {type}:",
+    "themePreset": "Preset de Tema",
+    "colorPreset": "Preset de Cor",
+    "validationError": "O nome é obrigatório.",
+    "presetNameLabel": "Nome do Preset",
+    "presetNamePlaceholder": "Ex: Meu Tema Customizado"
+  },
+  "buttons": {
+    "revert": "Reverter para Padrão",
+    "saveAsColorPreset": "Salvar como Preset de Cor",
+    "saveAsThemePreset": "Salvar como Preset de Tema"
+  },
+  "identity": {
+    "browserIconsTitle": "Ícones do Navegador e PWA",
+    "browserIconsDescription": "Configure o favicon e os ícones para a Progressive Web App.",
+    "appleTouchIconLabel": "Apple Touch Icon",
+    "appleTouchIconDescription": "Ícone para iOS (180x180px).",
+    "pwaIcon192Label": "Ícone PWA (192x192)",
+    "pwaIcon192Description": "Ícone principal para a PWA.",
+    "pwaIcon512Label": "Ícone PWA (512x512)",
+    "pwaIcon512Description": "Ícone grande para a tela de boas-vindas da PWA."
+  },
+  "mainColors": {
+    "title": "Cores Principais de Destaque",
+    "primary": "Primária",
+    "primaryForeground": "Primária (Texto)",
+    "accent": "Destaque (Accent)",
+    "accentForeground": "Destaque (Texto)",
+    "destructive": "Destrutivo / Erro",
+    "destructiveForeground": "Destrutivo (Texto)"
+  },
+  "background": {
+    "title": "Fundo da Página",
+    "typeLabel": "Tipo de Fundo",
+    "solidColor": "Cor Sólida",
+    "gradient": "Gradiente",
+    "image": "Imagem",
+    "colorLabel": "Cor de Fundo",
+    "gradientColor1": "Cor 1",
+    "gradientColor2": "Cor 2",
+    "gradientDirection": "Direção do Gradiente",
+    "imageUrl": "URL da Imagem",
+    "animatedEffect": "Efeito Animado de Fundo",
+    "selectEffect": "Selecione um efeito...",
+    "effectDescription": "Aplica uma animação sutil sobre o fundo.",
+    "effects": {
+      "none": "Nenhum",
+      "aurora": "Aurora Boreal",
+      "stars": "Estrelas Cintilantes",
+      "bubbles": "Bolhas Flutuantes",
+      "diamonds": "Diamantes Flutuantes",
+      "lines": "Linhas Fluidas",
+      "grid": "Padrão de Grade",
+      "bokeh": "Desfoque Bokeh",
+      "waves": "Ondas Suaves",
+      "noise": "Ruído Sutil",
+      "floatingShapes": "Formas Flutuantes",
+      "animatedGrid": "Grade Animada",
+      "subtleDust": "Poeira Sutil"
+    }
+  },
+  "typography": {
+    "fontFamily": "Família da Fonte",
+    "fontSize": "Tamanho da Fonte",
+    "fontWeight": "Peso da Fonte",
+    "letterSpacing": "Espaçamento entre Letras",
+    "lineHeight": "Altura da Linha",
+    "fontWeightBody": "Peso do Corpo do Texto",
+    "lineHeightBody": "Altura da Linha do Corpo do Texto",
+    "pageTitle": { "title": "Título da Página" },
+    "pageSubtitle": { "title": "Subtítulo da Página" },
+    "sectionTitle": { "title": "Título de Seção" },
+    "bodyText": { "title": "Corpo do Texto" }
+  },
+  "components": {
+    "backgroundsTitle": "Fundos e Texto de Componentes",
+    "mainText": "Texto Principal",
+    "baseBackground": "Fundo Base (UI)",
+    "cardBackground": "Fundo do Card",
+    "cardText": "Texto do Card",
+    "popoverBackground": "Fundo do Popover/Modal",
+    "popoverText": "Texto do Popover/Modal",
+    "secondaryBackground": "Fundo Secundário",
+    "secondaryText": "Texto Secundário",
+    "mutedBackground": "Fundo Silenciado",
+    "mutedText": "Texto Silenciado",
+    "interactionsTitle": "Interações de Componentes",
+    "defaultBorder": "Borda Padrão",
+    "inputBorder": "Borda de Input",
+    "focusRing": "Anel de Foco"
+  },
+  "shapeAndStyle": {
+    "componentStyleTitle": "Estilo de Componente",
+    "borderStyleLabel": "Raio da Borda",
+    "selectStyle": "Selecione um estilo...",
+    "borderStyleDescription": "Controla o arredondamento de componentes como cards e inputs.",
+    "borderStyles": {
+      "sharp": "Reto (0px)",
+      "subtle": "Sutil (0.3rem)",
+      "smooth": "Suave (0.5rem)",
+      "rounded": "Arredondado (0.75rem)",
+      "pill": "Pílula (1.5rem)"
+    },
+    "tabsContainerStyleLabel": "Estilo do Contêiner de Abas",
+    "tabsContainerStyleDescription": "Estilo visual para o contêiner que abriga um conjunto de abas.",
+    "tabsContainerStyles": {
+      "default": "Padrão",
+      "softShadow": "Sombra Suave",
+      "connectedBorder": "Borda Conectada",
+      "simpleBorder": "Borda Simples"
+    },
+    "microInteractionsTitle": "Micro-interações",
+    "buttonHoverEffectLabel": "Efeito Hover de Botão",
+    "selectEffect": "Selecione um efeito...",
+    "buttonHoverEffectDescription": "Animação ao passar o mouse sobre os botões.",
+    "buttonHoverEffects": {
+      "none": "Nenhum",
+      "scale": "Aumentar",
+      "lift": "Elevar",
+      "glow": "Brilho"
+    },
+    "loadingEffectsTitle": "Efeitos de Carregamento (Skeleton)",
+    "skeletonBaseColor": "Cor Base do Skeleton",
+    "skeletonHighlightColor": "Cor de Destaque do Skeleton",
+    "animationSpeed": "Velocidade da Animação",
+    "animationSpeedDescription": "Velocidade da animação de carregamento.",
+    "skeletonPreview": "Pré-visualização"
+  },
+  "shared": {
+    "style": {
+      "label": "Estilo",
+      "options": {
+        "flat": "Plano",
+        "glass": "Vidro",
+        "bordered": "Com Borda",
+        "innerShadow": "Sombra Interna",
+        "outerShadow": "Sombra Externa",
+        "borderGradient": "Borda de Gradiente",
+        "borderAccent": "Borda de Destaque"
+      },
+      "description": "O estilo visual geral para este componente."
+    },
+    "glass": {
+      "opacityLabel": "Opacidade do Vidro",
+      "useBackgroundLabel": "Usar Fundo Principal como Cor Base",
+      "useBackgroundDescription": "Se desativado, usa a cor do Card como base para o efeito de vidro."
+    },
+    "border": {
+      "widthLabel": "Largura da Borda",
+      "gradientColor1": "Cor 1 do Gradiente da Borda",
+      "gradientColor2": "Cor 2 do Gradiente da Borda",
+      "gradientDirection": "Direção do Gradiente da Borda",
+      "colorLabel": "Cor da Borda"
+    },
+    "effects": {
+      "label": "Efeito de Texto",
+      "description": "Aplica um efeito visual especial ao texto.",
+      "options": {
+        "none": "Nenhum",
+        "gradient": "Gradiente",
+        "shadow": "Sombra",
+        "neon": "Brilho de Néon",
+        "emboss": "Relevo",
+        "deboss": "Baixo-relevo"
+      }
+    },
+    "gradient": {
+      "title": "Opções de Gradiente",
+      "color1": "Cor 1",
+      "color2": "Cor 2"
+    },
+    "shadow": {
+      "title": "Opções de Sombra",
+      "color": "Cor da Sombra"
+    },
+    "neon": {
+      "title": "Opções de Brilho de Néon",
+      "glowColor": "Cor do Brilho",
+      "glowStrength": "Força do Brilho"
+    },
+    "animations": {
+      "entryLabel": "Animação de Entrada",
+      "entryDescription": "Animação quando o texto aparece pela primeira vez.",
+      "repeatLabel": "Animação Repetida",
+      "repeatDescription": "Animação em loop após o texto ter aparecido.",
+      "entryOptions": {
+        "none": "Nenhuma",
+        "fadeIn": "Aparecer Gradualmente",
+        "zoomIn": "Aproximar",
+        "slideInUp": "Deslizar para Cima",
+        "slideInLeft": "Deslizar da Esquerda",
+        "lightWipeLeft": "Varredura de Luz (Esquerda)",
+        "lightWipeDiagonal": "Varredura de Luz (Diagonal)"
+      },
+      "repeatOptions": {
+        "none": "Nenhuma",
+        "pulse": "Pulsar",
+        "shimmerDiagonal": "Brilho Diagonal",
+        "auroraText": "Texto Aurora (Gradiente)"
+      }
+    }
+  },
+  "layoutEffects": {
+    "layoutVisibilityTitle": "Layout e Visibilidade",
+    "leftSidebarVisible": "Barra Lateral Esquerda",
+    "topBarVisible": "Barra Superior",
+    "bottomBarVisible": "Barra Inferior",
+    "topBarMode": "Modo da Barra Superior",
+    "bottomBarMode": "Modo da Barra Inferior",
+    "modes": { "fixed": "Fixo", "floating": "Flutuante" },
+    "elementStyleTitle": "Estilo de Elemento",
+    "layoutStyle": "Estilo de Componente",
+    "layoutStyleDescription": "Estilo visual geral para componentes como cards e barras laterais.",
+    "styles": { "default": "Padrão", "glassmorphism": "Vidro" },
+    "opacityLabel": "Opacidade (para Vidro)",
+    "opacityDescription": "Controla a transparência do efeito de vidro.",
+    "interactionFocusTitle": "Interação e Foco",
+    "focusRingStyle": "Estilo do Anel de Foco",
+    "focusRingStyleDescription": "Estilo do contorno em elementos focados.",
+    "ringStyles": { "default": "Sólido", "dashed": "Tracejado", "dotted": "Pontilhado" },
+    "focusRingWidth": "Largura do Anel de Foco",
+    "transitionPreview": "Pré-visualização da Transição",
+    "transitionBoxText": "Navegando..."
+  },
+  "sidebar": {
+    "style": {
+      "label": "Estilo",
+      "description": "Estilo visual para este componente.",
+      "options": {
+        "flat": "Plano",
+        "glass": "Vidro",
+        "bordered": "Com Borda",
+        "innerShadow": "Sombra Interna",
+        "outerShadow": "Sombra Externa",
+        "borderGradient": "Borda de Gradiente",
+        "borderAccent": "Borda de Destaque"
+      }
+    },
+    "branding": {
+      "title": "Marca",
+      "logoExpanded": "Logo (Expandido)",
+      "useMainLogo": "Usar Logo Principal",
+      "useCollapsedLogo": "Usar Logo Recolhido",
+      "customUrl": "URL/Upload Personalizado",
+      "logoCollapsed": "Logo (Recolhido/Ícone)",
+      "logoSize": "Tamanho do Logo",
+      "enableLink": "Habilitar Link no Logo/Nome?",
+      "linkToHome": "Link para a Página Inicial?",
+      "linkHref": "Destino do Link Personalizado",
+      "selectDestination": "Selecione uma página de destino...",
+      "destinationDescription": "Apenas páginas marcadas como 'pode ser página inicial' aparecerão aqui.",
+      "textSource": "Fonte do Texto",
+      "sources": { "full": "Nome Completo do Sistema", "nickname": "Apelido do Sistema", "custom": "Texto Personalizado" },
+      "customText": "Texto Personalizado",
+      "fontFamily": "Família da Fonte",
+      "fontWeight": "Peso da Fonte",
+      "letterSpacing": "Espaçamento entre Letras",
+      "color": "Cor"
+    },
+    "appName": {
+      "title": "Nome da Aplicação",
+      "show": "Mostrar Nome do App?",
+      "source": "Fonte do Texto",
+      "sources": { "full": "Nome Completo do Sistema", "nickname": "Apelido do Sistema", "custom": "Texto Personalizado" },
+      "customText": "Texto Personalizado",
+      "fontFamily": "Família da Fonte",
+      "fontWeight": "Peso da Fonte",
+      "letterSpacing": "Espaçamento entre Letras",
+      "color": "Cor",
+      "enableLink": "Habilitar Link?",
+      "linkToHome": "Link para a Página Inicial?",
+      "linkHref": "Destino do Link Personalizado",
+      "selectDestination": "Selecione uma página de destino...",
+      "destinationDescription": "Apenas páginas marcadas como 'pode ser página inicial' aparecerão aqui."
+    },
+    "background": {
+      "title": "Fundo",
+      "description": "Configure o estilo de fundo para este componente.",
+      "typeLabel": "Tipo de Fundo",
+      "solid": "Sólido",
+      "gradient": "Gradiente",
+      "gradientColor1": "Cor 1",
+      "colorLabel": "Cor",
+      "gradientColor2": "Cor 2",
+      "gradientDirection": "Direção do Gradiente"
+    },
+    "items": {
+      "title": "Itens do Menu",
+      "description": "Cores padrão para os itens do menu.",
+      "defaultColor": "Cor Padrão (Ícone e Texto)",
+      "activeBackground": "Fundo Ativo",
+      "activeColor": "Cor Ativa (Ícone e Texto)",
+      "notificationBadgeBg": "Fundo Badge Notificação",
+      "notificationBadgeText": "Texto Badge Notificação"
+    },
+    "sizes": {
+      "small": "Pequeno",
+      "medium": "Médio",
+      "large": "Grande"
+    }
+  },
+  "topBar": {
+    "style": {
+      "label": "Estilo",
+      "description": "Estilo visual para este componente.",
+      "options": {
+        "flat": "Plano",
+        "glass": "Vidro",
+        "bordered": "Com Borda",
+        "innerShadow": "Sombra Interna",
+        "outerShadow": "Sombra Externa",
+        "borderGradient": "Borda de Gradiente",
+        "borderAccent": "Borda de Destaque"
+      }
+    },
+    "content": {
+      "title": "Conteúdo da Barra Superior",
+      "description": "Configure o que aparece na barra de navegação superior."
+    },
+    "trigger": {
+      "title": "Gatilho do Menu",
+      "typeLabel": "Tipo de Gatilho",
+      "icon": "Ícone",
+      "image": "Imagem",
+      "iconName": "Nome do Ícone",
+      "iconColor": "Cor do Ícone",
+      "logoLabel": "Logo do Gatilho",
+      "useMainLogo": "Usar Logo Principal",
+      "useCollapsedLogo": "Usar Logo Recolhido",
+      "customUrl": "URL/Upload Personalizado"
+    },
+    "branding": {
+      "title": "Marca (Área Central)",
+      "typeLabel": "Tipo de Elemento",
+      "text": "Texto",
+      "image": "Imagem",
+      "textSource": "Fonte do Texto",
+      "sources": { "full": "Nome Completo do Sistema", "nickname": "Apelido do Sistema", "custom": "Texto Personalizado" },
+      "customText": "Texto Personalizado",
+      "fontFamily": "Família da Fonte",
+      "fontWeight": "Peso da Fonte",
+      "fontSize": "Tamanho da Fonte",
+      "letterSpacing": "Espaçamento entre Letras",
+      "textColor": "Cor do Texto",
+      "logoLabel": "Logo de Marca",
+      "useMainLogo": "Usar Logo Principal",
+      "useCollapsedLogo": "Usar Logo Recolhido",
+      "customUrl": "URL/Upload Personalizado",
+      "enableLink": "Habilitar Link?",
+      "linkToHome": "Link para a Página Inicial?",
+      "linkHref": "Destino do Link Personalizado",
+      "selectDestination": "Selecione uma página de destino...",
+      "destinationDescription": "Apenas páginas marcadas como 'pode ser página inicial' aparecerão aqui."
+    },
+    "background": {
+      "title": "Fundo",
+      "description": "Configure o estilo de fundo para este componente.",
+      "typeLabel": "Tipo de Fundo",
+      "solid": "Sólido",
+      "gradient": "Gradiente",
+      "gradientColor1": "Cor 1",
+      "colorLabel": "Cor",
+      "gradientColor2": "Cor 2",
+      "gradientDirection": "Direção do Gradiente"
+    },
+    "actionIcons": {
+      "title": "Ícones de Ação",
+      "color": "Cor do Ícone (Tema, Usuário, etc.)"
+    }
+  },
+  "bottomBar": {
+    "style": {
+      "label": "Estilo",
+      "description": "Estilo visual para este componente.",
+      "options": {
+        "flat": "Plano",
+        "glass": "Vidro",
+        "bordered": "Com Borda",
+        "innerShadow": "Sombra Interna",
+        "outerShadow": "Sombra Externa",
+        "borderGradient": "Borda de Gradiente",
+        "borderAccent": "Borda de Destaque"
+      }
+    },
+    "background": {
+      "title": "Fundo",
+      "description": "Configure o estilo de fundo para este componente.",
+      "typeLabel": "Tipo de Fundo",
+      "solid": "Sólido",
+      "gradient": "Gradiente",
+      "gradientColor1": "Cor 1",
+      "colorLabel": "Cor",
+      "gradientColor2": "Cor 2",
+      "gradientDirection": "Direção do Gradiente"
+    },
+    "colors": {
+      "title": "Cores dos Itens",
+      "iconActive": "Ícone (Ativo)",
+      "iconInactive": "Ícone (Inativo)",
+      "textActive": "Texto (Ativo)",
+      "textInactive": "Texto (Inativo)"
+    },
+    "layout": {
+      "title": "Layout e Espaçamento",
+      "horizontalAlign": "Alinhamento Horizontal",
+      "spaceAround": "Espaço ao Redor",
+      "spaceBetween": "Espaço Entre",
+      "spaceEvenly": "Espaço Uniforme",
+      "center": "Centro",
+      "start": "Início",
+      "end": "Fim",
+      "verticalAlign": "Alinhamento Vertical",
+      "alignCenter": "Centro",
+      "alignStart": "Início",
+      "alignEnd": "Fim",
+      "itemsGap": "Espaço entre Itens",
+      "itemsGapDescription": "Aplica-se apenas aos alinhamentos Centro, Início e Fim.",
+      "verticalPadding": "Preenchimento Vertical",
+      "verticalPaddingDescription": "Espaçamento vertical interno da barra.",
+      "iconSize": "Tamanho do Ícone",
+      "fontSize": "Tamanho da Fonte",
+      "iconLabelSpacing": "Espaçamento (Ícone/Rótulo)",
+      "fontFamily": "Família da Fonte"
+    }
+  }
+}

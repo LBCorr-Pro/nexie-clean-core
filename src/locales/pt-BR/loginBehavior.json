@@ -1,0 +1,35 @@
+{
+  "pageTitle": "Comportamento da Página de Login",
+  "pageDescription": "Controle o fluxo de acesso e a página inicial padrão após o login.",
+  "common": {
+    "save": "Salvar Alterações"
+  },
+  "form": {
+    "loginPageActive": {
+      "label": "Página de Login Ativa?",
+      "description": "Se inativo, usuários serão redirecionados para a URL de Fallback."
+    },
+    "fallbackPageUrl": {
+      "label": "URL de Fallback",
+      "description": "Página para onde o usuário é levado se a de login estiver inativa.",
+      "loading": "Carregando páginas...",
+      "placeholder": "Selecione uma página...",
+      "noPages": "Nenhuma página configurada"
+    }
+  },
+  "infoBox": "Estas configurações afetam diretamente o fluxo de autenticação e o primeiro acesso do usuário.",
+  "toasts": {
+    "loadError": "Erro ao carregar configurações.",
+    "saveSuccessTitle": "Configurações Salvas!",
+    "saveSuccessDescription": "O comportamento da página de login foi atualizado.",
+    "saveErrorTitle": "Erro ao Salvar"
+  },
+  "contextAlert": {
+    "instanceTitle": "Editando Configurações da Instância",
+    "instanceDescription": "Você está sobrescrevendo as configurações padrão para esta instância.",
+    "subInstanceTitle": "Editando Configurações da Sub-instância",
+    "subInstanceDescription": "Você está sobrescrevendo as configurações da instância pai para esta sub-instância.",
+    "inheritingFromMasterTitle": "Herdando Configurações do Master",
+    "saveToCustomizeDescription": "As alterações serão salvas como uma configuração personalizada para este contexto."
+  }
+}

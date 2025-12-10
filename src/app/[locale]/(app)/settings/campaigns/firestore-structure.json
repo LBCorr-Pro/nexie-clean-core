@@ -1,0 +1,52 @@
+{
+  "description": "Defines the Firestore structure for the Splash Screen Campaigns module.",
+  "campaigns_collection": {
+    "collection_path": "Global/master/config/splash_screen_campaigns",
+    "description": "Stores individual Splash Screen campaigns. The application logic will determine which active campaign to show based on type, schedule, and targeting.",
+    "document_id_example": "auto_generated_campaign_id",
+    "fields": {
+      "campaignName": { "type": "string", "description": "User-friendly name for the campaign (e.g., 'Promoção de Natal')." },
+      "campaignType": { "type": "string", "enum": ["app_opening", "banner"], "default": "banner", "description": "'app_opening' for the main splash, 'banner' for secondary messages." },
+      "status": { "type": "string", "enum": ["active", "inactive", "draft"], "default": "draft" },
+      "startDate": { "type": "timestamp", "optional": true, "description": "When the campaign becomes active." },
+      "endDate": { "type": "timestamp", "optional": true, "description": "When the campaign deactivates." },
+      "displayFrequency": { "type": "string", "enum": ["once_ever", "once_per_day", "once_per_session", "every_time"], "default": "once_per_day" },
+      "targetAudience": {
+        "type": "map",
+        "optional": true,
+        "description": "Defines who will see this campaign. If omitted, it's visible to everyone.",
+        "fields": {
+          "user_ids": { "type": "array", "items": "string", "optional": true, "description": "Array of specific Firebase UIDs." },
+          "access_level_ids": { "type": "array", "items": "string", "optional": true, "description": "Array of Access Level Template IDs (groups)." }
+        }
+      },
+      "settings": {
+        "type": "map",
+        "description": "The actual content and appearance settings for the splash screen, identical to the previous structure.",
+        "fields": {
+          "main_element_type": { "type": "string", "enum": ["image", "text"], "default": "image" },
+          "main_element_source": { "type": "string", "optional": true },
+          "background_type": { "type": "string", "enum": ["color", "gradient", "image", "video"], "default": "color" },
+          "background_source_color": { "type": "string", "optional": true },
+          "total_duration_seconds": { "type": "number", "default": 5 },
+          "destination_page_default": { "type": "string", "default":"/login" },
+          "phrases": { "type": "array", "description": "Array of phrase configuration objects.", "optional": true }
+        }
+      },
+      "createdAt": { "type": "timestamp" },
+      "updatedAt": { "type": "timestamp" }
+    },
+    "subcollections": {
+      "views": {
+        "collection_path_template": "Global/master/config/splash_screen_campaigns/{campaignId}/views",
+        "description": "Logs each time a user views this campaign.",
+        "document_id_example": "auto_generated_view_log_id",
+        "fields": {
+          "userId": { "type": "string", "description": "The UID of the user who saw the campaign." },
+          "viewedAt": { "type": "timestamp" },
+          "instanceContext": { "type": "string", "optional": true, "description": "Instance ID if the user was acting as an instance." }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Formas de Acesso",
+  "pageDescription": "Controle como os usuários podem se registrar e fazer login no sistema.",
+  "common": {
+    "save": "Salvar Alterações"
+  },
+  "fields": {
+    "allowInvitation": {
+      "label": "Permitir Registro por Convite",
+      "description": "Se ativo, usuários podem se registrar usando um código de convite."
+    },
+    "allowPublicRegistration": {
+      "label": "Permitir Registro Público",
+      "description": "Se ativo, qualquer pessoa com uma conta válida (ex: Google) pode fazer login e criar um perfil de usuário no sistema. Se desativado, apenas usuários pré-cadastrados podem fazer login."
+    },
+    "allowEmailLogin": {
+      "label": "Permitir Login com E-mail/Senha",
+      "description": "Permite o método de login tradicional com e-mail e senha."
+    },
+    "allowPhoneLogin": {
+      "label": "Permitir Login com Telefone",
+      "description": "Habilita a autenticação via SMS ou chamada telefônica."
+    },
+    "allowGoogleLogin": {
+      "label": "Permitir Login com Google",
+      "description": "Permite que os usuários façam login com suas contas do Google."
+    },
+    "allowAppleLogin": {
+      "label": "Permitir Login com Apple",
+      "description": "Habilita a autenticação com Apple ID."
+    },
+    "allowFacebookLogin": {
+      "label": "Permitir Login com Facebook",
+      "description": "Permite o login através de contas do Facebook."
+    }
+  },
+  "contextAlert": {
+    "masterTitle": "Editando Configurações Globais",
+    "masterDescription": "Estas são as configurações padrão para todo o sistema.",
+    "instanceTitle": "Editando Configurações da Instância: {instanceName}",
+    "instanceDescription": "Você está sobrescrevendo as configurações padrão para esta instância.",
+    "subInstanceTitle": "Editando Configurações da Sub-instância",
+    "subInstanceDescription": "Você está sobrescrevendo as configurações da instância pai para esta sub-instância.",
+    "inheritingFromMasterTitle": "Herdando Configurações do Master",
+    "inheritingFromInstanceTitle": "Herdando Configurações da Instância",
+    "saveToCustomizeDescription": "As alterações serão salvas como uma configuração personalizada para este contexto."
+  },
+  "revertButton": "Reverter para Padrão",
+  "revertDialog": {
+    "title": "Confirmar Reversão",
+    "description": "Tem certeza de que deseja reverter as configurações para o padrão herdado? As personalizações feitas para {contextName} serão perdidas.",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  },
+  "toasts": {
+    "loadError": "Erro ao carregar configurações.",
+    "saveSuccess": "Configurações salvas com sucesso!",
+    "saveError": "Erro ao salvar as configurações.",
+    "revertSuccess": "Configurações revertidas para o padrão!",
+    "revertError": "Erro ao reverter as configurações."
+  },
+  "sourceNameMaster": "Master",
+  "sourceNameInstance": "Instância"
+}

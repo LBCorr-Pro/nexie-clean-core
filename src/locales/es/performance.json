@@ -1,0 +1,77 @@
+
+{
+  "pageTitle": "Rendimiento y Caché",
+  "pageDescription": "Herramientas para limpiar la caché de la aplicación y optimizar el rendimiento.",
+  "permissionDenied": "No tienes permiso para acceder a las herramientas de rendimiento.",
+  "dexieCard": {
+    "title": "Caché de Datos de la Aplicación (Dexie)",
+    "description": "La aplicación guarda en caché configuraciones como la apariencia y los menús en la base de datos local de tu navegador (IndexedDB/Dexie) para acelerar la carga. Limpiar esta caché obliga a la aplicación a obtener los datos más recientes del servidor en la siguiente carga.",
+    "buttonText": "Limpiar Caché de la Aplicación",
+    "alertTitle": "Esta es una acción agresiva.",
+    "alertDescription": "Limpiará todas las configuraciones guardadas localmente en caché (apariencia, menús, etc.) para TODOS los usuarios en este navegador. Úsalo si estás experimentando inconsistencias de datos."
+  },
+  "browserCacheCard": {
+    "title": "Almacenamiento del Navegador",
+    "description": "Gestiona los datos almacenados directamente en el Local Storage y Session Storage de tu navegador.",
+    "appCacheTitle": "Caché Específica de la Aplicación",
+    "appCacheDescription": "Limpia una clave de caché específica utilizada por la aplicación ('<code>'{cacheKey}'</code>'). Esta es una acción segura.",
+    "appCacheButton": "Limpiar Clave de App",
+    "localStorageTitle": "LocalStorage Completo",
+    "localStorageAlertTitle": "¡Acción Destructiva!",
+    "localStorageAlertDescription": "Esto limpiará TODOS los datos almacenados por este dominio en el Local Storage, incluyendo las sesiones de inicio de sesión de otras pestañas.",
+    "localStorageButton": "Limpiar Todo el Local Storage",
+    "sessionStorageTitle": "SessionStorage Completo",
+    "sessionStorageAlertTitle": "¡Acción Destructiva!",
+    "sessionStorageAlertDescription": "Esto limpiará TODOS los datos de la sesión actual, lo que podría causar un comportamiento inesperado en otras pestañas abiertas.",
+    "sessionStorageButton": "Limpiar Session Storage"
+  },
+  "filesCacheCard": {
+    "title": "Caché de Archivos del Navegador",
+    "description": "Para asegurarte de que estás viendo la última versión de los archivos de la aplicación (como JavaScript y CSS), se recomienda realizar una recarga forzada.",
+    "p1": "Esta acción limpia los archivos almacenados en caché por tu navegador, forzándolo a descargar las versiones más nuevas del servidor.",
+    "p2": "Usa la funcionalidad integrada de tu navegador:",
+    "windowsLinux": "En Windows/Linux: '<code>'Ctrl'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "mac": "En macOS: '<code>'Cmd'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "p3": "Esto es útil después de que se haya desplegado una nueva versión de la aplicación para asegurarte de que no estás ejecutando código antiguo."
+  },
+  "toasts": {
+    "dexie": {
+      "successTitle": "Caché de Aplicación Limpiada",
+      "successDescription": "Todos los datos locales han sido eliminados correctamente. Por favor, recarga la página.",
+      "errorTitle": "Error al Limpiar la Caché",
+      "errorDescription": "No se pudo limpiar la base de datos local de la aplicación."
+    },
+    "appCache": {
+      "successTitle": "Clave de Caché de App Limpiada",
+      "successDescription": "La clave específica '{cacheKey}' ha sido eliminada del Local Storage.",
+      "errorTitle": "Error al Limpiar la Clave"
+    },
+    "localStorage": {
+      "successTitle": "LocalStorage Limpiado",
+      "successDescription": "Todos los datos del Local Storage para este dominio han sido eliminados. Es posible que necesites iniciar sesión de nuevo.",
+      "errorTitle": "Error al Limpiar LocalStorage"
+    },
+    "sessionStorage": {
+      "successTitle": "SessionStorage Limpiado",
+      "successDescription": "Todos los datos de esta sesión han sido eliminados.",
+      "errorTitle": "Error al Limpiar SessionStorage"
+    }
+  },
+  "dialogs": {
+    "dexie": {
+      "title": "Confirmar Limpieza de Caché",
+      "description": "Esto eliminará todos los datos locales en caché de la aplicación, incluidas las configuraciones de apariencia y menú. Se cerrará tu sesión. ¿Estás seguro?",
+      "actionText": "Sí, Limpiar Todo"
+    },
+    "localStorage": {
+      "title": "Confirmar Eliminación Completa",
+      "description": "Estás a punto de eliminar TODOS los datos del Local Storage para este dominio. Esto cerrará tu sesión y podría afectar otras pestañas abiertas. Procede con precaución.",
+      "actionText": "Sí, Eliminar Todo"
+    },
+    "sessionStorage": {
+      "title": "Confirmar Eliminación de Sesión",
+      "description": "Esto limpiará todos los datos de la sesión actual del navegador. Esto podría causar un comportamiento inesperado.",
+      "actionText": "Sí, Limpiar Sesión"
+    }
+  }
+}

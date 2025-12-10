@@ -1,0 +1,64 @@
+{
+  "access": {
+    "restrictedTitle": "Acesso Restrito",
+    "masterContextRequiredTitle": "Contexto Master Global Necessário",
+    "masterContextRequiredDescription": "Esta funcionalidade é exclusiva do contexto Master. Para editar, por favor, retorne ao contexto Master Global (sem estar atuando como uma instância).",
+    "permissionNeededTitle": "Permissão Necessária",
+    "permissionNeededDescription": "Você não tem permissão para acessar estas ferramentas."
+  },
+  "debugCard": {
+    "title": "Depuração e Desenvolvimento",
+    "description": "Ferramentas e opções para desenvolvedores. Estes controles não serão visíveis em um ambiente de produção.",
+    "actingBarLabel": "Mostrar Barra de Troca de Contexto",
+    "logWindowLabel": "Mostrar Janela de Logs"
+  },
+  "actionsCard": {
+    "title": "Ações do Sistema",
+    "warning": "Aviso:",
+    "description": "As ações abaixo modificam diretamente o banco de dados ou os arquivos do sistema e devem ser usadas com extrema cautela."
+  },
+  "syncModules": {
+    "title": "Sincronizar/Importar Módulos",
+    "description": "Esta ação lê o diretório 'src/modules' e atualiza o manifesto manual do sistema ('known-module-folders.ts'). Use isso após adicionar uma nova pasta de módulo para torná-lo disponível para registro.",
+    "button": "Sincronizar Pastas de Módulos",
+    "permissionNeeded": "Você não tem permissão para importar módulos."
+  },
+  "seedPresets": {
+    "title": "Popular Presets de Editor Padrão",
+    "description": "Preenche o banco de dados com os presets de conteúdo padrão para os editores de texto rico (Lexical e TipTap). Isso é útil para a configuração inicial ou para restaurar templates de conteúdo padrão.",
+    "button": "Popular Presets de Editor",
+    "dialogTitle": "Confirmar Carregamento",
+    "dialogDescription": "Isso irá adicionar ou sobrescrever os presets de editor padrão. Tem certeza?",
+    "dialogAction": "Confirmar Carregamento"
+  },
+  "seedManual": {
+    "title": "Popular Artigos do Manual Padrão",
+    "description": "Preenche o banco de dados com os artigos padrão para o manual do usuário. Esta ação pode ser usada para configurar a documentação de ajuda pela primeira vez.",
+    "button": "Popular Artigos do Manual",
+    "dialogTitle": "Confirmar Carregamento",
+    "dialogDescription": "Isso irá adicionar ou sobrescrever os artigos do manual padrão. Tem certeza?",
+    "dialogAction": "Confirmar Carregamento"
+  },
+  "cleanupModules": {
+    "title": "Limpar Definições de Módulos",
+    "destructiveAction": "Ação Destrutiva!",
+    "description": "Esta ação escaneia todas as definições de módulos e remove duplicatas ou documentos obsoletos, consolidando-os em um estado limpo com base em seu ID único (slug).",
+    "button": "Limpar e Consolidar",
+    "dialogTitle": "Confirmar Limpeza",
+    "dialogDescription": "Isso excluirá permanentemente definições de módulos duplicadas ou antigas. Esta ação não pode ser desfeita.",
+    "dialogAction": "Sim, Consolidar"
+  },
+  "confirmDialog": {
+    "defaultActionText": "Confirmar",
+    "cancel": "Cancelar"
+  },
+  "toasts": {
+    "permissionDenied": "Permissão Negada",
+    "syncSuccessTitle": "Módulos Sincronizados!",
+    "syncErrorTitle": "Sincronização Falhou",
+    "cleanupSuccessTitle": "Limpeza Concluída!",
+    "cleanupErrorTitle": "Limpeza Falhou",
+    "seedSuccessTitle": "Carregamento Bem-sucedido!",
+    "seedErrorTitle": "Carregamento Falhou"
+  }
+}

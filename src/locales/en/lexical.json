@@ -1,0 +1,104 @@
+{
+  "title": "Lexical Editor Module",
+  "description": "Configure the toolbar and test the rich text editor based on the Lexical framework.",
+  "configureToolbar": "Configure Toolbar",
+  "toolbarAccordionTitle": "Toolbar Tools",
+  "addSeparatorButton": "Add Separator",
+  "separatorLabel": "Separator",
+  "saveDefaultConfigButton": "Save Default Configuration",
+  "previewTitle": "Editor Preview",
+  "placeholder": "Start writing here to test...",
+  "configureDenied": "You do not have permission to configure the toolbar.",
+  "presets": {
+    "accordionTitle": "Manage Presets",
+    "savePresetButton": "Save as Preset",
+    "noPresetsMessage": "No presets saved.",
+    "loadPreset": "Load Preset",
+    "actions": {
+      "srLabel": "Actions for {presetName}",
+      "load": "Load",
+      "overwrite": "Overwrite with Current",
+      "delete": "Delete"
+    }
+  },
+  "dialogs": {
+    "savePreset": {
+      "title": "Save Configuration as Preset",
+      "description": "Give a name to the current toolbar configuration.",
+      "label": "Preset Name",
+      "cancelButton": "Cancel",
+      "savingButton": "Saving...",
+      "contextLabel": "Save preset for which context?",
+      "noContextOption": "Save as a Generic Preset",
+      "customNameLabel": "Preset Name (if generic)"
+    },
+    "deletePreset": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete the preset \"{name}\"? This action cannot be undone.",
+      "cancelButton": "Cancel",
+      "deleteButton": "Delete"
+    },
+    "overwritePreset": {
+      "title": "Overwrite Preset?",
+      "description": "A preset named \"{name}\" already exists. Do you want to replace it with the current configuration?",
+      "cancelButton": "Cancel",
+      "confirmButton": "Overwrite"
+    }
+  },
+  "toasts": {
+    "loadConfigErrorTitle": "Error Loading Configuration",
+    "loadConfigErrorDesc": "Using default settings.",
+    "saveConfigSuccessTitle": "Default Configuration Saved!",
+    "saveConfigSuccessDesc": "The editor's toolbar has been updated.",
+    "saveConfigErrorTitle": "Error Saving",
+    "savePresetSuccessTitle": "Preset Saved!",
+    "savePresetSuccessDesc": "The preset \"{name}\" was saved successfully.",
+    "invalidPresetNameTitle": "Invalid Name",
+    "invalidPresetNameDesc": "Please enter a name for the preset.",
+    "savePresetErrorTitle": "Error Saving Preset",
+    "loadPresetsErrorTitle": "Error",
+    "loadPresetsErrorDesc": "Could not load presets.",
+    "loadPresetSuccessTitle": "Preset Loaded",
+    "loadPresetSuccessDesc": "The configuration \"{name}\" has been applied. Click 'Save Default' to confirm.",
+    "deletePresetSuccessTitle": "Preset Deleted!",
+    "deletePresetErrorTitle": "Error Deleting"
+  },
+  "toolbar": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "strikethrough": "Strikethrough",
+    "code": "Inline Code",
+    "h1": "Heading 1",
+    "h2": "Heading 2",
+    "h3": "Heading 3",
+    "alignLeft": "Align Left",
+    "alignCenter": "Align Center",
+    "alignRight": "Align Right",
+    "alignJustify": "Justify",
+    "bulletList": "Bulleted List",
+    "numberList": "Numbered List",
+    "checkList": "Checklist",
+    "quote": "Quote",
+    "codeBlock": "Code Block",
+    "link": "Insert Link",
+    "image": "Insert Image",
+    "fontFamily": "Font Family",
+    "fontSize": "Font Size",
+    "fontColor": "Font Color",
+    "fontBgColor": "Font Background Color",
+    "prompts": {
+      "enterUrl": "Enter URL"
+    },
+    "placeholders": {
+      "fontFamily": "Font...",
+      "fontSize": "Size..."
+    },
+    "ariaLabels": {
+      "fontColor": "Select font color",
+      "fontBgColor": "Select font background color"
+    }
+  }
+}

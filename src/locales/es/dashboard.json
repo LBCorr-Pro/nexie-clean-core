@@ -1,0 +1,53 @@
+
+{
+  "title": "Panel",
+  "welcome": "¡Bienvenido a tu panel! Aquí puedes ver un resumen de tu actividad.",
+  "logoAlt": "Logo de Nexie",
+  "debug": {
+    "title": "Información de Depuración",
+    "description": "Datos de la sesión actual para fines de desarrollo.",
+    "userSection": "Usuario:",
+    "uid": "UID:",
+    "name": "Nombre:",
+    "email": "Email:",
+    "notApplicable": "N/D",
+    "contextSection": "Contexto:",
+    "isMaster": "¿Es Maestro?",
+    "yes": "Sí",
+    "no": "No",
+    "actingAs": "Actuando como:",
+    "permissionsSection": "Permisos ({count}):",
+    "loadingPermissions": "Cargando permisos...",
+    "noPermissions": "No se encontraron permisos.",
+    "loadingSettings": "Cargando configuraciones...",
+    "appSettings": {
+        "title": "Configuración del Sistema:",
+        "loading": "Cargando configuraciones...",
+        "multilingual": "¿Multilenguaje Activo?",
+        "defaultLanguage": "Idioma Predeterminado del Sistema",
+        "defaultHomepage": "Página de Inicio Predeterminada"
+    },
+    "clientInfo": {
+        "title": "Información del Cliente (LocalStorage):",
+        "language": "Idioma (debug_language):",
+        "theme": "Tema (theme):"
+    },
+    "dbPreferences": {
+      "title": "Preferencias de la Base de Datos:",
+      "language": "Idioma (settings.language):",
+      "theme": "Tema (settings.themePreference):"
+    },
+    "generalSettingsDebug": {
+      "title": "Herencia de Configuraciones Generales:",
+      "hasName": "¿Tiene Nombre Definido?",
+      "loadedFrom": "Nombre Cargado desde Ruta:",
+      "masterInstanceExists": "¿Existe Instancia Maestra?",
+      "masterInstanceHasName": "¿Instancia Maestra Tiene Nombre?",
+      "masterInstancePath": "Ruta de Instancia Maestra:",
+      "masterInstanceNameInDB": "Nombre en Instancia Maestra:",
+      "globalMasterNameInDB": "Nombre en Maestro Global:",
+      "resolvedTopBarName": "Nombre Final (Barra Superior):",
+      "resolvedMenuName": "Nombre Final (Menú):"
+    }
+  }
+}

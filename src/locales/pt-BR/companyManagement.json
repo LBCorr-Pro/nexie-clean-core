@@ -1,0 +1,68 @@
+
+{
+  "title": "Gerenciamento de Empresas",
+  "description": "Crie, visualize e gerencie os registros de empresas globais no sistema.",
+  "createButton": "Cadastrar Nova Empresa",
+  "searchPlaceholder": "Buscar por nome fantasia, razão social ou CNPJ...",
+  "noCompaniesFound": "Nenhuma empresa encontrada para sua busca.",
+  "noCompaniesCreated": "Nenhuma empresa cadastrada ainda.",
+  "totalCompanies": "Total de empresas: {count}",
+  "active": "Ativa",
+  "inactive": "Inativa",
+  "tableHeaders": {
+    "tradeName": "Nome Fantasia",
+    "legalName": "Razão Social",
+    "cnpj": "CNPJ",
+    "status": "Status",
+    "createdAt": "Criada em",
+    "actions": "Ações"
+  },
+  "actions": {
+    "edit": "Editar",
+    "delete": "Excluir",
+    "openMenu": "Abrir menu"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirmar Exclusão",
+    "deleteConfirmDescription": "Tem certeza que deseja excluir a empresa \"{companyName}\"? Esta ação não pode ser desfeita.",
+    "deleteConfirmAction": "Excluir"
+  },
+  "createTitle": "Cadastrar Nova Empresa Global",
+  "createDescription": "Preencha os campos para adicionar uma nova empresa no nível Master.",
+  "editTitle": "Editar Empresa Global",
+  "editDescription": "Editando o perfil de uma empresa global do sistema.",
+  "deleting": "Excluindo...",
+  "deleteSuccess": "Empresa excluída com sucesso!",
+  "savingChanges": "Salvando alterações...",
+  "creatingCompany": "Criando empresa...",
+  "saveSuccess": "Empresa salva com sucesso!",
+  "createSuccess": "Empresa criada com sucesso!",
+  "errors": {
+    "accessDenied": "Você não tem permissão para visualizar empresas.",
+    "fetch": "Falha ao carregar empresas.",
+    "deletePermission": "Você não tem permissão para excluir empresas.",
+    "delete": "Falha ao excluir empresa: {error}",
+    "required": "Este campo é obrigatório"
+  },
+  "saveCompanyButton": "Salvar Empresa",
+  "saveChangesButton": "Salvar Alterações",
+  "form": {
+    "fields": {
+      "companyName": "Razão Social",
+      "fantasyName": "Nome Fantasia",
+      "cnpj": "CNPJ",
+      "email": "E-mail Principal",
+      "phone": "Telefone",
+      "website": "Website",
+      "status": "Status",
+      "addressGroup": "Endereço",
+      "addressStreet": "Rua",
+      "addressNumber": "Número",
+      "addressComplement": "Complemento",
+      "addressNeighborhood": "Bairro",
+      "addressCity": "Cidade",
+      "addressState": "Estado",
+      "addressZipCode": "CEP"
+    }
+  }
+}

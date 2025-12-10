@@ -1,0 +1,50 @@
+/* src/styles/bottom-bar.css */
+
+/* --- STYLES APPLIED BY data-style ATTRIBUTE --- */
+div[aria-label="Navegação Inferior"] > nav[data-style='flat'] { /* No extra styles needed besides background */ }
+
+div[aria-label="Navegação Inferior"] > nav[data-style='glass'] {
+  border-top-width: var(--bottom-bar-border-width, 1px);
+  border-color: hsla(var(--bottom-bar-border-color-1, var(--border)), 0.2);
+}
+
+div[aria-label="Navegação Inferior"] > nav[data-style='bordered'] {
+  border-top-width: var(--bottom-bar-border-width, 1px);
+  border-color: hsl(var(--bottom-bar-border-color-1));
+}
+
+div[aria-label="Navegação Inferior"] > nav[data-style='inner-shadow'] {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+div[aria-label="Navegação Inferior"] > nav[data-style='outer-shadow'] {
+  box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+div[aria-label="Navegação Inferior"] > nav[data-style='border-gradient'] {
+  border-style: solid;
+  border-image-slice: 1 !important;
+  border-image-source: linear-gradient(var(--bottom-bar-border-gradient-direction, to top), hsl(var(--bottom-bar-border-color-1)), hsl(var(--bottom-bar-border-color-2))) !important;
+  border-top-width: var(--bottom-bar-border-width, 1px);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+div[aria-label="Navegação Inferior"] > nav[data-style='border-accent'] {
+  border-top-width: var(--bottom-bar-border-width, 1px);
+  border-color: hsl(var(--accent)) !important;
+}
+
+/* --- TAB STYLING FOR INTEGRATED LOOK --- */
+#bottom-bar-tabs-container button[data-active='true'] {
+    /* Make the active tab visually connect by covering the nav bar's top border */
+    border-bottom-color: transparent !important;
+    margin-bottom: -1px; /* Pull the tab down to overlap the border */
+}
+
+/* --- Typography for Bottom Bar --- */
+div[aria-label="Navegação Inferior"] > nav span {
+  font-size: var(--bottom-bar-font-size, var(--font-size-body)) !important;
+  font-family: var(--bottom-bar-font-family, var(--font-family-body));
+}

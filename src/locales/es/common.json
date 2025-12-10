@@ -1,0 +1,21 @@
+{
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "back": "Volver",
+  "goBackLabel": "Volver atrás",
+  "manage": "Gestionar",
+  "edit": "Editar",
+  "delete": "Eliminar",
+  "confirm": "Confirmar",
+  "noResults": "No se encontraron resultados.",
+  "accessDenied": {
+    "title": "Acceso Denegado",
+    "description": "No tienes permiso para acceder a esta página."
+  },
+  "statusActive": "Activo",
+  "statusInactive": "Inactivo",
+  "notAvailable": "N/D",
+  "upload": "Subir",
+  "sending": "Enviando...",
+  "uploadDisabled": "La carga de archivos está deshabilitada en la configuración del módulo de almacenamiento."
+}

@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Planes de Suscripción",
+  "pageDescription": "Crea y gestiona los planes que se pueden asignar a las instancias.",
+  "createNew": "Crear Nuevo Plan",
+  "searchPlaceholder": "Buscar por nombre...",
+  "noResults": "No se encontraron planes.",
+  "table": {
+    "name": "Nombre",
+    "status": "Estado",
+    "order": "Orden",
+    "actions": "Acciones"
+  },
+  "statusBadge": {
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "legacy": "Legado"
+  },
+  "editAction": "Editar",
+  "deleteAction": "Eliminar",
+  "accessDenied": {
+    "title": "Acceso Denegado",
+    "message": "La gestión de planes es una función de nivel Maestro."
+  },
+  "deleteDialog": {
+    "title": "Confirmar Eliminación",
+    "description": "¿Estás seguro de que deseas eliminar el plan \"{planName}\"? Esta acción no se puede deshacer.",
+    "confirm": "Eliminar"
+  },
+  "toasts": {
+    "deleteSuccess": "¡Plan eliminado con éxito!",
+    "deleteError": "Error al eliminar el plan."
+  },
+  "create": {
+    "pageTitle": "Crear Nuevo Plan",
+    "pageDescription": "Establece un nombre y una descripción. Después de guardar, serás redirigido a la página de edición completa.",
+    "form": {
+      "nameLabel": "Nombre del Plan",
+      "namePlaceholder": "Ej: Plan Básico, Plan Pro",
+      "descriptionLabel": "Descripción (Opcional)",
+      "descriptionPlaceholder": "Para quién o para qué es este plan.",
+      "statusLabel": "Estado",
+      "orderLabel": "Orden"
+    },
+    "saveAndContinue": "Guardar y Continuar"
+  },
+  "edit": {
+    "pageTitle": "Editar Plan",
+    "pageDescription": "Ajusta los detalles, características y permisos de este plan.",
+    "successTitle": "Plan Actualizado",
+    "errorTitle": "Error al Actualizar",
+    "tabs": {
+      "details": "Detalles",
+      "features": "Características",
+      "permissions": "Permisos"
+    },
+    "detailsForm": {
+      "title": "Detalles del Plan",
+      "description": "Información básica del plan de suscripción."
+    }
+  },
+  "common": {
+    "save": "Guardar"
+  }
+}

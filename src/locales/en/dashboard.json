@@ -1,0 +1,53 @@
+
+{
+  "title": "Dashboard",
+  "welcome": "Welcome to your dashboard! Here you can see a summary of your activity.",
+  "logoAlt": "Nexie Logo",
+  "debug": {
+    "title": "Debug Information",
+    "description": "Current session data for development purposes.",
+    "userSection": "User:",
+    "uid": "UID:",
+    "name": "Name:",
+    "email": "Email:",
+    "notApplicable": "N/A",
+    "contextSection": "Context:",
+    "isMaster": "Is Master?",
+    "yes": "Yes",
+    "no": "No",
+    "actingAs": "Acting as:",
+    "permissionsSection": "Permissions ({count}):",
+    "loadingPermissions": "Loading permissions...",
+    "noPermissions": "No permissions found.",
+    "loadingSettings": "Loading settings...",
+    "appSettings": {
+      "title": "System Settings:",
+      "loading": "Loading settings...",
+      "multilingual": "Multilingual Active?",
+      "defaultLanguage": "System Default Language",
+      "defaultHomepage": "Default Homepage"
+    },
+    "clientInfo": {
+      "title": "Client Info (LocalStorage):",
+      "language": "Language (debug_language):",
+      "theme": "Theme (theme):"
+    },
+    "dbPreferences": {
+      "title": "Database Preferences:",
+      "language": "Language (settings.language):",
+      "theme": "Theme (settings.themePreference):"
+    },
+    "generalSettingsDebug": {
+      "title": "General Settings Inheritance:",
+      "hasName": "Has Defined Name?",
+      "loadedFrom": "Name Loaded from DB Path:",
+      "masterInstanceExists": "Master Instance Exists?",
+      "masterInstanceHasName": "Master Instance Has Name?",
+      "masterInstancePath": "Master Instance Path:",
+      "masterInstanceNameInDB": "Name in Master Instance:",
+      "globalMasterNameInDB": "Name in Global Master:",
+      "resolvedTopBarName": "Final Name (Top Bar):",
+      "resolvedMenuName": "Final Name (Menu):"
+    }
+  }
+}

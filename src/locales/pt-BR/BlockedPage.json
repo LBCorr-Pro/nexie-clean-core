@@ -1,0 +1,20 @@
+{
+    "instanceInactive": {
+        "title": "Acesso à Instância Restrito",
+        "description": "O acesso à instância '{instanceName}' foi temporariamente suspenso devido a questões administrativas ou de faturamento.\n\nPara restaurar o acesso, por favor, entre em contato com o administrador da sua instância em: {contactEmail}"
+    },
+    "userInactive": {
+        "title": "Sua Assinatura Está Inativa",
+        "description": "Sua assinatura pessoal para a instância '{instanceName}' não está ativa. Para reativar seu acesso, renove sua assinatura ou entre em contato com o suporte da instância em: {contactEmail}"
+    },
+    "noProfile": {
+        "title": "Perfil de Usuário Não Encontrado",
+        "description": "Não foi possível encontrar um perfil de usuário associado à sua conta. Isso pode ser um erro de configuração. Por favor, tente sair e entrar novamente."
+    },
+    "unknown": {
+        "title": "Acesso Negado",
+        "description": "Ocorreu um erro inesperado ao verificar seu acesso. Por favor, tente novamente."
+    },
+    "tryAgainButton": "Tentar Novamente",
+    "logoutButton": "Sair"
+}

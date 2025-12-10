@@ -1,0 +1,53 @@
+
+{
+  "title": "Painel",
+  "welcome": "Bem-vindo ao seu painel! Aqui você pode ver um resumo de sua atividade.",
+  "logoAlt": "Logo da Nexie",
+  "debug": {
+    "title": "Informações de Depuração",
+    "description": "Dados da sessão atual para fins de desenvolvimento.",
+    "userSection": "Usuário:",
+    "uid": "UID:",
+    "name": "Nome:",
+    "email": "Email:",
+    "notApplicable": "N/A",
+    "contextSection": "Contexto:",
+    "isMaster": "É Master?",
+    "yes": "Sim",
+    "no": "Não",
+    "actingAs": "Atuando em:",
+    "permissionsSection": "Permissões ({count}):",
+    "loadingPermissions": "Carregando permissões...",
+    "noPermissions": "Nenhuma permissão encontrada.",
+    "loadingSettings": "Carregando configurações...",
+    "appSettings": {
+        "title": "Configurações do Sistema:",
+        "loading": "Carregando configurações...",
+        "multilingual": "Sistema Multilíngue Ativo?",
+        "defaultLanguage": "Idioma Padrão do Sistema",
+        "defaultHomepage": "Página Inicial Padrão"
+    },
+    "clientInfo": {
+        "title": "Informações do Cliente (LocalStorage):",
+        "language": "Idioma (debug_language):",
+        "theme": "Tema (theme):"
+    },
+    "dbPreferences": {
+      "title": "Preferências do Banco de Dados:",
+      "language": "Idioma (settings.language):",
+      "theme": "Tema (settings.themePreference):"
+    },
+    "generalSettingsDebug": {
+      "title": "Herança de Configurações Gerais:",
+      "hasName": "Tem Nome Definido?",
+      "loadedFrom": "Nome Carregado do BD:",
+      "masterInstanceExists": "Instância Master Existe?",
+      "masterInstanceHasName": "Instância Master Tem Nome?",
+      "masterInstancePath": "Caminho da Instância Master:",
+      "masterInstanceNameInDB": "Nome na Instância Master:",
+      "globalMasterNameInDB": "Nome na Master Global:",
+      "resolvedTopBarName": "Nome Final (Barra de Topo):",
+      "resolvedMenuName": "Nome Final (Menu):"
+    }
+  }
+}

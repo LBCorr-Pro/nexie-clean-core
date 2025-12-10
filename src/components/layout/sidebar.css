@@ -1,0 +1,102 @@
+/* src/components/layout/sidebar.css */
+
+/* Define as variáveis de largura para consistência */
+:root {
+  --sidebar-width-expanded: 16rem; /* 256px */
+  --sidebar-width-collapsed: 4.5rem; /* 72px */
+  --sidebar-transition-duration: 300ms;
+  --sidebar-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base styles for the main sidebar container */
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--sidebar-background));
+  color: hsl(var(--sidebar-foreground));
+  border-right: 1px solid hsl(var(--sidebar-border));
+  width: var(--sidebar-width-expanded);
+  /* A transição agora é no transform, não mais na largura */
+  transform: translateX(0);
+  transition: transform var(--sidebar-transition-duration) var(--sidebar-transition-timing);
+}
+
+/* Styles for the collapsed state on desktop */
+.main-sidebar.collapsed {
+  /* Em vez de mudar a largura, deslizamos o menu para a esquerda */
+  /* O cálculo faz com que "sobreve" apenas a largura do menu colapsado */
+  transform: translateX(calc(var(--sidebar-width-collapsed) - var(--sidebar-width-expanded)));
+}
+
+/* Esconde o texto e outros elementos dentro do menu de forma suave quando colapsado */
+.main-sidebar .sidebar-header .app-name-span,
+.main-sidebar .sidebar-content-area .nav-link-text,
+.main-sidebar .sidebar-footer .footer-text {
+    transition: opacity 150ms ease-in-out;
+    opacity: 1;
+}
+
+.main-sidebar.collapsed .sidebar-header .app-name-span,
+.main-sidebar.collapsed .sidebar-content-area .nav-link-text,
+.main-sidebar.collapsed .sidebar-footer .footer-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Header section containing the logo */
+.sidebar-header {
+  flex-shrink: 0; 
+}
+
+/* Scrollable content area */
+.sidebar-content-area {
+  flex-grow: 1; 
+  overflow-y: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+.sidebar-content-area::-webkit-scrollbar {
+  display: none; 
+}
+
+/* Footer section */
+.sidebar-footer {
+  flex-shrink: 0; 
+  padding: 0.5rem; 
+  font-size: 0.75rem; 
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  border-top: 1px solid hsl(var(--sidebar-border));
+}
+
+/* Modify the main page content's margin when the sidebar is present on desktop */
+@media (min-width: 768px) { /* md breakpoint */
+  .main-sidebar-peer ~ .main-content-wrapper {
+    margin-left: var(--sidebar-width-expanded);
+    transition: margin-left var(--sidebar-transition-duration) var(--sidebar-transition-timing);
+  }
+
+  .main-sidebar-peer.collapsed ~ .main-content-wrapper {
+    margin-left: var(--sidebar-width-collapsed);
+  }
+}
+
+/* Ajustes no SheetContent para o menu móvel */
+.mobile-sidebar-sheet {
+    padding: 0 !important;
+    display: flex !important; 
+    border: none !important;
+    height: 100vh !important; 
+    background-color: transparent !important; 
+    box-shadow: none !important;
+}
+
+/* Garante que o overlay do Sheet não seja exibido no mobile */
+.mobile-sidebar-sheet ~ div[data-radix-dialog-overlay] {
+  display: none;
+}

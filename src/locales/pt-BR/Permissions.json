@@ -1,0 +1,23 @@
+{
+  "categories": {
+    "master": "Master",
+    "instance": "Instância",
+    "module": "Módulo"
+  },
+  "VIEW_DASHBOARD": {
+    "name": "Visualizar Dashboard",
+    "description": "Permite que o usuário visualize o dashboard da instância."
+  },
+  "MANAGE_USERS": {
+    "name": "Gerenciar Usuários",
+    "description": "Permite que o usuário crie, edite e remova usuários da instância."
+  },
+  "MANAGE_INSTANCES": {
+    "name": "Gerenciar Instâncias",
+    "description": "Permite que o usuário crie, edite e remova instâncias."
+  },
+  "VIEW_REPORTS": {
+    "name": "Visualizar Relatórios",
+    "description": "Permite que o usuário visualize os relatórios da instância."
+  }
+}

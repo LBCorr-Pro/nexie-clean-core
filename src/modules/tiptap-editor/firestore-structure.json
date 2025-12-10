@@ -1,0 +1,37 @@
+{
+  "description": "Defines the Firestore structure for the TipTap Editor module settings.",
+    "presets_document": {
+    "document_path_template": "Global/master/config/modules/tiptap-editor/presets",
+    "description": "A single document that holds multiple presets as a map.",
+    "fields": {
+      "presets": {
+        "type": "map",
+        "description": "A map where each key is a preset ID (e.g., 'invite_email', 'default') and the value is the preset object.",
+        "example_preset_object": {
+          "name": { "type": "string", "description": "User-friendly name for the preset." },
+          "content": { "type": "string", "description": "The TipTap editor content as a JSON string." },
+          "settings": { "type": "map", "description": "Toolbar configuration for this preset.", "optional": true }
+        }
+      }
+    }
+  },
+  "toolbar_config_document": {
+    "document_path_template": "Global/master/config/modules/tiptap-editor/default_toolbar_config",
+    "description": "Stores the default toolbar configuration for the TipTap editor.",
+    "fields": {
+      "toolbar": {
+        "type": "array",
+        "description": "An ordered array of objects representing the toolbar items.",
+        "items": {
+          "type": "map",
+          "fields": {
+            "key": "string",
+            "label": "string",
+            "icon": "string",
+            "active": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

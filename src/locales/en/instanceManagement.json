@@ -1,0 +1,154 @@
+
+{
+  "title": "Instance Management",
+  "description": "Create, view, and manage the different client instances of the system.",
+  "createButton": "Create New Instance",
+  "contextErrorTitle": "Restricted Access",
+  "masterContextRequired": "Instance management is a Master level feature. You are currently acting as an instance.",
+  "masterContextRequiredDescription": "To manage instances, please return to the Master Global context.",
+  "permissionNeeded": "Permission Needed",
+  "viewPermissionError": "You do not have permission ('master.instance.view_all') to view instances.",
+  "searchPlaceholder": "Search by name, slug, or plan...",
+  "noInstancesFound": "No instances found for your search.",
+  "noInstancesCreated": "No instances registered yet.",
+  "totalInstances": "Total instances: {count}",
+  "active": "Active",
+  "inactive": "Inactive",
+  "noPlan": "None",
+  "typeDefault": "Default",
+  "typeDev": "Dev",
+  "typeMaster": "Master",
+  "tableHeaders": {
+    "instanceName": "Instance Name",
+    "type": "Type",
+    "plan": "Plan",
+    "status": "Status",
+    "createdAt": "Created At",
+    "actions": "Actions"
+  },
+  "actions": {
+    "title": "Actions",
+    "actAs": "Act as {instanceName}",
+    "manageUsers": "Manage Users",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirm Deletion",
+    "deleteConfirmDescription": "Are you sure you want to delete the instance \"{instanceName}\"? This action is irreversible and will remove all associated data.",
+    "deleteConfirmAction": "Delete Permanently",
+    "deleteSubInstanceConfirm_part1": "Are you sure you want to delete the sub-instance \"",
+    "deleteSubInstanceConfirm_part2": "\"? This action is irreversible."
+  },
+  "toasts": {
+    "actionNotAllowed": "Action not allowed",
+    "deleteSuccessTitle": "Instance Deleted",
+    "deleteSuccessDescription": "The instance \"{instanceName}\" has been removed.",
+    "deleteErrorTitle": "Error Deleting",
+    "deleteErrorDescription": "Could not remove the instance.",
+    "loadInstancesError": "Error loading instances",
+    "loadPlansError": "Error loading plans",
+    "notFound": "Instance not found"
+  },
+  "create": {
+    "title": "Create New Instance",
+    "description": "Define the details for a new client instance.",
+    "toastSuccessTitle": "Instance Created!",
+    "toastSuccessDesc": "The instance \"{instanceName}\" was created successfully.",
+    "toastErrorTitle": "Error Creating Instance",
+    "permissionError": "You do not have the permission ('master.instance.create') for this action."
+  },
+  "instanceName": "Instance Name",
+  "slug": "Slug (URL Identifier)",
+  "slugDescription": "Unique identifier for the URL. Will be auto-generated from the name.",
+  "slugInUse": "This slug is already in use.",
+  "instanceType": "Instance Type",
+  "selectType": "Select a type...",
+  "planLabel": "Subscription Plan",
+  "selectPlan": "Select a plan...",
+  "customDomain": "Custom Domain",
+  "status": "Status",
+  "statusDescriptionInstance": "Controls if this instance is active and accessible.",
+  "statusDescriptionSubInstance": "Controls if this sub-instance is active.",
+  "canCreateSubInstances": "Can Create Sub-instances?",
+  "canCreateSubInstancesDesc": "Allow this instance to have its own sub-units.",
+  "isMasterTemplate": "Is Master Template?",
+  "isMasterTemplateDesc": "Use this instance's settings as a template for new instances of the same plan.",
+  "isDevelopment": "Is Development?",
+  "isDevelopmentDesc": "Mark this as a development or testing instance.",
+  "saveInstance": "Save Instance",
+  "edit": {
+    "title": "Edit Instance",
+    "subtitle": "Editing instance: {instanceName}",
+    "subtitleSubInstance": "Editing sub-instance",
+    "tabs": {
+      "details": "Details",
+      "subinstances": "Sub-instances",
+      "users": "Users",
+      "usersDescription": "Manage users associated with this instance.",
+      "manageUsersButton": "Manage Users"
+    },
+    "instanceDetailsTitle": "Instance Details",
+    "instanceDetailsDesc": "Change the main information of the instance.",
+    "subInstanceDetailsTitle": "Sub-instance Details",
+    "subInstanceDetailsDesc": "Change the sub-instance information.",
+    "saveChanges": "Save Changes",
+    "successTitle": "Instance Updated",
+    "successDescription": "Instance information has been saved.",
+    "errorTitle": "Update Error",
+    "errorDescription": "Could not save instance changes."
+  },
+  "infoCard": {
+    "title": "Instance Information",
+    "description": "Details and metadata about this record.",
+    "instanceId": "Instance ID",
+    "createdAt": "Creation Date",
+    "updatedAt": "Last Updated"
+  },
+  "validation": {
+    "nameRequired": "Instance name is required.",
+    "nameMin": "Instance name must be at least 3 characters long.",
+    "slugMin": "Slug must be at least 3 characters long.",
+    "slugInvalid": "Slug must contain only lowercase letters, numbers, and hyphens."
+  },
+  "form": {
+    "title": "Instance Details",
+    "name": {
+      "label": "Instance Name",
+      "placeholder": "e.g., Example Company Inc.",
+      "description": "The name that will be displayed for this instance."
+    },
+    "type": {
+      "label": "Type",
+      "placeholder": "Select a type...",
+      "options": {
+        "default": "Default",
+        "dev": "Development",
+        "master": "Master (Template)"
+      },
+      "description": "The type of instance in the system."
+    },
+    "status": {
+      "label": "Status",
+      "description": "Controls if the instance is active or inactive."
+    }
+  },
+  "subInstances": {
+    "title": "Sub-instances of {instanceName}",
+    "description": "Manage the units or departments within this instance.",
+    "createSubInstance": {
+      "title": "Create Sub-instance"
+    },
+    "table": {
+      "name": "Name",
+      "status": "Status",
+      "createdAt": "Created At"
+    },
+    "noSubInstances": "No sub-instances created yet."
+  },
+   "createSubInstance": {
+    "title": "Create Sub-instance",
+    "description": "Creating a new sub-instance within {parentName}.",
+    "nameLabel": "Sub-instance Name"
+  }
+}

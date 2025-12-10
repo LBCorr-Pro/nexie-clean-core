@@ -1,0 +1,104 @@
+{
+  "title": "Módulo Editor Lexical",
+  "description": "Configura la barra de herramientas y prueba el editor de texto enriquecido basado en el framework Lexical.",
+  "configureToolbar": "Configurar Barra de Herramientas",
+  "toolbarAccordionTitle": "Herramientas de la Barra",
+  "addSeparatorButton": "Añadir Separador",
+  "separatorLabel": "Separador",
+  "saveDefaultConfigButton": "Guardar Configuración Predeterminada",
+  "previewTitle": "Vista Previa del Editor",
+  "placeholder": "Empieza a escribir aquí para probar...",
+  "configureDenied": "No tienes permiso para configurar la barra de herramientas.",
+  "presets": {
+    "accordionTitle": "Gestionar Presets",
+    "savePresetButton": "Guardar como Preset",
+    "noPresetsMessage": "No hay presets guardados.",
+    "loadPreset": "Cargar Preset",
+    "actions": {
+      "srLabel": "Acciones para {presetName}",
+      "load": "Cargar",
+      "overwrite": "Sobrescribir con Actual",
+      "delete": "Eliminar"
+    }
+  },
+  "dialogs": {
+    "savePreset": {
+      "title": "Guardar Configuración como Preset",
+      "description": "Dale un nombre a la configuración actual de la barra de herramientas.",
+      "label": "Nombre del Preset",
+      "cancelButton": "Cancelar",
+      "savingButton": "Guardando...",
+      "contextLabel": "¿Guardar preset para qué contexto?",
+      "noContextOption": "Guardar como un Preset Genérico",
+      "customNameLabel": "Nombre del Preset (si es genérico)"
+    },
+    "deletePreset": {
+      "title": "Confirmar Eliminación",
+      "description": "¿Estás seguro de que quieres eliminar el preset \"{name}\"? Esta acción no se puede deshacer.",
+      "cancelButton": "Cancelar",
+      "deleteButton": "Eliminar"
+    },
+    "overwritePreset": {
+      "title": "¿Sobrescribir Preset?",
+      "description": "Ya existe un preset con el nombre \"{name}\". ¿Deseas reemplazarlo con la configuración actual?",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sobrescribir"
+    }
+  },
+  "toasts": {
+    "loadConfigErrorTitle": "Error al Cargar Configuración",
+    "loadConfigErrorDesc": "Usando configuraciones predeterminadas.",
+    "saveConfigSuccessTitle": "¡Configuración Predeterminada Guardada!",
+    "saveConfigSuccessDesc": "La barra de herramientas del editor ha sido actualizada.",
+    "saveConfigErrorTitle": "Error al Guardar",
+    "savePresetSuccessTitle": "¡Preset Guardado!",
+    "savePresetSuccessDesc": "El preset \"{name}\" se guardó correctamente.",
+    "invalidPresetNameTitle": "Nombre Inválido",
+    "invalidPresetNameDesc": "Por favor, introduce un nombre para el preset.",
+    "savePresetErrorTitle": "Error al Guardar Preset",
+    "loadPresetsErrorTitle": "Error",
+    "loadPresetsErrorDesc": "No se pudieron cargar los presets.",
+    "loadPresetSuccessTitle": "Preset Cargado",
+    "loadPresetSuccessDesc": "La configuración \"{name}\" ha sido aplicada. Haz clic en 'Guardar Predeterminado' para confirmar.",
+    "deletePresetSuccessTitle": "¡Preset Eliminado!",
+    "deletePresetErrorTitle": "Error al Eliminar"
+  },
+  "toolbar": {
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "bold": "Negrita",
+    "italic": "Cursiva",
+    "underline": "Subrayado",
+    "strikethrough": "Tachado",
+    "code": "Código en Línea",
+    "h1": "Encabezado 1",
+    "h2": "Encabezado 2",
+    "h3": "Encabezado 3",
+    "alignLeft": "Alinear a la Izquierda",
+    "alignCenter": "Alinear al Centro",
+    "alignRight": "Alinear a la Derecha",
+    "alignJustify": "Justificar",
+    "bulletList": "Lista de Viñetas",
+    "numberList": "Lista Numerada",
+    "checkList": "Lista de Tareas",
+    "quote": "Cita",
+    "codeBlock": "Bloque de Código",
+    "link": "Insertar Enlace",
+    "image": "Insertar Imagen",
+    "fontFamily": "Familia de Fuente",
+    "fontSize": "Tamaño de Fuente",
+    "fontColor": "Color de Fuente",
+    "fontBgColor": "Color de Fondo de Fuente",
+    "prompts": {
+      "enterUrl": "Ingresar URL"
+    },
+    "placeholders": {
+      "fontFamily": "Fuente...",
+      "fontSize": "Tamaño..."
+    },
+    "ariaLabels": {
+      "fontColor": "Seleccionar color de fuente",
+      "fontBgColor": "Seleccionar color de fondo de fuente"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Métodos de Acceso",
+  "pageDescription": "Controla cómo los usuarios pueden registrarse e iniciar sesión en el sistema.",
+  "common": {
+    "save": "Guardar Cambios"
+  },
+  "fields": {
+    "allowInvitation": {
+      "label": "Permitir Registro por Invitación",
+      "description": "Si está activo, los usuarios pueden registrarse usando un código de invitación."
+    },
+    "allowPublicRegistration": {
+      "label": "Permitir Registro Público",
+      "description": "Si está activo, cualquier persona con una cuenta válida (ej. Google) puede iniciar sesión y crear un perfil de usuario en el sistema. Si está desactivado, solo los usuarios registrados previamente pueden iniciar sesión."
+    },
+    "allowEmailLogin": {
+      "label": "Permitir Inicio de Sesión con Email/Contraseña",
+      "description": "Permite el método de inicio de sesión tradicional con email y contraseña."
+    },
+    "allowPhoneLogin": {
+      "label": "Permitir Inicio de Sesión con Teléfono",
+      "description": "Habilita la autenticación vía SMS o llamada telefónica."
+    },
+    "allowGoogleLogin": {
+      "label": "Permitir Inicio de Sesión con Google",
+      "description": "Permite a los usuarios iniciar sesión con sus cuentas de Google."
+    },
+    "allowAppleLogin": {
+      "label": "Permitir Inicio de Sesión con Apple",
+      "description": "Habilita la autenticación con Apple ID."
+    },
+    "allowFacebookLogin": {
+      "label": "Permitir Inicio de Sesión con Facebook",
+      "description": "Permite el inicio de sesión a través de cuentas de Facebook."
+    }
+  },
+  "contextAlert": {
+    "masterTitle": "Editando Configuración Global",
+    "masterDescription": "Esta es la configuración predeterminada para todo el sistema.",
+    "instanceTitle": "Editando Configuración de la Instancia: {instanceName}",
+    "instanceDescription": "Estás sobrescribiendo la configuración predeterminada para esta instancia.",
+    "subInstanceTitle": "Editando Configuración de la Sub-instancia",
+    "subInstanceDescription": "Estás sobrescribiendo la configuración de la instancia padre para esta sub-instancia.",
+    "inheritingFromMasterTitle": "Heredando Configuración de Master",
+    "inheritingFromInstanceTitle": "Heredando Configuración de la Instancia",
+    "saveToCustomizeDescription": "Los cambios se guardarán como una configuración personalizada para este contexto."
+  },
+  "revertButton": "Revertir a Predeterminado",
+  "revertDialog": {
+    "title": "Confirmar Reversión",
+    "description": "¿Estás seguro de que deseas revertir la configuración al valor predeterminado heredado? Las personalizaciones hechas para {contextName} se perderán.",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  },
+  "toasts": {
+    "loadError": "Error al cargar la configuración.",
+    "saveSuccess": "¡Configuración guardada con éxito!",
+    "saveError": "Error al guardar la configuración.",
+    "revertSuccess": "¡Configuración revertida a la predeterminada!",
+    "revertError": "Error al revertir la configuración."
+  },
+  "sourceNameMaster": "Master",
+  "sourceNameInstance": "Instancia"
+}

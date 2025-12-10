@@ -1,0 +1,25 @@
+{
+  "templates": {
+    "pageTitle": "Access Level Templates",
+    "pageDescription": "Create and manage permission templates that can be assigned to users.",
+    "createButton": "Create New Template",
+    "filterPlaceholder": "Filter by name...",
+    "noResults": "No results found."
+  },
+  "columns": {
+    "name": "Name",
+    "description": "Description",
+    "noDescription": "No description provided"
+  },
+  "form": {
+    "createTitle": "Create New Template",
+    "editTitle": "Edit Template",
+    "nameLabel": "Template Name",
+    "namePlaceholder": "Ex: Instance Administrator",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Ex: Grants full access to manage an instance",
+    "saveButton": "Save Template",
+    "permissionsTitle": "Template Permissions",
+    "cancelButton": "Cancel"
+  }
+}

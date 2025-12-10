@@ -1,0 +1,156 @@
+
+{
+  "title": "Gerenciamento de Instâncias",
+  "description": "Crie, visualize e gerencie as diferentes instâncias de cliente do sistema.",
+  "createButton": "Criar Nova Instância",
+  "contextErrorTitle": "Acesso Restrito",
+  "masterContextRequired": "A gestão de instâncias é uma funcionalidade do nível Master. Você está atualmente atuando como uma instância.",
+  "masterContextRequiredDescription": "Para gerenciar instâncias, retorne ao contexto Master Global.",
+  "permissionNeeded": "Permissão Necessária",
+  "viewPermissionError": "Você não tem permissão ('master.instance.view_all') para visualizar instâncias.",
+  "searchPlaceholder": "Buscar por nome, slug ou plano...",
+  "noInstancesFound": "Nenhuma instância encontrada para sua busca.",
+  "noInstancesCreated": "Nenhuma instância cadastrada ainda.",
+  "totalInstances": "Total de instâncias: {count}",
+  "active": "Ativa",
+  "inactive": "Inativa",
+  "noPlan": "Nenhum",
+  "typeDefault": "Padrão",
+  "typeDev": "Dev",
+  "typeMaster": "Master",
+  "tableHeaders": {
+    "instanceName": "Nome da Instância",
+    "type": "Tipo",
+    "plan": "Plano",
+    "status": "Status",
+    "createdAt": "Criada em",
+    "actions": "Ações"
+  },
+  "actions": {
+    "title": "Ações",
+    "actAs": "Atuar como {instanceName}",
+    "manageUsers": "Gerenciar Usuários",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirmar Exclusão",
+    "deleteConfirmDescription": "Tem certeza que deseja excluir a instância \"{instanceName}\"? Esta ação é irreversível e removerá todos os dados associados.",
+    "deleteConfirmAction": "Excluir Permanentemente",
+    "deleteSubInstanceConfirm_part1": "Tem certeza que deseja excluir a sub-instância \"",
+    "deleteSubInstanceConfirm_part2": "\"? Esta ação é irreversível."
+  },
+  "toasts": {
+    "actionNotAllowed": "Ação não permitida",
+    "deleteSuccessTitle": "Instância Excluída",
+    "deleteSuccessDescription": "A instância \"{instanceName}\" foi removida.",
+    "deleteErrorTitle": "Erro ao Excluir",
+    "deleteErrorDescription": "Não foi possível remover a instância.",
+    "loadInstancesError": "Erro ao carregar instâncias",
+    "loadPlansError": "Erro ao carregar planos",
+    "notFound": "Instância não encontrada"
+  },
+  "create": {
+    "title": "Criar Nova Instância",
+    "description": "Defina os detalhes para uma nova instância de cliente.",
+    "toastSuccessTitle": "Instância Criada!",
+    "toastSuccessDesc": "A instância \"{instanceName}\" foi criada com sucesso.",
+    "toastErrorTitle": "Erro ao Criar Instância",
+    "permissionError": "Você não tem a permissão ('master.instance.create') para esta ação."
+  },
+  "instanceName": "Nome da Instância",
+  "slug": "Slug (Identificador URL)",
+  "slugDescription": "Identificador único para a URL. Será gerado automaticamente a partir do nome.",
+  "slugInUse": "Este slug já está em uso.",
+  "instanceType": "Tipo da Instância",
+  "selectType": "Selecione um tipo...",
+  "planLabel": "Plano de Assinatura",
+  "selectPlan": "Selecione um plano...",
+  "customDomain": "Domínio Personalizado",
+  "status": "Status",
+  "statusDescriptionInstance": "Controla se esta instância está ativa e acessível.",
+  "statusDescriptionSubInstance": "Controla se esta sub-instância está ativa.",
+  "canCreateSubInstances": "Pode Criar Sub-instâncias?",
+  "canCreateSubInstancesDesc": "Permite que esta instância tenha suas próprias sub-unidades.",
+  "isMasterTemplate": "É Modelo Master?",
+  "isMasterTemplateDesc": "Usa as configurações desta instância como modelo para novas instâncias do mesmo plano.",
+  "isDevelopment": "É de Desenvolvimento?",
+  "isDevelopmentDesc": "Marca esta como uma instância de desenvolvimento ou teste.",
+  "saveInstance": "Salvar Instância",
+  "edit": {
+    "title": "Editar Instância",
+    "subtitle": "Editando a instância: {instanceName}",
+    "subtitleSubInstance": "Editando a sub-instância",
+    "tabs": {
+      "details": "Detalhes",
+      "subinstances": "Sub-instâncias",
+      "users": "Usuários",
+      "usersDescription": "Gerencie os usuários associados a esta instância.",
+      "manageUsersButton": "Gerenciar Usuários"
+    },
+    "instanceDetailsTitle": "Detalhes da Instância",
+    "instanceDetailsDesc": "Altere as informações principais da instância.",
+    "subInstanceDetailsTitle": "Detalhes da Sub-instância",
+    "subInstanceDetailsDesc": "Altere as informações da sub-instância.",
+    "saveChanges": "Salvar Alterações",
+    "successTitle": "Instância Atualizada",
+    "successDescription": "As informações da instância foram salvas.",
+    "errorTitle": "Erro ao Atualizar",
+    "errorDescription": "Não foi possível salvar as alterações da instância."
+  },
+  "infoCard": {
+    "title": "Informações da Instância",
+    "description": "Detalhes e metadados sobre este registro.",
+    "instanceId": "ID da Instância",
+    "createdAt": "Data de Criação",
+    "updatedAt": "Última Atualização"
+  },
+  "validation": {
+    "nameRequired": "O nome da instância é obrigatório.",
+    "nameMin": "O nome da instância deve ter no mínimo 3 caracteres.",
+    "slugMin": "O slug deve ter no mínimo 3 caracteres.",
+    "slugInvalid": "Slug deve conter apenas letras minúsculas, números e hífens."
+  },
+  "form": {
+    "title": "Detalhes da Instância",
+    "name": {
+      "label": "Nome da Instância",
+      "placeholder": "Ex: Empresa Exemplo Ltda",
+      "description": "O nome que será exibido para esta instância."
+    },
+    "type": {
+      "label": "Tipo",
+      "placeholder": "Selecione o tipo...",
+      "options": {
+        "default": "Padrão",
+        "dev": "Desenvolvimento",
+        "master": "Master (Template)"
+      },
+      "description": "O tipo de instância no sistema."
+    },
+    "status": {
+      "label": "Status",
+      "description": "Controla se a instância está ativa ou inativa."
+    }
+  },
+  "subInstances": {
+    "title": "Sub-instâncias de {instanceName}",
+    "description": "Gerencie as unidades ou departamentos dentro desta instância.",
+    "createSubInstance": {
+      "title": "Criar Sub-instância",
+      "toastSuccessTitle": "Sub-instância Criada!",
+      "toastSuccessDesc": "A sub-instância \"{instanceName}\" foi criada com sucesso."
+    },
+    "table": {
+      "name": "Nome",
+      "status": "Status",
+      "createdAt": "Criada em"
+    },
+    "noSubInstances": "Nenhuma sub-instância criada."
+  },
+   "createSubInstance": {
+    "title": "Criar Sub-instância",
+    "description": "Criando uma nova sub-instância dentro de {parentName}.",
+    "nameLabel": "Nome da Sub-instância"
+  }
+}

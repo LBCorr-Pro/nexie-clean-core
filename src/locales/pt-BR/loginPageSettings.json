@@ -1,0 +1,36 @@
+{
+  "pageTitle": "Configurações da Página de Login",
+  "pageDescription": "Controle o fluxo de acesso e a página inicial padrão após o login.",
+  "form": {
+    "loginPageActiveLabel": "Página de Login Ativa",
+    "loginPageActiveDescription": "Se inativo, usuários serão redirecionados para a URL de Fallback.",
+    "fallbackUrlLabel": "URL de Fallback",
+    "fallbackUrlPlaceholder": "Selecione uma página",
+    "fallbackUrlDescription": "Página para onde o usuário é levado se a de login estiver inativa.",
+    "loadingPlaceholder": "Carregando...",
+    "noPagesConfigured": "Nenhuma página configurada",
+    "validation": {
+      "fallbackUrlInvalid": "URL de fallback deve ser um caminho relativo (iniciando com /) ou vazia."
+    }
+  },
+  "infoBox": "Estas configurações afetam diretamente o fluxo de autenticação e o primeiro acesso do usuário.",
+  "contextAlert": {
+    "globalTitle": "Editando Configurações Globais (Master)",
+    "globalDescription": "Estas são as configurações padrão para todo o sistema.",
+    "instanceCustomTitle": "Editando Configs. da Instância",
+    "instanceCustomDescription": "Estas são configurações personalizadas para esta instância.",
+    "instanceInheritingTitle": "Herdando Configs. Globais",
+    "instanceInheritingDescription": "Ao salvar, você criará uma personalização para esta instância, sobrepondo as configurações globais.",
+    "permissionDeniedTitle": "Permissão Negada",
+    "permissionDeniedDescription": "Você não tem a permissão '{permissionId}' necessária para modificar estas configurações."
+  },
+  "toasts": {
+    "loadError": "Erro ao carregar dados",
+    "saveSuccess": "Configurações Salvas",
+    "saveSuccessDescription": "O comportamento da página de login foi atualizado.",
+    "saveError": "Erro ao Salvar"
+  },
+  "buttons": {
+    "save": "Salvar Alterações"
+  }
+}

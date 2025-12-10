@@ -1,0 +1,39 @@
+{
+  "module_id_slug": "calc-genius",
+  "description": "Firestore structure for the Calc Genius module. It defines fields, formulas, and groups.",
+  "operational_settings": {
+    "description": "Each document represents a group of fields and formulas. The settings are hierarchical, starting from a master/global context, which can be overridden by instances and sub-instances.",
+    "path_templates": [
+      "master/modules/calc_genius/{versionId}",
+      "master/instancias/{instanceId}/modules/calc_genius/{versionId}",
+      "master/instancias/{parentId}/subinstancias/{subInstanceId}/modules/calc_genius/{versionId}"
+    ],
+    "fields_collection": {
+      "name": "fields",
+      "description": "Subcollection to store input field definitions within a group.",
+      "document_id_example": "field_id_slug (e.g., total_hours)",
+      "fields": {
+        "label": { "type": "string", "description": "Display name for the field." },
+        "origin_type": { "type": "string", "enum": ["manual", "spreadsheet", "json", "xml", "api"] },
+        "origin_config": { "type": "map", "description": "Configuration specific to the origin type." },
+        "data_type": { "type": "string", "enum": ["string", "number", "boolean", "date"] },
+        "editable_by_user": { "type": "boolean", "default": false },
+        "order": { "type": "number", "default": 0 },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "formulas_collection": {
+      "name": "formulas",
+      "description": "Subcollection to store formula definitions within a group.",
+      "document_id_example": "formula_id_slug (e.g., bonus_payment)",
+      "fields": {
+        "label": { "type": "string", "description": "Display name for the formula." },
+        "expression": { "type": "string", "description": "The mathematical or logical expression." },
+        "description": { "type": "string", "optional": true },
+        "result_type": { "type": "string", "enum": ["number", "string", "boolean"] },
+        "order": { "type": "number", "default": 0 },
+        "createdAt": { "type": "timestamp" }
+      }
+    }
+  }
+}

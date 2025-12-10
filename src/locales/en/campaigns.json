@@ -1,0 +1,100 @@
+
+{
+  "title": "Splash Screen Campaigns",
+  "description": "Create and manage splash screen campaigns to display to users.",
+  "createButton": "Create New Campaign",
+  "noCampaigns": "No campaigns created.",
+  "table": {
+    "campaign": "Campaign",
+    "type": "Type",
+    "status": "Status",
+    "period": "Period",
+    "actions": "Actions"
+  },
+  "types": {
+    "app_opening": "App Opening",
+    "banner": "Banner"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "draft": "Draft",
+    "archived": "Archived"
+  },
+  "actions": {
+    "report": "Report",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "dialog": {
+    "editTitle": "Edit Campaign",
+    "createTitle": "Create New Campaign",
+    "description": "Fill in the details of your splash screen campaign."
+  },
+  "deleteDialog": {
+    "title": "Confirm Deletion",
+    "description": "Are you sure you want to delete the campaign \"{campaignName}\"? This action cannot be undone."
+  },
+  "form": {
+    "name": "Campaign Name",
+    "description": "Description (internal use)",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "status": "Status",
+    "birthdayCampaign": "Is it a birthday campaign?",
+    "mainElementType": "Main Element",
+    "mainElementTypes": {
+      "image": "Image",
+      "video": "Video",
+      "text": "Text"
+    },
+    "mainElementSource": "Main Element Source (URL or Text)",
+    "backgroundType": "Background Type",
+    "backgroundTypes": {
+      "color": "Solid Color",
+      "gradient": "Gradient",
+      "image": "Image",
+      "video": "Video"
+    },
+    "backgroundColor": "Background Color",
+    "gradientFrom": "Gradient Color 1",
+    "gradientTo": "Gradient Color 2",
+    "backgroundSourceUrl": "Background Image/Video URL",
+    "totalDuration": "Total Duration (seconds)",
+    "destinationPage": "Destination Page",
+    "audienceType": "Target Audience",
+    "audienceTypes": {
+      "public": "Public (everyone)",
+      "allLoggedIn": "All Logged In",
+      "specificGroups": "Specific Groups"
+    },
+    "accessLevels": "Access Levels"
+  },
+  "reportDialog": {
+    "title": "Views Report",
+    "description": "Views for the campaign \"{campaignName}\".",
+    "noViews": "No views recorded yet.",
+    "table": {
+      "user": "User",
+      "viewedAt": "Viewed At"
+    }
+  },
+  "tabs": {
+    "details": "Details",
+    "content": "Content",
+    "audience": "Audience"
+  },
+  "toasts": {
+    "contextErrorTitle": "Context Error",
+    "contextErrorDesc": "Invalid instance context to create a campaign.",
+    "loadError": "Error loading campaigns",
+    "updateSuccess": "Campaign updated successfully!",
+    "createSuccess": "Campaign created successfully!",
+    "saveError": "Error saving campaign",
+    "deleteSuccess": "Campaign deleted successfully!",
+    "deleteError": "Error deleting campaign",
+    "reportErrorTitle": "Report Error",
+    "reportGenericError": "Failed to load report data.",
+    "reportErrorDesc": "Could not load the views report."
+  }
+}

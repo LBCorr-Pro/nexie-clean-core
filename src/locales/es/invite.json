@@ -1,0 +1,119 @@
+
+{
+  "title": "Módulo de Invitaciones",
+  "description": "Gestiona la configuración para generar invitaciones y visualiza las invitaciones ya creadas.",
+  "tabs": {
+    "manage": "Gestionar Invitaciones",
+    "settings": "Configuración del Módulo"
+  },
+  "settingsTab": {
+    "title": "Configuración del Módulo de Invitaciones",
+    "description": "Define el comportamiento predeterminado para la generación de códigos de invitación.",
+    "accessDenied": "Permiso Denegado",
+    "accessDeniedMessage": "No tienes el permiso '{permission}' para configurar el módulo de invitaciones.",
+    "prefixLabel": "Prefijo del Código",
+    "prefixPlaceholder": "Ej: MIAPP-",
+    "codeLengthLabel": "Longitud del Código (Parte Aleatoria)",
+    "noExpirationLabel": "¿No Expira?",
+    "noExpirationDescription": "Si está marcado, las invitaciones serán válidas indefinidamente.",
+    "validityLabel": "Período de Validez",
+    "validityTypes": {
+      "hours": "Horas",
+      "days": "Días",
+      "months": "Meses"
+    },
+    "templatesTitle": "Plantillas de Mensajes",
+    "emailTemplateLabel": "Plantilla de Correo Electrónico",
+    "whatsappTemplateLabel": "Plantilla de WhatsApp",
+    "placeholders": {
+      "title": "Variables Disponibles",
+      "titleEmail": "Variables Disponibles (Email)",
+      "titleMessage": "Variables Disponibles (Mensaje)",
+      "inviteCode": "Código de Invitación",
+      "inviteCodeDesc": "El código único generado.",
+      "inviteLink": "Enlace de Invitación",
+      "inviteLinkDesc": "La URL de registro completa con el código de invitación.",
+      "senderName": "Nombre del Remitente",
+      "senderNameDesc": "Tu nombre ({name}).",
+      "senderEmail": "Email del Remitente",
+      "senderEmailDesc": "Tu email ({email}).",
+      "systemName": "Nombre del Sistema",
+      "systemNameDesc": "Nombre de la plataforma ({name}).",
+      "instanceName": "Nombre de la Instancia",
+      "instanceNameDesc": "Nombre de la instancia actual ({name}).",
+      "systemLogo": "Logo del Sistema",
+      "systemLogoDesc": "URL del logo principal."
+    },
+    "saveButton": "Guardar Configuración",
+    "defaultTemplates": {
+      "whatsapp": "¡Hola! Has sido invitado a unirte a nuestra plataforma. Usa este enlace para registrarte: {{invite_link}}",
+      "email": "<h1>¡Estás Invitado!</h1><p>¡Hola, {{user_name}}!</p><p>Has sido invitado a unirte a nuestra plataforma. Haz clic en el enlace de abajo para completar tu registro:</p><p><a href=\"{{invite_link}}\">Aceptar Invitación</a></p><p>Si el botón no funciona, copia y pega esta URL en tu navegador: {{invite_link}}</p>"
+    },
+    "toasts": {
+      "saveSuccessTitle": "¡Configuración Guardada!",
+      "saveSuccessDescription": "La configuración del módulo de invitaciones ha sido actualizada.",
+      "saveErrorTitle": "Error al Guardar",
+      "permissionDenied": "No tienes permiso para realizar esta acción."
+    }
+  },
+  "manageTab": {
+    "generateTitle": "Generar Nueva Invitación",
+    "emailLabel": "Emitir para un Email Específico (Opcional)",
+    "emailPlaceholder": "usuario@ejemplo.com",
+    "emailDescription": "Si se deja en blanco, la invitación será abierta para cualquiera con el código.",
+    "accessLevelLabel": "Nivel de Acceso Objetivo (Opcional)",
+    "accessLevelPlaceholder": "Seleccionar un nivel...",
+    "noAccessLevelOption": "Nivel Predeterminado",
+    "generateButton": "Generar Invitación",
+    "generatingButton": "Generando...",
+    "generatedTitle": "Invitaciones Generadas",
+    "noInvitesMessage": "Aún no se han generado invitaciones en este contexto.",
+    "table": {
+      "code": "Código",
+      "status": "Estado",
+      "recipient": "Destinatario",
+      "targetLevel": "Nivel Objetivo",
+      "createdAt": "Creada en",
+      "expiresAt": "Expira en",
+      "actions": "Acciones"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "accepted": "Aceptada",
+      "expired": "Expirada",
+      "revoked": "Revocada"
+    },
+    "recipientTypes": {
+      "open": "Abierta",
+      "na": "N/A",
+      "defaultLevel": "Predeterminado"
+    },
+    "neverExpires": "Nunca",
+    "actions": {
+      "revoke": "Revocar"
+    },
+    "toasts": {
+      "generationErrorTitle": "Error de Generación",
+      "generationError": "No se pudo generar un código único. Por favor, inténtalo de nuevo.",
+      "revokeSuccess": "¡Invitación Revocada!",
+      "revokeError": "Error al Revocar la Invitación"
+    },
+    "dialogs": {
+      "generatedTitle": "¡Invitación Generada!",
+      "generatedDescription": "Comparte el código o el enlace de abajo con el usuario.",
+      "generatedCodeLabel": "Código:",
+      "generatedLinkLabel": "Enlace:",
+      "copySuccessToast": "¡Código copiado!",
+      "linkCopySuccessToast": "¡Enlace copiado!",
+      "generatedHelpText": "El usuario necesitará esto para registrarse.",
+      "closeButton": "Cerrar",
+      "revokeTitle": "Confirmar Revocación",
+      "revokeDescription": "¿Estás seguro de que quieres revocar la invitación <strong>{code}</strong>? Ya no podrá ser utilizada.",
+      "cancelButton": "Cancelar",
+      "confirmRevokeButton": "Confirmar Revocación"
+    },
+    "zod": {
+      "invalidEmail": "Por favor, introduce una dirección de correo electrónico válida."
+    }
+  }
+}

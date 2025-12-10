@@ -1,0 +1,6 @@
+{
+  "createSuccess": "Template created successfully!",
+  "updateSuccess": "Template updated successfully!",
+  "error": "An error occurred",
+  "deleteSuccess": "Template deleted successfully!"
+}

@@ -1,0 +1,55 @@
+
+{
+  "pageTitle": "Niveles de Acceso (Plantillas Globales)",
+  "pageDescription": "Gestiona las plantillas de niveles de acceso de usuario para el sistema.",
+  "createButton": "Crear Nuevo Nivel",
+  "permissionNeeded": "Permiso Requerido",
+  "permissionDenied": "No tienes permiso para gestionar las plantillas de niveles de acceso.",
+  "noTemplates": "No se han creado niveles de acceso.",
+  "editAction": "Editar",
+  "deleteAction": "Eliminar",
+  "dialog": {
+    "editTitle": "Editar Nivel de Acceso",
+    "createTitle": "Crear Nuevo Nivel de Acceso",
+    "description": "Define el nombre, la descripción y los permisos para este nivel.",
+    "nameLabel": "Nombre del Nivel",
+    "namePlaceholder": "Ej: Gestor de Instancias",
+    "descriptionLabel": "Descripción (Opcional)",
+    "descriptionPlaceholder": "Describe las responsabilidades de este nivel.",
+    "systemLevelLabel": "¿Es un nivel del sistema (no se puede eliminar)?",
+    "permissionsTitle": "Permisos:",
+    "menuPresetLabel": "Plantilla de Menú Aplicada (Preset)",
+    "menuPresetPlaceholder": "Selecciona una plantilla de menú...",
+    "menuPresetDescription": "Define la estructura base del menú para este nivel de acceso. La página para gestionar estas plantillas se creará pronto.",
+    "menuPresetNone": "Ninguno (usará el menú completo, oculto por permiso)"
+  },
+  "deleteDialog": {
+    "title": "Confirmar Eliminación",
+    "description": "¿Estás seguro de que quieres eliminar la plantilla \"{templateName}\"?"
+  },
+  "toasts": {
+    "loadError": "Error al cargar las plantillas",
+    "permissionDenied": "Acción no permitida",
+    "saveError": "Error al Guardar",
+    "updateSuccess": "Plantilla Actualizada",
+    "updateSuccessDesc": "La plantilla \"{templateName}\" ha sido actualizada.",
+    "createSuccess": "Plantilla Creada",
+    "createSuccessDesc": "La plantilla \"{templateName}\" ha sido creada.",
+    "slugInUse": "Este slug ya está en uso.",
+    "deleteSuccess": "Plantilla Eliminada",
+    "deleteSuccessDesc": "La plantilla \"{templateName}\" ha sido eliminada.",
+    "deleteError": "Error al Eliminar",
+    "systemLevelDeleteError": "Las plantillas a nivel de sistema no se pueden eliminar."
+  },
+  "permissionCategory": {
+    "master": "Maestro",
+    "instance": "Instancia",
+    "module": "Módulo",
+    "subinstance": "Sub-instancia",
+    "general": "General"
+  },
+  "contextAlert": {
+    "title": "Se Requiere Contexto Maestro Global",
+    "description": "Esta es una configuración global y afecta a todo el sistema. Para editar, por favor regresa al contexto Maestro Global (sin actuar como una instancia)."
+  }
+}

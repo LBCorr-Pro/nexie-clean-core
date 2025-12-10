@@ -1,0 +1,50 @@
+{
+  "pageTitle": "Configurar Campos de Cadastro (Empresa)",
+  "pageDescription": "Defina os campos que aparecerão no formulário de cadastro e edição de empresas.",
+  "addNewFieldButton": "Adicionar Novo Campo",
+  "saveButton": "Salvar Campos",
+  "revertButton": "Reverter para Padrão",
+  "newFieldDefaultLabel": "Novo Campo Customizado",
+  "contextAlert": {
+    "masterTitle": "Editando Configurações Globais",
+    "masterDescription": "Estas são as configurações padrão para todo o sistema.",
+    "instanceTitle": "Editando Configurações da Instância: {instanceName}",
+    "instanceDescription": "Você está sobrescrevendo as configurações padrão para esta instância.",
+    "subInstanceTitle": "Editando Configurações da Sub-instância",
+    "subInstanceDescription": "Você está sobrescrevendo as configurações da instância pai para esta sub-instância.",
+    "inheritingFromMasterTitle": "Herdando Configurações do Master",
+    "inheritingFromInstanceTitle": "Herdando da Instância",
+    "saveToCustomizeDescription": "As alterações serão salvas como uma configuração personalizada para este contexto."
+  },
+  "permissionNeededAlert": {
+    "title": "Permissão Necessária",
+    "description": "Você não tem permissão ('{permissionId}') para editar estes campos."
+  },
+  "fieldItem": {
+    "tooltipSystemField": "Campo Padrão do Sistema (não pode ser excluído)",
+    "tooltipRequired": "Campo Obrigatório",
+    "tooltipOptional": "Campo Opcional",
+    "tooltipVisible": "Visível no Formulário",
+    "tooltipHidden": "Oculto do Formulário",
+    "menuEdit": "Editar Detalhes",
+    "menuDelete": "Excluir Campo"
+  },
+  "fieldEditor": {
+    "labelLabel": "Rótulo",
+    "fieldKeyLabel": "Chave do Campo (ID)",
+    "fieldKeyDescription": "Não altere para campos pré-definidos.",
+    "fieldTypeLabel": "Tipo do Campo",
+    "descriptionLabel": "Descrição (Opcional)",
+    "descriptionPlaceholder": "Instrução para o usuário ou nota.",
+    "visibleLabel": "Visível no Formulário?",
+    "requiredLabel": "Campo Obrigatório?",
+    "uniqueLabel": "Valor Único?",
+    "validationLabel": "Ativar Validação?"
+  },
+  "revertDialog": {
+    "title": "Confirmar Reversão",
+    "description": "Tem certeza que deseja reverter as configurações para o padrão herdado? Quaisquer personalizações feitas neste contexto serão perdidas.",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Módulo de Armazenamento",
+  "description": "Gerencie as configurações de armazenamento e navegue pelos arquivos da sua instância.",
+  "fileManagerTab": "Gerenciador de Arquivos",
+  "settingsTab": "Configurações",
+  "fileManager": {
+    "title": "Gerenciador de Arquivos",
+    "description": "Navegue, visualize e gerencie os arquivos da sua instância.",
+    "uploadButton": "Enviar Arquivo",
+    "tableHeaders": {
+      "name": "Nome",
+      "size": "Tamanho",
+      "modified": "Modificado em",
+      "actions": "Ações"
+    },
+    "emptyState": "Nenhum arquivo ou pasta encontrado.",
+    "actions": {
+      "open": "Abrir / Ver",
+      "download": "Baixar",
+      "copyUrl": "Copiar URL",
+      "rename": "Renomear",
+      "delete": "Excluir"
+    },
+    "toasts": {
+      "loadErrorTitle": "Erro ao Carregar",
+      "defaultLoadError": "Falha ao carregar arquivos."
+    }
+  },
+  "settings": {
+    "toasts": {
+      "loadError": "Erro ao Carregar Configurações",
+      "actionNotAllowed": "Ação não permitida.",
+      "saveSuccessTitle": "Configurações Salvas!",
+      "saveSuccessDescription": "As configurações de armazenamento foram atualizadas.",
+      "saveError": "Erro ao Salvar"
+    },
+    "alerts": {
+      "globalConfigTitle": "Configuração Global",
+      "globalConfigDescription": "Esta configuração é global e só pode ser editada no contexto Master.",
+      "permissionDeniedTitle": "Permissão Negada",
+      "permissionDeniedDescription": "Você não tem a permissão 'module.storage.configure' para editar estas configurações."
+    },
+    "form": {
+      "enableStorageLabel": "Ativar Upload de Arquivos",
+      "enableStorageDescription": "Permite que os usuários enviem arquivos (imagens, documentos, etc.) para o Firebase Storage."
+    },
+    "saveButton": "Salvar Configurações"
+  }
+}

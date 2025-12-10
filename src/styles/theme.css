@@ -1,0 +1,121 @@
+
+/* 
+  This file contains only the CSS variable definitions for the themes.
+  It is imported after globals.css to ensure these variables have the final say.
+*/
+
+:root {
+  --background: 240 10% 98% !important;
+  --foreground: 224 71.4% 4.1% !important;
+  --card: 0 0% 100% !important;
+  --card-foreground: 224 71.4% 4.1% !important;
+  --header-background: 0 0% 100% !important;
+  --tabs-trigger-active-background: 0 0% 100% !important;
+  --popover: 0 0% 100% !important;
+  --popover-foreground: 224 71.4% 4.1% !important;
+  --primary: 221.2 83.2% 53.3% !important;
+  --primary-foreground: 210 20% 98% !important;
+  --secondary: 220 14.3% 95.9% !important;
+  --secondary-foreground: 220 8.9% 46.1% !important;
+  --muted: 220 14.3% 95.9% !important;
+  --muted-foreground: 220 8.9% 46.1% !important;
+  --accent: 220 14.3% 95.9% !important;
+  --accent-foreground: 220 8.9% 46.1% !important;
+  --destructive: 0 84.2% 60.2% !important;
+  --destructive-foreground: 210 20% 98% !important;
+  --border: 220 13% 91% !important;
+  --input: 220 13% 91% !important;
+  --input-background: 0 0% 100% !important;
+  --ring: 221.2 83.2% 53.3% !important;
+  --ring-width: 2px !important;
+  --radius: 0.75rem !important;
+  --layout-opacity: 0.8 !important;
+
+  /* Typography */
+  --font-family-page-title: "Inter", sans-serif !important;
+  --font-size-page-title: 1.5rem !important;
+  --font-weight-page-title: 600 !important;
+  --letter-spacing-page-title: -0.025em !important;
+  --line-height-page-title: 1.2 !important;
+  --font-family-page-subtitle: "Inter", sans-serif !important;
+  --font-size-page-subtitle: 0.875rem !important;
+  --font-weight-page-subtitle: 400 !important;
+  --letter-spacing-page-subtitle: 0em !important;
+  --line-height-page-subtitle: 1.5 !important;
+  --font-family-section-title: "Inter", sans-serif !important;
+  --font-size-section-title: 1.125rem !important;
+  --font-weight-section-title: 600 !important;
+  --letter-spacing-section-title: 0em !important;
+  --line-height-section-title: 1.4 !important;
+  --font-family-body: "Inter", sans-serif !important;
+  --font-size-body: 0.875rem !important;
+  --font-weight-body: 400 !important;
+  --letter-spacing-body: 0em !important;
+  --line-height-body: 1.6 !important;
+  
+  /* Background */
+  --page-background: hsl(var(--background)) !important;
+  
+  /* Sidebar */
+  --sidebar-bg-1: hsl(var(--card)) !important;
+  --sidebar-bg-1-hsl: var(--card) !important;
+  --sidebar-bg-2: hsl(var(--card)) !important;
+  --sidebar-border-color-1: hsl(var(--border)) !important;
+  --sidebar-border-color-2: hsl(var(--primary)) !important;
+  --sidebar-foreground: hsl(var(--card-foreground)) !important;
+  --sidebar-accent: hsl(var(--accent)) !important;
+  --sidebar-accent-foreground: hsl(var(--accent-foreground)) !important;
+  --sidebar-primary: hsl(var(--primary)) !important;
+  --sidebar-primary-foreground: hsl(var(--primary-foreground)) !important;
+  
+  /* Top Bar */
+  --top-bar-bg-1: hsl(var(--header-background)) !important;
+  --top-bar-bg-1-hsl: var(--header-background) !important;
+  --top-bar-bg-2: hsl(var(--header-background)) !important;
+  --top-bar-border-color-1: hsl(var(--border)) !important;
+  --top-bar-border-color-2: hsl(var(--primary)) !important;
+  --header-foreground: hsl(var(--foreground)) !important;
+  
+  /* Bottom Bar */
+  --bottom-bar-bg-1: hsl(var(--card)) !important;
+  --bottom-bar-bg-1-hsl: var(--card) !important;
+  --bottom-bar-bg-2: hsl(var(--card)) !important;
+  --bottom-bar-border-color-1: hsl(var(--border)) !important;
+  --bottom-bar-border-color-2: hsl(var(--primary)) !important;
+  --bottom-bar-icon-active: hsl(var(--primary)) !important;
+  --bottom-bar-icon-inactive: hsl(var(--muted-foreground)) !important;
+  --bottom-bar-text-active: hsl(var(--primary)) !important;
+  --bottom-bar-text-inactive: hsl(var(--muted-foreground)) !important;
+
+  /* Skeleton */
+  --skeleton-base-color: hsl(220, 13%, 91%) !important;
+  --skeleton-highlight-color: hsl(220, 14.3%, 95.9%) !important;
+  --skeleton-animation-duration: 1.5s !important;
+}
+
+.dark {
+  --background: 224 71.4% 4.1% !important;
+  --foreground: 210 20% 98% !important;
+  --card: 224 71.4% 4.1% !important;
+  --card-foreground: 210 20% 98% !important;
+  --header-background: 224 71.4% 4.1% !important;
+  --tabs-trigger-active-background: 224 71.4% 4.1% !important;
+  --popover: 224 71.4% 4.1% !important;
+  --popover-foreground: 210 20% 98% !important;
+  --primary: 217.2 91.2% 59.8% !important;
+  --primary-foreground: 210 20% 98% !important;
+  --secondary: 215 27.9% 16.9% !important;
+  --secondary-foreground: 210 20% 98% !important;
+  --muted: 215 27.9% 16.9% !important;
+  --muted-foreground: 217.9 10.6% 64.9% !important;
+  --accent: 215 27.9% 16.9% !important;
+  --accent-foreground: 210 20% 98% !important;
+  --destructive: 0 62.8% 30.6% !important;
+  --destructive-foreground: 210 20% 98% !important;
+  --border: 215 27.9% 16.9% !important;
+  --input: 215 27.9% 16.9% !important;
+  --input-background: 224 71.4% 4.1% !important;
+  --ring: 217.2 91.2% 59.8% !important;
+  --skeleton-base-color: hsl(215, 27.9%, 16.9%) !important;
+  --skeleton-highlight-color: hsl(220, 18%, 8%) !important;
+}

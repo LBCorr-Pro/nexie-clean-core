@@ -1,0 +1,13 @@
+{
+  "invalidEmail": "The email format is invalid.",
+  "passwordTooShort": "Password must be at least {min} characters long.",
+  "loginFailed": "Login Failed",
+  "sessionCreationError": "Could not create a secure session.",
+  "invalidCredentials": "Invalid email or password. Please check and try again.",
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Oops! The page you are looking for does not exist or has been moved.",
+    "backButton": "Go Back",
+    "homeLink": "Go to Homepage"
+  }
+}

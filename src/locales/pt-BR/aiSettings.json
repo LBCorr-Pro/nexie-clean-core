@@ -1,0 +1,237 @@
+{
+  "title": "Inteligência Artificial",
+  "description": "Gerencie provedores, modelos, assistentes e contextos de IA para a aplicação.",
+  "tabs": {
+    "settings": "Configurações",
+    "assistants": "Assistentes",
+    "contexts": "Contextos",
+    "monitoring": "Monitoramento",
+    "test": "Testar",
+    "debug": "Depuração"
+  },
+  "settingsTab": {
+    "title": "Configurações do Motor de IA",
+    "description": "Crie e gerencie conexões com diferentes provedores de IA e seus modelos.",
+    "addButton": "Adicionar Nova Configuração",
+    "table": {
+      "name": "Nome",
+      "provider": "Provedor",
+      "model": "ID do Modelo",
+      "status": "Status",
+      "actions": "Ações"
+    },
+    "statusLabels": {
+      "active": "Ativo",
+      "inactive": "Inativo"
+    },
+    "noResults": "Nenhuma configuração de IA encontrada.",
+    "actions": {
+      "edit": "Editar",
+      "duplicate": "Duplicar",
+      "delete": "Excluir"
+    },
+    "formDialog": {
+      "titleCreate": "Criar Nova Configuração de IA",
+      "titleEdit": "Editar Configuração de IA",
+      "description": "Defina os detalhes de conexão para um modelo de IA.",
+      "nameLabel": "Nome da Configuração",
+      "namePlaceholder": "Ex: Gemini 1.5 Flash (Padrão)",
+      "nameDescription": "Um nome amigável para identificar esta configuração.",
+      "providerLabel": "Provedor",
+      "providerPlaceholder": "Selecione um provedor...",
+      "providerOptions": {
+        "google": "Google AI",
+        "openai": "OpenAI (em breve)"
+      },
+      "modelIdLabel": "ID do Modelo",
+      "modelIdPlaceholder": "Ex: gemini-1.5-flash",
+      "modelIdDescription": "O identificador específico do modelo do provedor.",
+      "statusLabel": "Ativo",
+      "saveButton": "Salvar Configuração",
+      "savingButton": "Salvando...",
+      "zod": {
+        "nameRequired": "O nome da configuração é obrigatório.",
+        "providerRequired": "Você deve selecionar um provedor.",
+        "modelIdRequired": "O ID do modelo é obrigatório.",
+        "apiKeyRequired": "Uma chave de API personalizada é necessária se você não usar a padrão."
+      },
+      "useDefaultApiKeyLabel": "Usar Chave de API Padrão?",
+      "useDefaultApiKeyDescription": "Se habilitado, usará a chave definida nas variáveis de ambiente do sistema.",
+      "apiKeyLabel": "Chave de API Personalizada",
+      "apiKeyPlaceholder": "Digite a chave de API específica...",
+      "apiKeyDescription": "Use isto para substituir a chave padrão do sistema."
+    },
+    "deleteDialog": {
+      "title": "Confirmar Exclusão",
+      "description": "Tem certeza de que deseja excluir a configuração \"{name}\"? Assistentes que usam esta configuração deixarão de funcionar.",
+      "cancel": "Cancelar",
+      "confirm": "Excluir"
+    },
+    "toasts": {
+      "loadingError": "Erro ao carregar as configurações.",
+      "duplicatingTitle": "Duplicando Configuração",
+      "duplicatingDescription": "A configuração para \"{name}\" está pronta para ser salva como uma cópia.",
+      "deleteSuccessTitle": "Configuração Excluída!",
+      "deleteSuccessDescription": "A configuração \"{name}\" foi removida.",
+      "deleteErrorTitle": "Erro ao Excluir Configuração",
+      "saveSuccessTitle": "Configuração Salva!",
+      "saveSuccessDescription": "A configuração de IA foi salva com sucesso.",
+      "saveErrorTitle": "Erro ao Salvar Configuração"
+    }
+  },
+  "assistantsTab": {
+    "title": "Assistentes de IA",
+    "description": "Crie e gerencie seus 'pilotos' de IA. Cada assistente tem uma personalidade e uma função específica.",
+    "addButton": "Adicionar Novo Assistente",
+    "table": {
+      "headerIcon": "Ícone",
+      "headerNameType": "Nome / Tipo",
+      "headerEngine": "Motor",
+      "headerActions": "Ações",
+      "noResults": "Nenhum assistente criado ainda.",
+      "undefinedConfig": "Indefinido"
+    },
+    "typeLabels": {
+      "text": "Texto",
+      "image": "Imagem",
+      "video": "Vídeo",
+      "speech": "Voz"
+    },
+    "actions": {
+      "edit": "Editar",
+      "duplicate": "Duplicar",
+      "delete": "Excluir"
+    },
+    "formDialog": {
+      "titleCreate": "Criar Novo Assistente",
+      "titleEdit": "Editar Assistente",
+      "description": "Defina a personalidade, capacidades e motor para este assistente de IA.",
+      "nameLabel": "Nome do Assistente",
+      "namePlaceholder": "Ex: Chatbot de Suporte, Redator de Posts",
+      "nicknameLabel": "Apelido (Opcional)",
+      "nicknamePlaceholder": "Ex: G-Bot",
+      "typeLabel": "Tipo de Assistente",
+      "typePlaceholder": "Selecione um tipo...",
+      "typeOptions": {
+        "text": "Texto (Gera texto)",
+        "image": "Imagem (Gera imagens)",
+        "video": "Vídeo (Gera vídeos)",
+        "speech": "Voz (Gera áudio)"
+      },
+      "typeDescription": "O tipo não pode ser alterado após a criação.",
+      "configLabel": "Motor de IA (Configuração)",
+      "configPlaceholder": "Selecione uma configuração...",
+      "configDescription": "O modelo de IA que este assistente usará.",
+      "avatarLabel": "Avatar (Opcional)",
+      "systemPromptLabel": "Prompt do Sistema / Personalidade",
+      "systemPromptRequired": " (obrigatório para assistentes de texto)",
+      "systemPromptPlaceholderText": "Você é um assistente prestativo e amigável. Você sempre responde em português...",
+      "systemPromptPlaceholderOther": "Descreva a cena para a imagem/vídeo ou as características da voz...",
+      "contextFilesLabel": "Arquivos de Contexto (Em breve)",
+      "contextFilesPlaceholder": "Funcionalidade em desenvolvimento. Aqui você poderá enviar PDFs, planilhas, etc.",
+      "cancelButton": "Cancelar",
+      "saveButton": "Salvar Assistente",
+      "savingButton": "Salvando...",
+      "zod": {
+        "nameRequired": "O nome do assistente é obrigatório.",
+        "typeRequired": "Você deve selecionar um tipo de assistente.",
+        "configRequired": "Você deve selecionar uma configuração de motor de IA.",
+        "systemPromptRequired": "O prompt do sistema é obrigatório para assistentes baseados em texto."
+      }
+    },
+    "deleteDialog": {
+      "title": "Confirmar Exclusão",
+      "description": "Tem certeza de que deseja excluir o assistente \"{name}\"? Isso pode afetar os contextos que o estão usando.",
+      "cancel": "Cancelar",
+      "confirm": "Excluir"
+    },
+    "toasts": {
+      "loadingError": "Erro ao carregar os assistentes.",
+      "duplicatingTitle": "Duplicando Assistente",
+      "duplicatingDescription": "O assistente \"{name}\" está pronto para ser salvo como uma cópia.",
+      "deleteSuccessTitle": "Assistente Excluído!",
+      "deleteSuccessDescription": "O assistente \"{name}\" foi removido.",
+      "deleteErrorTitle": "Erro ao Excluir Assistente",
+      "saveSuccessTitle": "Assistente Salvo!",
+      "saveSuccessDescription": "O assistente de IA foi salvo com sucesso.",
+      "saveErrorTitle": "Erro ao Salvar Assistente"
+    }
+  },
+  "contextsTab": {
+    "title": "Gerenciamento de Contextos de IA",
+    "description": "Atribua um Assistente de IA específico para cada contexto de uso no sistema. As configurações aqui substituem as configurações master.",
+    "defaultCategory": "Geral",
+    "saveButton": "Salvar Atribuições",
+    "savingButton": "Salvando...",
+    "selectPlaceholder": "Trocar assistente...",
+    "noAssistantOption": "Nenhum (Padrão do sistema)",
+    "toasts": {
+      "loadingError": "Erro ao carregar dados.",
+      "saveSuccessTitle": "Atribuições Salvas!",
+      "saveSuccessDescription": "As atribuições de contexto de IA foram atualizadas.",
+      "saveErrorTitle": "Erro ao Salvar Atribuições"
+    }
+  },
+  "monitoringTab": {
+    "title": "Monitoramento de Interações",
+    "description": "Visualize o histórico recente de todas as chamadas feitas aos assistentes de IA.",
+    "searchPlaceholder": "Buscar por assistente, status, prompt...",
+    "table": {
+      "headerTimestamp": "Data/Hora",
+      "headerAssistant": "Assistente",
+      "headerStatus": "Status",
+      "headerCost": "Custo",
+      "headerActions": "Ações",
+      "noResults": "Nenhum log de interação encontrado.",
+      "noResultsForSearch": "Nenhum log corresponde à sua busca."
+    },
+    "actions": {
+      "viewDetails": "Ver Detalhes"
+    },
+    "dialog": {
+      "title": "Detalhes do Log",
+      "description": "Visualizando interação de <strong>{assistant}</strong> em {timestamp}",
+      "userInput": "Entrada do Usuário (Prompt)",
+      "aiOutput": "Saída da IA",
+      "errorDetails": "Detalhes do Erro",
+      "noDetailsAvailable": "Nenhum detalhe de erro disponível.",
+      "closeButton": "Fechar"
+    }
+  },
+  "testTab": {
+    "title": "Testar Assistentes",
+    "description": "Execute testes em tempo real com seus assistentes configurados para verificar suas respostas, prompts e configurações.",
+    "assistantLabel": "Assistente",
+    "assistantPlaceholder": "Selecione...",
+    "loadingAssistants": "Carregando assistentes...",
+    "promptLabel": "Prompt do Usuário",
+    "promptPlaceholder": "Digite sua pergunta ou instrução aqui...",
+    "runButton": "Executar Assistente",
+    "processingButton": "Processando...",
+    "resultTitle": "Resultado da Execução",
+    "generatedMedia": "Mídia Gerada:",
+    "unsupportedBrowser": "Seu navegador não suporta o elemento de áudio.",
+    "errorTitle": "Erro",
+    "errorExecuting": "Erro ao executar o assistente:",
+    "invalidInput": "Selecione um assistente e insira um prompt."
+  },
+  "debugTab": {
+    "title": "Aba de Depuração de IA",
+    "description": "Use esta seção para executar testes de diagnóstico isolados nas capacidades de IA.",
+    "tts": {
+      "title": "Teste de Geração de Áudio (Text-to-Speech)",
+      "description": "Insira um texto e execute testes para gerar áudio usando diferentes métodos de backend. Isso ajuda a diagnosticar problemas de conectividade e configuração com as APIs de TTS.",
+      "label": "Texto para Converter em Áudio",
+      "genkitButton": "Testar com Genkit",
+      "sdkButton": "Testar com Google Cloud SDK",
+      "resultTitle": "Resultado do Teste",
+      "waiting": "Aguardando...",
+      "error": "Erro",
+      "noPrompt": "O prompt de TTS não pode estar vazio",
+      "testStart": "Iniciando teste: {testName}",
+      "testComplete": "Teste {testName} Concluído",
+      "testCompleteDesc": "O resultado (áudio ou erro) é exibido abaixo.",
+      "testError": "Erro no Teste {testName}"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+
+{
+  "pageTitle": "Performance & Cache",
+  "pageDescription": "Tools to clear application cache and optimize performance.",
+  "permissionDenied": "You do not have permission to access performance tools.",
+  "dexieCard": {
+    "title": "Application Data Cache (Dexie)",
+    "description": "The application caches settings like appearance and menus in your browser's local database (IndexedDB/Dexie) to speed up loading. Clearing this cache forces the app to fetch the latest data from the server on the next load.",
+    "buttonText": "Clear Application Cache",
+    "alertTitle": "This is an aggressive action.",
+    "alertDescription": "It will clear all locally cached settings (appearance, menus, etc.) for ALL users on this browser. Use it if you are experiencing data inconsistencies."
+  },
+  "browserCacheCard": {
+    "title": "Browser Storage",
+    "description": "Manage data stored directly in your browser's Local Storage and Session Storage.",
+    "appCacheTitle": "Specific Application Cache",
+    "appCacheDescription": "Clear a specific cache key used by the application ('<code>'{cacheKey}'</code>'). This is a safe action.",
+    "appCacheButton": "Clear App Key",
+    "localStorageTitle": "Full Local Storage",
+    "localStorageAlertTitle": "Destructive Action!",
+    "localStorageAlertDescription": "This will clear ALL data stored by this domain in Local Storage, including login sessions from other tabs.",
+    "localStorageButton": "Clear All Local Storage",
+    "sessionStorageTitle": "Full Session Storage",
+    "sessionStorageAlertTitle": "Destructive Action!",
+    "sessionStorageAlertDescription": "This will clear ALL data for the current session, which might cause unexpected behavior in other open tabs.",
+    "sessionStorageButton": "Clear Session Storage"
+  },
+  "filesCacheCard": {
+    "title": "Browser Files Cache",
+    "description": "To ensure you are seeing the latest version of the application files (like JavaScript and CSS), it's recommended to perform a hard refresh.",
+    "p1": "This action clears files cached by your browser, forcing it to download the newest versions from the server.",
+    "p2": "Use your browser's built-in functionality:",
+    "windowsLinux": "On Windows/Linux: '<code>'Ctrl'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "mac": "On macOS: '<code>'Cmd'</code>' + '<code>'Shift'</code>' + '<code>'R'</code>'",
+    "p3": "This is useful after a new version of the application has been deployed to ensure you are not running old code."
+  },
+  "toasts": {
+    "dexie": {
+      "successTitle": "Application Cache Cleared",
+      "successDescription": "All local data has been successfully deleted. Please reload the page.",
+      "errorTitle": "Error Clearing Cache",
+      "errorDescription": "Could not clear the application's local database."
+    },
+    "appCache": {
+      "successTitle": "App Cache Key Cleared",
+      "successDescription": "The specific key '{cacheKey}' has been removed from Local Storage.",
+      "errorTitle": "Error Clearing Key"
+    },
+    "localStorage": {
+      "successTitle": "Local Storage Cleared",
+      "successDescription": "All data from Local Storage for this domain has been removed. You may need to log in again.",
+      "errorTitle": "Error Clearing Local Storage"
+    },
+    "sessionStorage": {
+      "successTitle": "Session Storage Cleared",
+      "successDescription": "All data for this session has been removed.",
+      "errorTitle": "Error Clearing Session Storage"
+    }
+  },
+  "dialogs": {
+    "dexie": {
+      "title": "Confirm Cache Clearing",
+      "description": "This will delete all locally cached data for the app, including appearance and menu settings. You will be logged out. Are you sure?",
+      "actionText": "Yes, Clear Everything"
+    },
+    "localStorage": {
+      "title": "Confirm Full Deletion",
+      "description": "You are about to delete ALL Local Storage data for this domain. This will log you out and may affect other open tabs. Proceed with caution.",
+      "actionText": "Yes, Delete All"
+    },
+    "sessionStorage": {
+      "title": "Confirm Session Deletion",
+      "description": "This will clear all data for the current browser session. This might cause unexpected behavior.",
+      "actionText": "Yes, Clear Session"
+    }
+  }
+}

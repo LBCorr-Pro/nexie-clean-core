@@ -1,0 +1,97 @@
+
+{
+  "title": "User Management",
+  "description": "Create, view, and manage system users.",
+  "createButton": "Create New User",
+  "instanceContext": "Instance Context",
+  "masterContextRequired": "User management is a Master level feature. You are currently acting as an instance.",
+  "permissionNeeded": "Permission Needed",
+  "viewPermissionError": "You do not have permission ('master.users.view_all') to view global users.",
+  "createPermissionError": "You do not have the permission ('master.users.create_global') for this action.",
+  "searchPlaceholder": "Search by name, email, or CPF...",
+  "noUsersFound": "No users found for your search.",
+  "noUsersCreated": "No global users registered yet.",
+  "totalUsers": "Total users: {count}",
+  "globalTitle": "Global User Management",
+  "globalDescription": "View, filter, and manage users who are not tied to specific instances.",
+  "table": {
+    "loading": "Loading users...",
+    "noUsersFound": "No users found.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "header": {
+      "name": "Name",
+      "email": "Email",
+      "registeredAt": "Registered At",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "openMenu": "Open menu"
+    }
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirm Deletion",
+    "deleteConfirmDescription": "Are you sure you want to delete the user \"{userName}\"? This action will remove the user from the system but will not delete them from the authentication provider (Firebase Auth).",
+    "deleteConfirmAction": "Delete"
+  },
+  "toasts": {
+    "actionNotAllowed": "Action not allowed",
+    "deleteSuccessTitle": "User Deleted",
+    "deleteSuccessDescription": "The user \"{userName}\" has been removed from the system.",
+    "deleteErrorTitle": "Error deleting",
+    "deleteErrorDescription": "Could not remove the user.",
+    "userNotFound": "User not found.",
+    "formInitError": "Error setting up user form",
+    "userUpdatedSuccessTitle": "User Updated!",
+    "userUpdatedErrorTitle": "Error Updating User",
+    "userCreatedSuccessTitle": "User Created!",
+    "userCreatedSuccessDescription": "A verification email has been sent to {email}.",
+    "userCreatedErrorTitle": "Error Creating User",
+    "userCreatedErrorDescription": "An unknown error occurred while trying to create the user.",
+    "emailInUse": "This email is already in use by another account.",
+    "weakPassword": "The password is too weak.",
+    "validationErrorTitle": "Validation Error",
+    "validationErrorDescription": "Please correct the fields marked in red.",
+    "verificationEmailSentTitle": "Email Sent",
+    "verificationEmailSentDescription": "A new verification email has been sent to you."
+  },
+  "createTitle": "Create New Global User",
+  "createDescription": "Fill in the fields to add a user at the Master level. The fields are defined in the settings.",
+  "editTitle": "Edit Global User",
+  "editDescription": "Editing the profile of a global system user.",
+  "editPermissionError": "You do not have the permission ('master.users.update_global') for this action.",
+  "saveChangesButton": "Save Changes",
+  "saveUserButton": "Save User",
+  "form": {
+    "emailLabel": "Email",
+    "emailDescription_part1": "To change the email, go to the ",
+    "emailDescription_link": "security page",
+    "emailDescription_part2": " for security reasons.",
+    "passwordPlaceholderEdit": "Leave blank to keep the current password",
+    "passwordPlaceholderCreate": "Minimum 6 characters",
+    "genderPlaceholder": "Select a gender...",
+    "placeholderGeneric": "Enter {label}",
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "User's full name",
+    "passwordLabel": "Password",
+    "statusLabel": "Status",
+    "statusPlaceholder": "Select a status",
+    "statusDescription": "Defines the user's account state."
+  },
+  "instanceTitle": "Instance User Management",
+  "instanceDescription": "Users belonging to this specific instance.",
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended"
+  },
+  "error": {
+    "genericTitle": "An Error Occurred"
+  },
+  "resendVerificationButton": "Resend Email",
+  "emailNotVerifiedTitle": "Email not verified",
+  "emailNotVerifiedDescription": "This user's email has not been verified yet."
+}

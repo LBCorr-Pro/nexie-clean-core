@@ -1,0 +1,23 @@
+{
+  "pageTitle": "Estatísticas Gerais",
+  "pageDescription": "Visão geral da atividade e uso do sistema.",
+  "permissionDenied": "Você não tem permissão para visualizar as estatísticas gerais.",
+  "activeUsers": "Usuários Ativos",
+  "createdInstances": "Instâncias Criadas",
+  "activeModules": "Módulos Ativos",
+  "recentActivity": "Atividade Recente",
+  "recentActivityDescription": "Um resumo dos principais eventos nos últimos 7 dias.",
+  "moreChartsComingSoon": "Mais gráficos e estatísticas em breve...",
+  "logins": "Logins",
+  "newUsers": "Novos Usuários",
+  "totalActions": "Ações Totais",
+  "days": {
+    "seg": "Seg",
+    "ter": "Ter",
+    "qua": "Qua",
+    "qui": "Qui",
+    "sex": "Sex",
+    "sáb": "Sáb",
+    "dom": "Dom"
+  }
+}

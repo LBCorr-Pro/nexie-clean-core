@@ -1,0 +1,466 @@
+
+{
+  "pageTitle": "Appearance Settings",
+  "pageDescription": "Customize the system's appearance to match your brand.",
+  "tabs": {
+    "identity": "Identity",
+    "mainColors": "Main Colors",
+    "background": "Background",
+    "typography": "Typography",
+    "components": "Components",
+    "shapesAndStyles": "Shapes & Styles",
+    "layoutAndEffects": "Layout & Effects",
+    "leftSidebar": "Left Sidebar",
+    "topBar": "Top Bar",
+    "bottomBar": "Bottom Bar"
+  },
+  "themePresets": {
+    "label": "Theme Presets",
+    "placeholder": "Load a preset..."
+  },
+  "colorPresets": {
+    "label": "Color Presets",
+    "placeholder": "Load color preset...",
+    "placeholderEmpty": "No color presets saved"
+  },
+  "toasts": {
+    "presetLoadedTitle": "Preset Loaded",
+    "presetLoadedDesc": "The preset has been loaded into the form. Save to apply.",
+    "cancelledTitle": "Action Cancelled",
+    "cancelledDesc": "No preset was saved.",
+    "presetSavedTitle": "Preset Saved",
+    "presetSavedDesc": "The preset \"{presetName}\" was saved successfully.",
+    "presetSaveErrorTitle": "Error Saving Preset",
+    "validationErrorTitle": "Validation Error",
+    "validationErrorDesc": "Please correct the errors in the form.",
+    "saveSuccessTitle": "Appearance Saved",
+    "saveSuccessDesc": "Your appearance settings have been saved.",
+    "saveErrorTitle": "Error Saving"
+  },
+  "dialogs": {
+    "presetNamePrompt": "Enter a name for this {type}:",
+    "themePreset": "Theme Preset",
+    "colorPreset": "Color Preset",
+    "validationError": "The name is required.",
+    "presetNameLabel": "Preset Name",
+    "presetNamePlaceholder": "e.g., My Custom Theme"
+  },
+  "buttons": {
+    "revert": "Revert to Default",
+    "saveAsColorPreset": "Save as Color Preset",
+    "saveAsThemePreset": "Save as Theme Preset"
+  },
+  "identity": {
+    "browserIconsTitle": "Browser and PWA Icons",
+    "browserIconsDescription": "Configure the favicon and icons for the Progressive Web App.",
+    "appleTouchIconLabel": "Apple Touch Icon",
+    "appleTouchIconDescription": "Icon for iOS (180x180px).",
+    "pwaIcon192Label": "PWA Icon (192x192)",
+    "pwaIcon192Description": "Main icon for the PWA.",
+    "pwaIcon512Label": "PWA Icon (512x512)",
+    "pwaIcon512Description": "Large icon for the PWA splash screen."
+  },
+  "mainColors": {
+    "title": "Main Accent Colors",
+    "primary": "Primary",
+    "primaryForeground": "Primary (Text)",
+    "accent": "Accent",
+    "accentForeground": "Accent (Text)",
+    "destructive": "Destructive / Error",
+    "destructiveForeground": "Destructive (Text)"
+  },
+  "background": {
+    "title": "Page Background",
+    "typeLabel": "Background Type",
+    "solidColor": "Solid Color",
+    "gradient": "Gradient",
+    "image": "Image",
+    "colorLabel": "Background Color",
+    "gradientColor1": "Color 1",
+    "gradientColor2": "Color 2",
+    "gradientDirection": "Gradient Direction",
+    "imageUrl": "Image URL",
+    "animatedEffect": "Animated Background Effect",
+    "selectEffect": "Select an effect...",
+    "effectDescription": "Applies a subtle animation over the background.",
+    "effects": {
+      "none": "None",
+      "aurora": "Aurora Borealis",
+      "stars": "Twinkling Stars",
+      "bubbles": "Floating Bubbles",
+      "diamonds": "Floating Diamonds",
+      "lines": "Flowing Lines",
+      "grid": "Grid Pattern",
+      "bokeh": "Bokeh Blur",
+      "waves": "Gentle Waves",
+      "noise": "Subtle Noise",
+      "floatingShapes": "Floating Shapes",
+      "animatedGrid": "Animated Grid",
+      "subtleDust": "Subtle Dust"
+    }
+  },
+  "typography": {
+    "fontFamily": "Font Family",
+    "fontSize": "Font Size",
+    "fontWeight": "Font Weight",
+    "letterSpacing": "Letter Spacing",
+    "lineHeight": "Line Height",
+    "fontWeightBody": "Body Text Weight",
+    "lineHeightBody": "Body Text Line Height",
+    "pageTitle": { "title": "Page Title" },
+    "pageSubtitle": { "title": "Page Subtitle" },
+    "sectionTitle": { "title": "Section Title" },
+    "bodyText": { "title": "Body Text" }
+  },
+  "components": {
+    "backgroundsTitle": "Component Backgrounds & Text",
+    "mainText": "Main Text",
+    "baseBackground": "Base Background (UI)",
+    "cardBackground": "Card Background",
+    "cardText": "Card Text",
+    "popoverBackground": "Popover/Modal Background",
+    "popoverText": "Popover/Modal Text",
+    "secondaryBackground": "Secondary Background",
+    "secondaryText": "Secondary Text",
+    "mutedBackground": "Muted Background",
+    "mutedText": "Muted Text",
+    "interactionsTitle": "Component Interactions",
+    "defaultBorder": "Default Border",
+    "inputBorder": "Input Border",
+    "focusRing": "Focus Ring"
+  },
+  "shapeAndStyle": {
+    "componentStyleTitle": "Component Style",
+    "borderStyleLabel": "Border Radius",
+    "selectStyle": "Select a style...",
+    "borderStyleDescription": "Controls the roundness of components like cards and inputs.",
+    "borderStyles": {
+      "sharp": "Sharp (0px)",
+      "subtle": "Subtle (0.3rem)",
+      "smooth": "Smooth (0.5rem)",
+      "rounded": "Rounded (0.75rem)",
+      "pill": "Pill (1.5rem)"
+    },
+    "tabsContainerStyleLabel": "Tabs Container Style",
+    "tabsContainerStyleDescription": "Visual style for the container holding a set of tabs.",
+    "tabsContainerStyles": {
+      "default": "Default",
+      "softShadow": "Soft Shadow",
+      "connectedBorder": "Connected Border",
+      "simpleBorder": "Simple Border"
+    },
+    "microInteractionsTitle": "Micro-interactions",
+    "buttonHoverEffectLabel": "Button Hover Effect",
+    "selectEffect": "Select an effect...",
+    "buttonHoverEffectDescription": "Animation when hovering over buttons.",
+    "buttonHoverEffects": {
+      "none": "None",
+      "scale": "Scale Up",
+      "lift": "Lift Up",
+      "glow": "Glow"
+    },
+    "loadingEffectsTitle": "Loading Effects (Skeleton)",
+    "skeletonBaseColor": "Skeleton Base Color",
+    "skeletonHighlightColor": "Skeleton Highlight Color",
+    "animationSpeed": "Animation Speed",
+    "animationSpeedDescription": "Speed of the loading animation.",
+    "skeletonPreview": "Preview"
+  },
+  "shared": {
+    "style": {
+      "label": "Style",
+      "options": {
+        "flat": "Flat",
+        "glass": "Glass",
+        "bordered": "Bordered",
+        "innerShadow": "Inner Shadow",
+        "outerShadow": "Outer Shadow",
+        "borderGradient": "Gradient Border",
+        "borderAccent": "Accent Border"
+      },
+      "description": "The overall visual style for this component."
+    },
+    "glass": {
+      "opacityLabel": "Glass Opacity",
+      "useBackgroundLabel": "Use Main Background as Base Color",
+      "useBackgroundDescription": "If disabled, uses the Card color as the base for the glass effect."
+    },
+    "border": {
+      "widthLabel": "Border Width",
+      "gradientColor1": "Border Gradient Color 1",
+      "gradientColor2": "Border Gradient Color 2",
+      "gradientDirection": "Border Gradient Direction",
+      "colorLabel": "Border Color"
+    },
+    "effects": {
+      "label": "Text Effect",
+      "description": "Apply a special visual effect to the text.",
+      "options": {
+        "none": "None",
+        "gradient": "Gradient",
+        "shadow": "Shadow",
+        "neon": "Neon Glow",
+        "emboss": "Emboss",
+        "deboss": "Deboss"
+      }
+    },
+    "gradient": {
+      "title": "Gradient Options",
+      "color1": "Color 1",
+      "color2": "Color 2"
+    },
+    "shadow": {
+      "title": "Shadow Options",
+      "color": "Shadow Color"
+    },
+    "neon": {
+      "title": "Neon Glow Options",
+      "glowColor": "Glow Color",
+      "glowStrength": "Glow Strength"
+    },
+    "animations": {
+      "entryLabel": "Entry Animation",
+      "entryDescription": "Animation when the text first appears.",
+      "repeatLabel": "Repeat Animation",
+      "repeatDescription": "Looping animation after the text has appeared.",
+      "entryOptions": {
+        "none": "None",
+        "fadeIn": "Fade In",
+        "zoomIn": "Zoom In",
+        "slideInUp": "Slide In Up",
+        "slideInLeft": "Slide In Left",
+        "lightWipeLeft": "Light Wipe (Left)",
+        "lightWipeDiagonal": "Light Wipe (Diagonal)"
+      },
+      "repeatOptions": {
+        "none": "None",
+        "pulse": "Pulse",
+        "shimmerDiagonal": "Shimmer Diagonal",
+        "auroraText": "Aurora Text (Gradient)"
+      }
+    }
+  },
+  "layoutEffects": {
+    "layoutVisibilityTitle": "Layout & Visibility",
+    "leftSidebarVisible": "Left Sidebar",
+    "topBarVisible": "Top Bar",
+    "bottomBarVisible": "Bottom Bar",
+    "topBarMode": "Top Bar Mode",
+    "bottomBarMode": "Bottom Bar Mode",
+    "modes": { "fixed": "Fixed", "floating": "Floating" },
+    "elementStyleTitle": "Element Style",
+    "layoutStyle": "Component Style",
+    "layoutStyleDescription": "General visual style for components like cards and sidebars.",
+    "styles": { "default": "Default", "glassmorphism": "Glassmorphism" },
+    "opacityLabel": "Opacity (for Glassmorphism)",
+    "opacityDescription": "Controls the transparency of the glass effect.",
+    "interactionFocusTitle": "Interaction & Focus",
+    "focusRingStyle": "Focus Ring Style",
+    "focusRingStyleDescription": "Style of the outline on focused elements.",
+    "ringStyles": { "default": "Solid", "dashed": "Dashed", "dotted": "Dotted" },
+    "focusRingWidth": "Focus Ring Width",
+    "transitionPreview": "Animation Preview",
+    "transitionBoxText": "Navigating..."
+  },
+  "sidebar": {
+    "style": {
+      "label": "Style",
+      "description": "Visual style for this component.",
+       "options": {
+        "flat": "Flat",
+        "glass": "Glass",
+        "bordered": "Bordered",
+        "innerShadow": "Inner Shadow",
+        "outerShadow": "Outer Shadow",
+        "borderGradient": "Gradient Border",
+        "borderAccent": "Accent Border"
+      }
+    },
+    "branding": {
+      "title": "Branding",
+      "logoExpanded": "Logo (Expanded)",
+      "useMainLogo": "Use Main Logo",
+      "useCollapsedLogo": "Use Collapsed Logo",
+      "customUrl": "Custom URL/Upload",
+      "logoCollapsed": "Logo (Collapsed/Icon)",
+      "logoSize": "Logo Size",
+      "enableLink": "Enable Link on Logo/Name?",
+      "linkToHome": "Link to Home?",
+      "linkHref": "Custom Link Destination",
+      "selectDestination": "Select a destination page...",
+      "destinationDescription": "Only pages marked as 'can be initial page' will appear here.",
+      "textSource": "Text Source",
+      "sources": { "full": "Full System Name", "nickname": "System Nickname", "custom": "Custom Text" },
+      "customText": "Custom Text",
+      "fontFamily": "Font Family",
+      "fontWeight": "Font Weight",
+      "letterSpacing": "Letter Spacing",
+      "color": "Color"
+    },
+    "appName": {
+      "title": "Application Name",
+      "show": "Show App Name?",
+      "source": "Text Source",
+      "sources": { "full": "Full System Name", "nickname": "System Nickname", "custom": "Custom Text" },
+      "customText": "Custom Text",
+      "fontFamily": "Font Family",
+      "fontWeight": "Font Weight",
+      "letterSpacing": "Letter Spacing",
+      "color": "Color",
+      "enableLink": "Enable Link?",
+      "linkToHome": "Link to Home?",
+      "linkHref": "Custom Link Destination",
+      "selectDestination": "Select a destination page...",
+      "destinationDescription": "Only pages marked as 'can be initial page' will appear here."
+    },
+    "background": {
+      "title": "Background",
+      "description": "Configure the background style for this component.",
+      "typeLabel": "Background Type",
+      "solid": "Solid",
+      "gradient": "Gradient",
+      "gradientColor1": "Color 1",
+      "colorLabel": "Color",
+      "gradientColor2": "Color 2",
+      "gradientDirection": "Gradient Direction"
+    },
+    "items": {
+      "title": "Menu Items",
+      "description": "Default colors for menu items.",
+      "defaultColor": "Default Color (Icon & Text)",
+      "activeBackground": "Active Background",
+      "activeColor": "Active Color (Icon & Text)",
+      "notificationBadgeBg": "Notification Badge BG",
+      "notificationBadgeText": "Notification Badge Text"
+    },
+    "sizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    }
+  },
+  "topBar": {
+    "style": {
+      "label": "Style",
+      "description": "Visual style for this component.",
+       "options": {
+        "flat": "Flat",
+        "glass": "Glass",
+        "bordered": "Bordered",
+        "innerShadow": "Inner Shadow",
+        "outerShadow": "Outer Shadow",
+        "borderGradient": "Gradient Border",
+        "borderAccent": "Accent Border"
+      }
+    },
+    "content": {
+      "title": "Top Bar Content",
+      "description": "Configure what appears in the top navigation bar."
+    },
+    "trigger": {
+      "title": "Menu Trigger",
+      "typeLabel": "Trigger Type",
+      "icon": "Icon",
+      "image": "Image",
+      "iconName": "Icon Name",
+      "iconColor": "Icon Color",
+      "logoLabel": "Trigger Logo",
+      "useMainLogo": "Use Main Logo",
+      "useCollapsedLogo": "Use Collapsed Logo",
+      "customUrl": "Custom URL/Upload"
+    },
+    "branding": {
+      "title": "Branding (Center Area)",
+      "typeLabel": "Element Type",
+      "text": "Text",
+      "image": "Image",
+      "textSource": "Text Source",
+      "sources": { "full": "Full System Name", "nickname": "System Nickname", "custom": "Custom Text" },
+      "customText": "Custom Text",
+      "fontFamily": "Font Family",
+      "fontWeight": "Font Weight",
+      "fontSize": "Font Size",
+      "letterSpacing": "Letter Spacing",
+      "textColor": "Text Color",
+      "logoLabel": "Branding Logo",
+      "useMainLogo": "Use Main Logo",
+      "useCollapsedLogo": "Use Collapsed Logo",
+      "customUrl": "Custom URL/Upload",
+      "enableLink": "Enable Link?",
+      "linkToHome": "Link to Home?",
+      "linkHref": "Custom Link Destination",
+      "selectDestination": "Select a destination page...",
+      "destinationDescription": "Only pages marked as 'can be initial page' will appear here."
+    },
+    "background": {
+      "title": "Background",
+      "description": "Configure the background style for this component.",
+      "typeLabel": "Background Type",
+      "solid": "Solid",
+      "gradient": "Gradient",
+      "gradientColor1": "Color 1",
+      "colorLabel": "Color",
+      "gradientColor2": "Color 2",
+      "gradientDirection": "Gradient Direction"
+    },
+    "actionIcons": {
+      "title": "Action Icons",
+      "color": "Icon Color (Theme, User, etc.)"
+    }
+  },
+  "bottomBar": {
+    "style": {
+      "label": "Style",
+      "description": "Visual style for this component.",
+      "options": {
+        "flat": "Flat",
+        "glass": "Glass",
+        "bordered": "Bordered",
+        "innerShadow": "Inner Shadow",
+        "outerShadow": "Outer Shadow",
+        "borderGradient": "Gradient Border",
+        "borderAccent": "Accent Border"
+      }
+    },
+    "background": {
+      "title": "Background",
+      "description": "Configure the background style for this component.",
+      "typeLabel": "Background Type",
+      "solid": "Solid",
+      "gradient": "Gradient",
+      "gradientColor1": "Color 1",
+      "colorLabel": "Color",
+      "gradientColor2": "Color 2",
+      "gradientDirection": "Gradient Direction"
+    },
+    "colors": {
+      "title": "Items Colors",
+      "iconActive": "Icon (Active)",
+      "iconInactive": "Icon (Inactive)",
+      "textActive": "Text (Active)",
+      "textInactive": "Text (Inactive)"
+    },
+    "layout": {
+      "title": "Layout & Spacing",
+      "horizontalAlign": "Horizontal Alignment",
+      "spaceAround": "Space Around",
+      "spaceBetween": "Space Between",
+      "spaceEvenly": "Space Evenly",
+      "center": "Center",
+      "start": "Start",
+      "end": "End",
+      "verticalAlign": "Vertical Alignment",
+      "alignCenter": "Center",
+      "alignStart": "Start",
+      "alignEnd": "End",
+      "itemsGap": "Gap Between Items",
+      "itemsGapDescription": "Only applies to Center, Start, and End alignments.",
+      "verticalPadding": "Vertical Padding",
+      "verticalPaddingDescription": "Internal vertical spacing of the bar.",
+      "iconSize": "Icon Size",
+      "fontSize": "Font Size",
+      "iconLabelSpacing": "Spacing (Icon/Label)",
+      "fontFamily": "Font Family"
+    }
+  }
+}

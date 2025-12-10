@@ -1,0 +1,78 @@
+{
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "back": "Volver",
+    "goBackLabel": "Volver atrás",
+    "manage": "Gestionar"
+  },
+  "dashboard": {
+    "title": "Tablero",
+    "welcome": "¡Bienvenido a tu tablero! Aquí puedes ver un resumen de tu actividad."
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "menus": {
+    "items": {
+      "title": "Gestionar Elementos del Menú",
+      "description": "Configure la visibilidad, agrupación y orden de cada elemento en el menú de navegación lateral.",
+      "createButton": "Crear Nuevo Elemento",
+      "searchPlaceholder": "Buscar por nombre o clave...",
+      "sortByLabel": "Ordenar por:",
+      "sortOptions": {
+        "displayOrder": "Orden de Visualización",
+        "nameAsc": "Nombre (A-Z)",
+        "nameDesc": "Nombre (Z-A)"
+      },
+      "noItemsFound": "No se encontraron elementos de menú.",
+      "form": {
+        "displayNameLabel": "Nombre para Mostrar",
+        "groupLabel": "Grupo",
+        "groupPlaceholder": "Seleccione un grupo...",
+        "noGroup": "Sin Grupo",
+        "orderLabel": "Orden",
+        "visibleLabel": "Visible en el Menú",
+        "canBeInitialPageLabel": "¿Puede ser página inicial?",
+        "canBeBottomBarItemLabel": "¿Puede ir a la barra inferior?"
+      },
+      "dialog": {
+        "title": "Crear Nuevo Elemento de Menú",
+        "description": "Defina las propiedades para el nuevo elemento de menú.",
+        "displayNameLabel": "Nombre para Mostrar",
+        "menuKeyLabel": "Clave del Menú (ID)",
+        "menuKeyDesc": "ID único, sin espacios ni caracteres especiales (ej: 'mi-nuevo-elemento'). No se puede cambiar después.",
+        "hrefLabel": "Ruta (URL)",
+        "hrefDesc": "La ruta de la aplicación, ej: '/dashboard' o '/settings/general'.",
+        "iconLabel": "Icono",
+        "suggestIcon": "Sugerir Icono con IA",
+        "groupLabel": "Grupo",
+        "groupPlaceholder": "Seleccione un grupo...",
+        "noGroup": "Sin Grupo (Nivel Superior)",
+        "parentLabel": "Elemento Padre (para Submenú)",
+        "parentPlaceholder": "Seleccione un elemento padre...",
+        "noParent": "Ninguno (Elemento Principal)",
+        "canBeInitialPage": "¿Puede ser página inicial?",
+        "canBeBottomBarItem": "¿Puede ir a la barra inferior?",
+        "cancel": "Cancelar",
+        "save": "Guardar",
+        "validation": {
+          "nameMin": "Por favor, ingrese un nombre con al menos 3 caracteres."
+        },
+        "suggestionError": "Error al buscar sugerencia."
+      },
+      "toasts": {
+        "configError": "Contexto de configuración no encontrado.",
+        "saveSuccess": "¡Elementos de Menú Guardados!",
+        "saveSuccessDesc": "La estructura del menú ha sido actualizada.",
+        "saveError": "Error al Guardar Elementos del Menú",
+        "createErrorTitle": "Error al Crear Elemento",
+        "keyExistsError": "Esta Clave de Menú ya está en uso.",
+        "createSuccessTitle": "¡Elemento Creado!",
+        "createSuccessDesc": "El elemento \"{itemName}\" ha sido creado."
+      }
+    }
+  }
+}

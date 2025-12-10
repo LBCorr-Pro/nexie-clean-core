@@ -1,0 +1,34 @@
+
+{
+  "title": "Crea Tu Cuenta",
+  "description": "Rellena los campos a continuación para crear tu cuenta.",
+  "emailLabel": "Correo Electrónico",
+  "emailPlaceholder": "tu@email.com",
+  "passwordLabel": "Contraseña",
+  "confirmPasswordLabel": "Confirma tu Contraseña",
+  "submitButton": "Crear Cuenta",
+  "submitting": "Creando...",
+  "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+  "loginLink": "Inicia sesión",
+  "authDomainWarning": {
+    "title": "Autenticación No Configurada",
+    "description": "Para que la autenticación funcione, debes agregar el dominio de tu aplicación a la lista de dominios autorizados en la <link>Consola de Firebase</link>."
+  },
+  "validation": {
+    "email": "Por favor, ingresa una dirección de correo electrónico válida.",
+    "passwordLength": "La contraseña debe tener al menos 8 caracteres.",
+    "passwordMismatch": "Las contraseñas no coinciden."
+  },
+  "messages": {
+    "successTitle": "¡Cuenta Creada!",
+    "successDescription": "Tu cuenta ha sido creada exitosamente.",
+    "verificationTitle": "Verifica Tu Correo",
+    "verificationText": "Se ha enviado un enlace de verificación a tu dirección de correo. Por favor, revisa tu bandeja de entrada para continuar."
+  },
+  "errors": {
+    "title": "Error de Registro",
+    "email-already-in-use": "Este correo electrónico ya está en uso por otra cuenta.",
+    "weak-password": "La contraseña es muy débil. Por favor, elige una más fuerte.",
+    "default": "Ocurrió un error desconocido. Por favor, inténtalo de nuevo."
+  }
+}

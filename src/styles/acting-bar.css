@@ -1,0 +1,28 @@
+/* src/styles/acting-bar.css */
+
+/* Regras de cor para os botões da ActingBar */
+
+/* Cor para ícone INATIVO */
+.acting-bar-btn.inactive svg {
+    color: #9ca3af !important; /* gray-400 */
+}
+
+/* Cor para MASTER GLOBAL ativo */
+.acting-bar-btn-global.active svg {
+    color: #22c55e !important; /* green-500 */
+}
+
+/* Cor para Instância/Sub-instância do tipo MASTER ativa */
+.acting-bar-btn.active-master svg {
+    color: #22c55e !important; /* green-500 */
+}
+
+/* Cor para Instância/Sub-instância do tipo DEV ativa */
+.acting-bar-btn.active-dev svg {
+    color: #eab308 !important; /* yellow-500 */
+}
+
+/* Cor para Instância/Sub-instância do tipo PADRÃO ativa */
+.acting-bar-btn.active-default svg {
+    color: #a855f7 !important; /* purple-500 */
+}

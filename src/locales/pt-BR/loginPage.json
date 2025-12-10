@@ -1,0 +1,28 @@
+{
+  "defaultTitle": "Acesse Sua Conta",
+  "defaultSubtitle": "Bem-vindo de volta! Por favor, insira suas credenciais.",
+  "logoAlt": "Logo da empresa",
+  "errorTitle": "Erro ao Carregar a Página",
+  "emailLabel": "E-mail",
+  "emailPlaceholder": "seu@email.com",
+  "passwordLabel": "Senha",
+  "passwordPlaceholder": "Sua senha",
+  "rememberMeLabel": "Lembrar-me",
+  "forgotPasswordLink": "Esqueceu a senha?",
+  "loginButton": "Entrar",
+  "loginWithGoogleButton": "Entrar com Google",
+  "noAccountPrompt": "Não tem uma conta?",
+  "registerLink": "Cadastre-se",
+  "loginSuccessTitle": "Login Efetuado com Sucesso!",
+  "loginSuccessDescription": "Bem-vindo de volta!",
+  "authDomainWarning": {
+    "title": "Autenticação Não Configurada",
+    "description": "Para que a autenticação funcione, você deve adicionar o domínio da sua aplicação à lista de domínios autorizados no <link>Console do Firebase</link>."
+  },
+  "errors": {
+    "loading": {
+      "title": "Erro ao Carregar Configurações",
+      "description": "Não foi possível carregar as configurações da página. Por favor, tente novamente mais tarde."
+    }
+  }
+}

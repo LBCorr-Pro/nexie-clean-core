@@ -1,0 +1,20 @@
+
+{
+  "title": "Verify Your Email",
+  "sentMessage": "A verification link has been sent to your email address: <strong>{email}</strong>. Please check your inbox.",
+  "alreadyVerified": "Your email address <strong>{email}</strong> is already verified. You can now log in.",
+  "sentMessagePostRegistration": "Your account has been created. A verification link was sent to <strong>{email}</strong>.",
+  "genericSentMessage": "A verification link has been sent. Please check your inbox.",
+  "loadingMessage": "Checking your status...",
+  "resendButton": "Resend Verification Email",
+  "backToLoginButton": "Back to Login",
+  "toast": {
+    "notLoggedInTitle": "Not Logged In",
+    "notLoggedInDescription": "You must be logged in to resend a verification email.",
+    "alreadyVerifiedTitle": "Already Verified",
+    "resentSuccessTitle": "Verification Email Resent!",
+    "resentSuccessDescription": "A new verification link has been sent to {email}.",
+    "resentErrorTitle": "Error Resending Email",
+    "resentErrorDescription": "Could not resend the verification email. Please try again later."
+  }
+}

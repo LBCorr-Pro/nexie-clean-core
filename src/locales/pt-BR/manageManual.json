@@ -1,0 +1,49 @@
+
+{
+  "pageTitle": "Gerenciar Manual do Usuário",
+  "pageDescription": "Crie, edite, ordene e gerencie os artigos do manual em diferentes contextos.",
+  "accessDenied": {
+    "title": "Acesso Negado",
+    "description": "Você não tem permissão ({permissionId}) para gerenciar o manual do usuário."
+  },
+  "createArticleButton": "Criar Artigo",
+  "noArticles": "Nenhum artigo criado neste contexto.",
+  "editButton": "Editar",
+  "deleteButton": "Excluir",
+  "toasts": {
+    "loadError": "Erro ao carregar artigos",
+    "saveSuccess": "Artigo salvo com sucesso",
+    "saveError": "Erro ao salvar o artigo",
+    "deleteSuccess": "Artigo excluído com sucesso",
+    "deleteError": "Erro ao excluir o artigo",
+    "slugInUse": "Este slug já está em uso neste contexto."
+  },
+  "form": {
+    "editTitle": "Editar Artigo",
+    "createTitle": "Criar Novo Artigo",
+    "description": "Preencha os detalhes do artigo do manual.",
+    "titleLabel": "Título",
+    "slugLabel": "Slug",
+    "slugDescription": "Identificador único. Será gerado a partir do título.",
+    "contentLabel": "Conteúdo (Suporta Markdown)",
+    "orderLabel": "Ordem",
+    "parentSlugLabel": "Slug Pai (Opcional)",
+    "parentSlugPlaceholder": "Deixe em branco para ser um tópico raiz",
+    "requiredPermissionLabel": "Permissão Necessária (Opcional)",
+    "requiredPermissionPlaceholder": "Nenhuma",
+    "requiredModuleLabel": "Módulo Necessário (Opcional)",
+    "requiredModulePlaceholder": "Nenhum",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "deleteDialog": {
+    "title": "Confirmar Exclusão",
+    "description": "Tem certeza que deseja excluir o artigo \"{title}\"? Esta ação é irreversível.",
+    "confirm": "Excluir"
+  },
+  "validation": {
+    "titleRequired": "O título é obrigatório (mín. 3 caracteres).",
+    "slugRequired": "O slug é obrigatório (mín. 3 caracteres).",
+    "slugPattern": "O slug deve conter apenas letras minúsculas, números e hífens."
+  }
+}

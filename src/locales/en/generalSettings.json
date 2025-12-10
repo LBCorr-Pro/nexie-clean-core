@@ -1,0 +1,67 @@
+
+{
+  "title": "General Settings",
+  "description": "Configure the basic details of the system or instance.",
+  "identitySection": {
+    "title": "System Identity",
+    "systemNameLabel": "System Name",
+    "nicknameLabel": "System Nickname",
+    "systemDescriptionLabel": "System Description"
+  },
+  "logoSection": {
+    "title": "Main Logo and Favicon",
+    "mainLogoLabel": "Main Logo (Expanded Menu)",
+    "mainLogoDescription": "Will be used in various UI locations. Recommended: PNG or SVG format with transparent background.",
+    "collapsedLogoLabel": "Logo (Icon/Collapsed)",
+    "collapsedLogoDescription": "Square version of the logo, for collapsed menus and avatars. Recommended: PNG or SVG format 1:1.",
+    "faviconLabel": "Favicon",
+    "faviconDescription": "Icon that appears in the browser tab. Format .ico, .png, or .svg (32x32px)."
+  },
+  "contactSection": {
+    "title": "Contact Information and Address",
+    "defaultEmailLabel": "Default Contact Email",
+    "defaultWhatsappLabel": "Default WhatsApp",
+    "institutionalSiteLabel": "Institutional Site",
+    "cepLabel": "Zip Code",
+    "streetLabel": "Street",
+    "numberLabel": "Number",
+    "complementLabel": "Complement",
+    "districtLabel": "District",
+    "cityLabel": "City",
+    "stateLabel": "State",
+    "countryLabel": "Country"
+  },
+  "socialSection": {
+    "title": "Social Networks",
+    "addLinkButton": "Add Link"
+  },
+  "regionalizationSection": {
+    "title": "Regionalization and Language",
+    "multilingualLabel": "Multilingual System",
+    "multilingualDescription": "Enable to support multiple languages. Disable to optimize the system for a single language.",
+    "singleLanguageLabel": "System's Single Language",
+    "defaultLanguageLabel": "Default Language",
+    "defaultTimezoneLabel": "Default Timezone",
+    "defaultCurrencyLabel": "Default Currency",
+    "languagePlaceholder": "Select a language...",
+    "timezonePlaceholder": "Select a timezone...",
+    "currencyPlaceholder": "Select a currency..."
+  },
+  "zod": {
+    "systemNameRequired": "System name is required.",
+    "invalidEmail": "Invalid contact email.",
+    "invalidUrl": "Invalid institutional site URL.",
+    "defaultLanguageRequired": "Default language is required.",
+    "defaultTimezoneRequired": "Default timezone is required.",
+    "defaultCurrencyRequired": "Default currency is required."
+  },
+  "toasts": {
+    "permissionDeniedTitle": "Permission Denied",
+    "permissionDeniedDesc": "You do not have permission to edit these settings.",
+    "validationErrorTitle": "Validation Error",
+    "validationErrorDesc": "Please, correct the fields marked in red.",
+    "saveSuccessTitle": "Settings Saved",
+    "saveErrorTitle": "Error Saving",
+    "saveErrorDesc": "Could not save the settings."
+  }
+}

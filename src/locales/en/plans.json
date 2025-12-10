@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Subscription Plans",
+  "pageDescription": "Create and manage the plans that can be assigned to instances.",
+  "createNew": "Create New Plan",
+  "searchPlaceholder": "Search by name...",
+  "noResults": "No plans found.",
+  "table": {
+    "name": "Name",
+    "status": "Status",
+    "order": "Order",
+    "actions": "Actions"
+  },
+  "statusBadge": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "legacy": "Legacy"
+  },
+  "editAction": "Edit",
+  "deleteAction": "Delete",
+  "accessDenied": {
+    "title": "Access Denied",
+    "message": "Plan management is a Master level feature."
+  },
+  "deleteDialog": {
+    "title": "Confirm Deletion",
+    "description": "Are you sure you want to delete the plan \"{planName}\"? This action cannot be undone.",
+    "confirm": "Delete"
+  },
+  "toasts": {
+    "deleteSuccess": "Plan deleted successfully!",
+    "deleteError": "Error deleting plan."
+  },
+  "create": {
+    "pageTitle": "Create New Plan",
+    "pageDescription": "Set a name and description. After saving, you will be redirected to the full edit page.",
+    "form": {
+      "nameLabel": "Plan Name",
+      "namePlaceholder": "E.g., Basic Plan, Pro Plan",
+      "descriptionLabel": "Description (Optional)",
+      "descriptionPlaceholder": "Who or what this plan is for.",
+      "statusLabel": "Status",
+      "orderLabel": "Order"
+    },
+    "saveAndContinue": "Save and Continue"
+  },
+  "edit": {
+    "pageTitle": "Edit Plan",
+    "pageDescription": "Adjust the details, features, and permissions of this plan.",
+    "successTitle": "Plan Updated",
+    "errorTitle": "Update Error",
+    "tabs": {
+      "details": "Details",
+      "features": "Features",
+      "permissions": "Permissions"
+    },
+    "detailsForm": {
+      "title": "Plan Details",
+      "description": "Basic information of the subscription plan."
+    }
+  },
+  "common": {
+    "save": "Save"
+  }
+}

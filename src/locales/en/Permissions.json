@@ -1,0 +1,23 @@
+{
+  "categories": {
+    "master": "Master",
+    "instance": "Instance",
+    "module": "Module"
+  },
+  "VIEW_DASHBOARD": {
+    "name": "View Dashboard",
+    "description": "Allows the user to view the instance dashboard."
+  },
+  "MANAGE_USERS": {
+    "name": "Manage Users",
+    "description": "Allows the user to create, edit, and remove users from the instance."
+  },
+  "MANAGE_INSTANCES": {
+    "name": "Manage Instances",
+    "description": "Allows the user to create, edit, and remove instances."
+  },
+  "VIEW_REPORTS": {
+    "name": "View Reports",
+    "description": "Allows the user to view instance reports."
+  }
+}

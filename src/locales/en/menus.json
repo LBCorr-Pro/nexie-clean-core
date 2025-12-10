@@ -1,0 +1,170 @@
+
+{
+  "title": "Menus & Layout",
+  "description": "Manage application navigation, menu structure, and visual sections.",
+  "subheading": "This section is the control panel for the entire application's navigation flow. Choose a subsection below to manage a specific part of the user experience.",
+  "presets": {
+    "title": "Menu Templates (Presets)",
+    "description": "Create and manage complete menu structures that can be applied to different Access Levels.",
+    "link": "Manage Presets",
+    "createButton": "Create New Preset",
+    "dialog": {
+      "deleteTitle": "Confirm Deletion",
+      "deleteDescription": "Are you sure you want to delete the preset \"{presetName}\"?",
+      "deleteAction": "Delete"
+    },
+    "noPresets": "No presets saved yet."
+  },
+  "groups": {
+    "title": "Menu Groups",
+    "description": "Organize side menu items into logical, collapsible sections.",
+    "link": "Manage Groups",
+    "createButton": "Create New Group",
+    "noGroups": "No groups created yet.",
+    "saveOrderButton": "Save Order",
+    "editAction": "Edit",
+    "deleteAction": "Delete",
+    "inheritedLabel": "Inherited",
+    "dialog": {
+      "editTitle": "Edit Group",
+      "createTitle": "Create New Group",
+      "description": "Set the properties for your menu group.",
+      "nameLabel": "Group Name",
+      "slugLabel": "ID (Slug)",
+      "slugDescription": "Unique identifier. Cannot be changed after creation.",
+      "iconLabel": "Icon",
+      "suggestButton": "Suggest Style with AI",
+      "validation": {
+        "nameMin": "Please enter a name with at least 3 characters.",
+        "slugInUse": "This slug is already in use. Please choose another one."
+      },
+      "suggestionError": "Error fetching suggestion.",
+      "colorApplyTo": {
+        "label": "Color Application",
+        "description": "Defines where the custom color will be applied.",
+        "options": {
+          "none": "None (inherit from theme)",
+          "group_only": "Only on Group Title",
+          "group_and_items": "On Group and its Items"
+        }
+      },
+      "isColorUnifiedLabel": "Use same color for icon and text?",
+      "unifiedColorLabel": "Main Color",
+      "iconColorLabel": "Icon Color",
+      "textColorLabel": "Text Color"
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete the group \"{groupName}\"? Items associated with this group will become ungrouped."
+    }
+  },
+  "items": {
+    "title": "Manage Menu Items",
+    "description": "Configure the visibility, grouping, and order of each item in the side navigation menu.",
+    "link": "Manage Items",
+    "createButton": "Create New Item",
+    "saveOrderButton": "Save Order",
+    "noItemsFound": "No menu items found.",
+    "dialog": {
+      "createTitle": "Create New Menu Item",
+      "editTitle": "Edit Menu Item",
+      "description": "Define the properties for the new menu item.",
+      "displayNameLabel": "Display Name",
+      "menuKeyLabel": "Menu Key (ID)",
+      "menuKeyDesc": "Unique ID, without spaces or special characters (e.g., 'my-new-item'). Cannot be changed later.",
+      "hrefLabel": "Path (URL)",
+      "hrefDesc": "The application path, e.g., '/dashboard' or '/settings/general'.",
+      "iconLabel": "Icon",
+      "groupLabel": "Group",
+      "groupPlaceholder": "Select a group...",
+      "noGroup": "No Group (Top Level)",
+      "parentLabel": "Parent Item (for Submenu)",
+      "parentPlaceholder": "Select a parent item...",
+      "noParent": "None (Top Level Item)",
+      "canBeInitialPage": "Can be initial page?",
+      "canBeBottomBarItem": "Can go to bottom bar?",
+      "cancel": "Cancel",
+      "save": "Save",
+      "validation": {
+        "nameMin": "Please enter a name with at least 3 characters."
+      },
+      "suggestionError": "Error fetching suggestion."
+    },
+    "toasts": {
+      "configError": "Configuration context not found.",
+      "saveSuccess": "Menu Items Saved!",
+      "saveSuccessDesc": "The menu structure has been updated.",
+      "saveError": "Error Saving Menu Items",
+      "createErrorTitle": "Error Creating Item",
+      "keyExistsError": "This Menu Key is already in use.",
+      "createSuccessTitle": "Item Created!",
+      "createSuccessDesc": "The item \"{itemName}\" has been created."
+    }
+  },
+  "bottomBar": {
+    "title": "Configure Bottom Bar",
+    "description": "Manage the structure, tabs, and items that appear in the bottom navigation bar on mobile devices.",
+    "link": "Configure Bar",
+    "createTabButton": "Create New Tab",
+    "tabsTitle": "Bottom Bar Tabs",
+    "tabsDescription": "Create and manage the navigation tabs. The order here will define the display.",
+    "noTabs": "No tabs created yet.",
+    "editTab": "Edit Tab",
+    "deleteTab": "Delete Tab",
+    "generalConfig": {
+      "title": "General Settings",
+      "enableOnDesktop": "Enable on Desktops?",
+      "enableOnDesktopDesc": "Displays the navigation bar on larger screens (above 768px).",
+      "desktopPosition": "Position on Desktop",
+      "positionBottom": "Bottom (Horizontal)",
+      "positionRight": "Right (Vertical)"
+    },
+    "tabsConfig": {
+      "enableTabs": "Enable Tab System?",
+      "enableTabsDesc": "Group menu items into different sections with tabs.",
+      "showTitleOnSingleTab": "Show 'ear' with only 1 tab?",
+      "tabsAlignment": "Tab Alignment",
+      "alignStart": "Start",
+      "alignCenter": "Center",
+      "alignEnd": "End",
+      "tabsDisplayMode": "Tab Content Display",
+      "displayModes": {
+        "icon_and_text": "Icon and Text",
+        "icon_only": "Icon Only",
+        "text_only": "Text Only"
+      }
+    },
+    "dialog": {
+      "editTitle": "Edit Tab",
+      "createTitle": "Create New Tab",
+      "description": "Define the properties for this navigation tab.",
+      "nameLabel": "Tab Name",
+      "namePlaceholder": "E.g., System, Modules",
+      "iconLabel": "Tab Icon",
+      "enableScrollLabel": "Enable Scrolling",
+      "maxItemsLabel": "Maximum Visible Items",
+      "maxItemsDesc": "Excess items will not be displayed.",
+      "cancelButton": "Cancel",
+      "saveButton": "Save"
+    },
+    "itemManager": {
+      "selectPlaceholder": "Select an item to add...",
+      "noItemsAvailable": "No items available to add.",
+      "addButton": "Add",
+      "noItemsAdded": "No items added to this tab.",
+      "noItemSelected": "No item selected"
+    },
+    "toasts": {
+      "saveSuccess": "Settings Saved!",
+      "saveSuccessDesc": "The bottom bar settings have been updated.",
+      "saveError": "Error Saving",
+      "saveErrorDesc": "Could not save the settings.",
+      "updateSuccess": "Tab Updated!",
+      "updateSuccessDesc": "The tab \"{tabName}\" has been modified.",
+      "createSuccess": "Tab Created!",
+      "createSuccessDesc": "The tab \"{tabName}\" has been added.",
+      "deleteSuccess": "Tab Removed",
+      "deleteSuccessDesc": "The tab \"{tabName}\" has been removed."
+    }
+  }
+}

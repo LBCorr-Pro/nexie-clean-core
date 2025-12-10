@@ -1,0 +1,67 @@
+
+{
+  "title": "Configurações Gerais",
+  "description": "Configure os detalhes básicos do sistema ou da instância.",
+  "identitySection": {
+    "title": "Identidade do Sistema",
+    "systemNameLabel": "Nome do Sistema",
+    "nicknameLabel": "Apelido do Sistema",
+    "systemDescriptionLabel": "Descrição do Sistema"
+  },
+  "logoSection": {
+    "title": "Logo Principal e Favicon",
+    "mainLogoLabel": "Logo Principal (Menu Expandido)",
+    "mainLogoDescription": "Será usado em vários locais da UI. Recomendado: formato PNG ou SVG com fundo transparente.",
+    "collapsedLogoLabel": "Logo (Ícone/Recolhido)",
+    "collapsedLogoDescription": "Versão quadrada do logo, para menus recolhidos e avatares. Recomendado: formato PNG ou SVG 1:1.",
+    "faviconLabel": "Favicon",
+    "faviconDescription": "Ícone que aparece na aba do navegador. Formato .ico, .png ou .svg (32x32px)."
+  },
+  "contactSection": {
+    "title": "Informações de Contato e Endereço",
+    "defaultEmailLabel": "E-mail de Contato Padrão",
+    "defaultWhatsappLabel": "WhatsApp Padrão",
+    "institutionalSiteLabel": "Site Institucional",
+    "cepLabel": "CEP",
+    "streetLabel": "Rua",
+    "numberLabel": "Número",
+    "complementLabel": "Complemento",
+    "districtLabel": "Bairro",
+    "cityLabel": "Cidade",
+    "stateLabel": "Estado",
+    "countryLabel": "País"
+  },
+  "socialSection": {
+    "title": "Redes Sociais",
+    "addLinkButton": "Adicionar Link"
+  },
+  "regionalizationSection": {
+    "title": "Regionalização e Idioma",
+    "multilingualLabel": "Sistema Multilíngue",
+    "multilingualDescription": "Ative para suportar múltiplos idiomas. Desative para otimizar o sistema para um único idioma.",
+    "singleLanguageLabel": "Língua Única do Sistema",
+    "defaultLanguageLabel": "Idioma Padrão",
+    "defaultTimezoneLabel": "Fuso Horário Padrão",
+    "defaultCurrencyLabel": "Moeda Padrão",
+    "languagePlaceholder": "Selecione um idioma...",
+    "timezonePlaceholder": "Selecione um fuso horário...",
+    "currencyPlaceholder": "Selecione uma moeda..."
+  },
+  "zod": {
+    "systemNameRequired": "O nome do sistema é obrigatório.",
+    "invalidEmail": "E-mail de contato inválido.",
+    "invalidUrl": "URL do site institucional inválida.",
+    "defaultLanguageRequired": "Idioma padrão é obrigatório.",
+    "defaultTimezoneRequired": "Fuso horário padrão é obrigatório.",
+    "defaultCurrencyRequired": "Moeda padrão é obrigatória."
+  },
+  "toasts": {
+    "permissionDeniedTitle": "Permissão Negada",
+    "permissionDeniedDesc": "Você não tem permissão para editar estas configurações.",
+    "validationErrorTitle": "Erro de Validação",
+    "validationErrorDesc": "Por favor, corrija os campos marcados em vermelho.",
+    "saveSuccessTitle": "Configurações Salvas",
+    "saveErrorTitle": "Erro ao Salvar",
+    "saveErrorDesc": "Não foi possível salvar as configurações."
+  }
+}

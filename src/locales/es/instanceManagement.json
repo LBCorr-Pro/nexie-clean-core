@@ -1,0 +1,156 @@
+
+{
+  "title": "Gestión de Instancias",
+  "description": "Crea, visualiza y gestiona las diferentes instancias de cliente del sistema.",
+  "createButton": "Crear Nueva Instancia",
+  "contextErrorTitle": "Acceso Restringido",
+  "masterContextRequired": "La gestión de instancias es una función de nivel Maestro. Actualmente estás actuando como una instancia.",
+  "masterContextRequiredDescription": "Para gestionar instancias, regresa al contexto Maestro Global.",
+  "permissionNeeded": "Permiso Necesario",
+  "viewPermissionError": "No tienes permiso ('master.instance.view_all') para ver instancias.",
+  "searchPlaceholder": "Buscar por nombre, slug o plan...",
+  "noInstancesFound": "No se encontraron instancias para tu búsqueda.",
+  "noInstancesCreated": "Aún no hay instancias registradas.",
+  "totalInstances": "Total de instancias: {count}",
+  "active": "Activa",
+  "inactive": "Inactiva",
+  "noPlan": "Ninguno",
+  "typeDefault": "Estándar",
+  "typeDev": "Desarrollo",
+  "typeMaster": "Maestra",
+  "tableHeaders": {
+    "instanceName": "Nombre de la Instancia",
+    "type": "Tipo",
+    "plan": "Plan",
+    "status": "Estado",
+    "createdAt": "Creada el",
+    "actions": "Acciones"
+  },
+  "actions": {
+    "title": "Acciones",
+    "actAs": "Actuar como {instanceName}",
+    "manageUsers": "Gestionar Usuarios",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirmar Eliminación",
+    "deleteConfirmDescription": "¿Estás seguro de que quieres eliminar la instancia \"{instanceName}\"? Esta acción es irreversible y eliminará todos los datos asociados.",
+    "deleteConfirmAction": "Eliminar Permanentemente",
+    "deleteSubInstanceConfirm_part1": "¿Estás seguro de que quieres eliminar la sub-instancia \"",
+    "deleteSubInstanceConfirm_part2": "\"? Esta acción es irreversible."
+  },
+  "toasts": {
+    "actionNotAllowed": "Acción no permitida",
+    "deleteSuccessTitle": "Instancia Eliminada",
+    "deleteSuccessDescription": "La instancia \"{instanceName}\" ha sido eliminada.",
+    "deleteErrorTitle": "Error al Eliminar",
+    "deleteErrorDescription": "No se pudo eliminar la instancia.",
+    "loadInstancesError": "Error al cargar las instancias",
+    "loadPlansError": "Error al cargar los planes",
+    "notFound": "Instancia no encontrada"
+  },
+  "create": {
+    "title": "Crear Nueva Instancia",
+    "description": "Define los detalles para una nueva instancia de cliente.",
+    "toastSuccessTitle": "¡Instancia Creada!",
+    "toastSuccessDesc": "La instancia \"{instanceName}\" fue creada exitosamente.",
+    "toastErrorTitle": "Error al Crear Instancia",
+    "permissionError": "No tienes el permiso ('master.instance.create') para esta acción."
+  },
+  "instanceName": "Nombre de la Instancia",
+  "slug": "Slug (Identificador URL)",
+  "slugDescription": "Identificador único para la URL. Se generará automáticamente a partir del nombre.",
+  "slugInUse": "Este slug ya está en uso.",
+  "instanceType": "Tipo de Instancia",
+  "selectType": "Selecciona un tipo...",
+  "planLabel": "Plan de Suscripción",
+  "selectPlan": "Selecciona un plan...",
+  "customDomain": "Dominio Personalizado",
+  "status": "Estado",
+  "statusDescriptionInstance": "Controla si esta instancia está activa y accesible.",
+  "statusDescriptionSubInstance": "Controla si esta sub-instancia está activa.",
+  "canCreateSubInstances": "¿Puede crear Sub-instancias?",
+  "canCreateSubInstancesDesc": "Permite que esta instancia tenga sus propias sub-unidades.",
+  "isMasterTemplate": "¿Es Plantilla Maestra?",
+  "isMasterTemplateDesc": "Usa la configuración de esta instancia como plantilla para nuevas instancias del mismo plan.",
+  "isDevelopment": "¿Es de Desarrollo?",
+  "isDevelopmentDesc": "Marca esto como una instancia de desarrollo o prueba.",
+  "saveInstance": "Guardar Instancia",
+  "edit": {
+    "title": "Editar Instancia",
+    "subtitle": "Editando la instancia: {instanceName}",
+    "subtitleSubInstance": "Editando la sub-instancia",
+    "tabs": {
+      "details": "Detalles",
+      "subinstances": "Sub-instancias",
+      "users": "Usuarios",
+      "usersDescription": "Gestiona los usuarios asociados a esta instancia.",
+      "manageUsersButton": "Gestionar Usuarios"
+    },
+    "instanceDetailsTitle": "Detalles de la Instancia",
+    "instanceDetailsDesc": "Cambia la información principal de la instancia.",
+    "subInstanceDetailsTitle": "Detalles de la Sub-instancia",
+    "subInstanceDetailsDesc": "Cambia la información de la sub-instancia.",
+    "saveChanges": "Guardar Cambios",
+    "successTitle": "Instancia Actualizada",
+    "successDescription": "La información de la instancia ha sido guardada.",
+    "errorTitle": "Error al Actualizar",
+    "errorDescription": "No se pudieron guardar los cambios de la instancia."
+  },
+  "infoCard": {
+    "title": "Información de la Instancia",
+    "description": "Detalles y metadatos sobre este registro.",
+    "instanceId": "ID de Instancia",
+    "createdAt": "Fecha de Creación",
+    "updatedAt": "Última Actualización"
+  },
+  "validation": {
+    "nameRequired": "El nombre de la instancia es obligatorio.",
+    "nameMin": "El nombre de la instancia debe tener al menos 3 caracteres.",
+    "slugMin": "El slug debe tener al menos 3 caracteres.",
+    "slugInvalid": "El slug debe contener solo letras minúsculas, números y guiones."
+  },
+  "form": {
+    "title": "Detalles de la Instancia",
+    "name": {
+      "label": "Nombre de la Instancia",
+      "placeholder": "Ej: Empresa Ejemplo S.A.",
+      "description": "El nombre que se mostrará para esta instancia."
+    },
+    "type": {
+      "label": "Tipo",
+      "placeholder": "Seleccione el tipo...",
+      "options": {
+        "default": "Estándar",
+        "dev": "Desarrollo",
+        "master": "Maestra (Plantilla)"
+      },
+      "description": "El tipo de instancia en el sistema."
+    },
+    "status": {
+      "label": "Estado",
+      "description": "Controla si la instancia está activa o inactiva."
+    }
+  },
+  "subInstances": {
+    "title": "Sub-instancias de {instanceName}",
+    "description": "Gestiona las unidades o departamentos dentro de esta instancia.",
+    "createSubInstance": {
+      "title": "Crear Sub-instancia",
+      "toastSuccessTitle": "¡Sub-instancia Creada!",
+      "toastSuccessDesc": "La sub-instancia \"{instanceName}\" fue creada exitosamente."
+    },
+    "table": {
+      "name": "Nombre",
+      "status": "Estado",
+      "createdAt": "Creada el"
+    },
+    "noSubInstances": "Aún no se han creado sub-instancias."
+  },
+   "createSubInstance": {
+    "title": "Crear Sub-instancia",
+    "description": "Creando una nueva sub-instancia dentro de {parentName}.",
+    "nameLabel": "Nombre de la Sub-instancia"
+  }
+}

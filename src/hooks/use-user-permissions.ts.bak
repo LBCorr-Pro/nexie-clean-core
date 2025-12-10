@@ -1,0 +1,120 @@
+// src/hooks/use-user-permissions.ts
+"use client";
+
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useAuthContext } from '@/context/AuthContext';
+import { useInstanceActingContext } from '@/contexts/instance-acting-context';
+import { getDoc, DocumentData } from 'firebase/firestore';
+import { refs } from '@/lib/firestore-refs';
+import { useToast } from '@/hooks/nx-use-toast';
+import { PermissionId, ALL_PERMISSIONS_TRUE, availablePermissions } from '@/lib/permissions';
+import { dequal } from 'dequal';
+
+export type { PermissionId };
+export { availablePermissions };
+
+type PermissionsMap = Partial<Record<PermissionId, boolean>>;
+interface UserProfileData {
+  activeModuleStatuses?: Record<string, boolean>;
+  userAccessLevelId?: string;
+}
+
+export function useUserPermissions() {
+  const { user: currentUser, loading: isAuthLoading } = useAuthContext();
+  const { actingAsInstanceId, isActingAsMaster, isContextLoading: isInstanceCtxLoading } = useInstanceActingContext();
+  const { toast } = useToast();
+
+  const authStatus = useMemo(() => {
+    if (isAuthLoading) return 'loading';
+    return currentUser ? 'authenticated' : 'unauthenticated';
+  }, [isAuthLoading, currentUser]);
+
+  const [fetchedPermissions, setFetchedPermissions] = useState<PermissionsMap | null>(null);
+  const [userProfile, setUserProfile] = useState<UserProfileData | null>(null);
+  const [isFetching, setIsFetching] = useState(true);
+
+  // --- START SECURITY FIX ---
+  // The override is only calculated after we have a definite, existing user from our database.
+  const isDevMode = process.env.NEXT_PUBLIC_DEV_MODE === 'true';
+  // Check if the user loaded from Firestore has the master UID.
+  const isMasterAdmin = userProfile !== null && currentUser?.uid === process.env.NEXT_PUBLIC_MASTER_UID;
+  const hasOverride = (isDevMode || isMasterAdmin);
+  // --- END SECURITY FIX ---
+
+  const isLoading = isAuthLoading || isInstanceCtxLoading || isFetching;
+
+  useEffect(() => {
+    if (isAuthLoading || isInstanceCtxLoading) {
+      return; 
+    }
+
+    if (authStatus !== 'authenticated' || !currentUser) {
+      setFetchedPermissions(null);
+      setUserProfile(null);
+      setIsFetching(false);
+      return;
+    }
+
+    const fetchData = async () => {
+      setIsFetching(true);
+      try {
+        const profileSnap = await getDoc(refs.user.doc(currentUser.uid));
+
+        // --- CRITICAL SECURITY CHECK ---
+        // If the user does not exist in our Firestore `users` collection,
+        // they get NO profile and NO permissions, regardless of auth state.
+        if (!profileSnap.exists()) {
+          console.warn(`[useUserPermissions] User with UID ${currentUser.uid} authenticated but not found in Firestore. Denying all permissions.`);
+          setUserProfile(null);
+          setFetchedPermissions({}); // Set to empty object, signifying no permissions.
+          setIsFetching(false);
+          return;
+        }
+        // --- END SECURITY CHECK ---
+        
+        const profileData = profileSnap.data() as UserProfileData;
+        setUserProfile(prev => dequal(prev, profileData) ? prev : profileData);
+
+        const permissionsSnap = await (isActingAsMaster
+          ? getDoc(refs.user.masterPermissions(currentUser.uid))
+          : actingAsInstanceId
+            ? getDoc(refs.user.instancePermissions(currentUser.uid, actingAsInstanceId))
+            : null);
+
+        const permissionsData = permissionsSnap?.exists() ? (permissionsSnap.data() as PermissionsMap) : {};
+        setFetchedPermissions(prev => dequal(prev, permissionsData) ? prev : permissionsData);
+
+      } catch (error) {
+        console.error("Failed to fetch user data:", error);
+        toast({ title: "Erro ao carregar dados do usuário", variant: "destructive" });
+        setFetchedPermissions(null);
+        setUserProfile(null);
+      } finally {
+        setIsFetching(false);
+      }
+    };
+
+    fetchData();
+  }, [currentUser, authStatus, actingAsInstanceId, isActingAsMaster, isAuthLoading, isInstanceCtxLoading, toast]);
+
+  const hasPermission = useCallback((permissionId: PermissionId): boolean => {
+    if (isLoading) return false;
+    if (hasOverride) return true;
+    return fetchedPermissions?.[permissionId] === true;
+  }, [hasOverride, isLoading, fetchedPermissions]);
+
+  const activeModuleStatusesMap = useMemo(() => {
+    const statuses = userProfile?.activeModuleStatuses;
+    return statuses ? new Map(Object.entries(statuses)) : new Map();
+  }, [userProfile]);
+
+  return {
+    currentUser,
+    permissions: hasOverride ? ALL_PERMISSIONS_TRUE : fetchedPermissions,
+    isLoadingPermissions: isLoading,
+    hasPermission,
+    permissionsLoaded: !isLoading,
+    activeModuleStatuses: activeModuleStatusesMap,
+    userAccessLevelId: userProfile?.userAccessLevelId || '',
+  };
+}

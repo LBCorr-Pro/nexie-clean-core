@@ -1,0 +1,119 @@
+
+{
+  "title": "Módulo de Convite",
+  "description": "Gerencie as configurações para geração de convites e visualize os convites já criados.",
+  "tabs": {
+    "manage": "Gerenciar Convites",
+    "settings": "Configurações do Módulo"
+  },
+  "settingsTab": {
+    "title": "Configurações do Módulo de Convite",
+    "description": "Defina o comportamento padrão para a geração de códigos de convite.",
+    "accessDenied": "Permissão Negada",
+    "accessDeniedMessage": "Você não tem a permissão '{permission}' para configurar o módulo de convite.",
+    "prefixLabel": "Prefixo do Código",
+    "prefixPlaceholder": "Ex: MINHAAPP-",
+    "codeLengthLabel": "Tamanho do Código (Parte Aleatória)",
+    "noExpirationLabel": "Não Expira?",
+    "noExpirationDescription": "Se marcado, os convites serão válidos indefinidamente.",
+    "validityLabel": "Período de Validade",
+    "validityTypes": {
+      "hours": "Horas",
+      "days": "Dias",
+      "months": "Meses"
+    },
+    "templatesTitle": "Templates de Mensagem",
+    "emailTemplateLabel": "Template de E-mail",
+    "whatsappTemplateLabel": "Template de WhatsApp",
+    "placeholders": {
+      "title": "Variáveis Disponíveis",
+      "titleEmail": "Variáveis Disponíveis (E-mail)",
+      "titleMessage": "Variáveis Disponíveis (Mensagem)",
+      "inviteCode": "Código do Convite",
+      "inviteCodeDesc": "O código único gerado.",
+      "inviteLink": "Link do Convite",
+      "inviteLinkDesc": "A URL completa de registro com o código de convite.",
+      "senderName": "Nome do Remetente",
+      "senderNameDesc": "Seu nome ({name}).",
+      "senderEmail": "E-mail do Remetente",
+      "senderEmailDesc": "Seu e-mail ({email}).",
+      "systemName": "Nome do Sistema",
+      "systemNameDesc": "Nome da plataforma ({name}).",
+      "instanceName": "Nome da Instância",
+      "instanceNameDesc": "Nome da instância atual ({name}).",
+      "systemLogo": "Logo do Sistema",
+      "systemLogoDesc": "URL do logo principal."
+    },
+    "saveButton": "Salvar Configurações",
+    "defaultTemplates": {
+      "whatsapp": "Olá! Você foi convidado para se juntar à nossa plataforma. Use este link para se registrar: {{invite_link}}",
+      "email": "<h1>Você foi Convidado!</h1><p>Olá, {{user_name}}!</p><p>Você foi convidado para se juntar à nossa plataforma. Clique no link abaixo para completar seu registro:</p><p><a href=\"{{invite_link}}\">Aceitar Convite</a></p><p>Se o botão não funcionar, copie e cole esta URL no seu navegador: {{invite_link}}</p>"
+    },
+    "toasts": {
+      "saveSuccessTitle": "Configurações Salvas!",
+      "saveSuccessDescription": "As configurações do módulo de convite foram atualizadas.",
+      "saveErrorTitle": "Erro ao Salvar",
+      "permissionDenied": "Você não tem permissão para realizar esta ação."
+    }
+  },
+  "manageTab": {
+    "generateTitle": "Gerar Novo Convite",
+    "emailLabel": "Emitir para um E-mail Específico (Opcional)",
+    "emailPlaceholder": "usuario@exemplo.com",
+    "emailDescription": "Se deixado em branco, o convite será aberto para qualquer pessoa com o código.",
+    "accessLevelLabel": "Nível de Acesso Alvo (Opcional)",
+    "accessLevelPlaceholder": "Selecione um nível...",
+    "noAccessLevelOption": "Nível Padrão",
+    "generateButton": "Gerar Convite",
+    "generatingButton": "Gerando...",
+    "generatedTitle": "Convites Gerados",
+    "noInvitesMessage": "Nenhum convite foi gerado neste contexto ainda.",
+    "table": {
+      "code": "Código",
+      "status": "Status",
+      "recipient": "Destinatário",
+      "targetLevel": "Nível Alvo",
+      "createdAt": "Criado em",
+      "expiresAt": "Expira em",
+      "actions": "Ações"
+    },
+    "status": {
+      "pending": "Pendente",
+      "accepted": "Aceito",
+      "expired": "Expirado",
+      "revoked": "Revogado"
+    },
+    "recipientTypes": {
+      "open": "Aberto",
+      "na": "N/A",
+      "defaultLevel": "Padrão"
+    },
+    "neverExpires": "Nunca",
+    "actions": {
+      "revoke": "Revogar"
+    },
+    "toasts": {
+      "generationErrorTitle": "Erro na Geração",
+      "generationError": "Não foi possível gerar um código único. Por favor, tente novamente.",
+      "revokeSuccess": "Convite Revogado!",
+      "revokeError": "Erro ao Revogar Convite"
+    },
+    "dialogs": {
+      "generatedTitle": "Convite Gerado!",
+      "generatedDescription": "Compartilhe o código ou o link abaixo com o usuário.",
+      "generatedCodeLabel": "Código:",
+      "generatedLinkLabel": "Link:",
+      "copySuccessToast": "Código copiado!",
+      "linkCopySuccessToast": "Link copiado!",
+      "generatedHelpText": "O usuário precisará disso para se registrar.",
+      "closeButton": "Fechar",
+      "revokeTitle": "Confirmar Revogação",
+      "revokeDescription": "Tem certeza de que deseja revogar o convite <strong>{code}</strong>? Ele não poderá mais ser usado.",
+      "cancelButton": "Cancelar",
+      "confirmRevokeButton": "Confirmar Revogação"
+    },
+    "zod": {
+      "invalidEmail": "Por favor, insira um e-mail válido."
+    }
+  }
+}

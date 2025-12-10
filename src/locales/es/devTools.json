@@ -1,0 +1,65 @@
+
+{
+  "access": {
+    "restrictedTitle": "Acceso Restringido",
+    "masterContextRequiredTitle": "Se Requiere Contexto Maestro Global",
+    "masterContextRequiredDescription": "Esta función es exclusiva del contexto Maestro. Para editar, por favor regresa al contexto Maestro Global (sin actuar como una instancia).",
+    "permissionNeededTitle": "Permiso Requerido",
+    "permissionNeededDescription": "No tienes permiso para acceder a estas herramientas."
+  },
+  "debugCard": {
+    "title": "Depuración y Desarrollo",
+    "description": "Herramientas y opciones para desarrolladores. Estos controles no serán visibles en un entorno de producción.",
+    "actingBarLabel": "Mostrar Barra de Cambio de Contexto",
+    "logWindowLabel": "Mostrar Ventana de Registros"
+  },
+  "actionsCard": {
+    "title": "Acciones del Sistema",
+    "warning": "Advertencia:",
+    "description": "Las siguientes acciones modifican directamente la base de datos o los archivos del sistema y deben usarse con extrema precaución."
+  },
+  "syncModules": {
+    "title": "Sincronizar/Importar Módulos",
+    "description": "Esta acción lee el directorio 'src/modules' y actualiza el manifiesto manual del sistema ('known-module-folders.ts'). Úsala después de añadir una nueva carpeta de módulo para que esté disponible para su registro.",
+    "button": "Sincronizar Carpetas de Módulos",
+    "permissionNeeded": "No tienes permiso para importar módulos."
+  },
+  "seedPresets": {
+    "title": "Cargar Presets de Editor Predeterminados",
+    "description": "Puebla la base de datos con los presets de contenido predeterminados para los editores de texto enriquecido (Lexical y TipTap). Es útil para la configuración inicial o para restaurar plantillas de contenido predeterminadas.",
+    "button": "Cargar Presets de Editor",
+    "dialogTitle": "Confirmar Carga",
+    "dialogDescription": "Esto añadirá o sobrescribirá los presets de editor predeterminados. ¿Estás seguro?",
+    "dialogAction": "Confirmar Carga"
+  },
+  "seedManual": {
+    "title": "Cargar Artículos del Manual Predeterminados",
+    "description": "Puebla la base de datos con los artículos predeterminados para el manual de usuario. Esta acción puede usarse para configurar la documentación de ayuda por primera vez.",
+    "button": "Cargar Artículos del Manual",
+    "dialogTitle": "Confirmar Carga",
+    "dialogDescription": "Esto añadirá o sobrescribirá los artículos del manual predeterminados. ¿Estás seguro?",
+    "dialogAction": "Confirmar Carga"
+  },
+  "cleanupModules": {
+    "title": "Limpiar Definiciones de Módulos",
+    "destructiveAction": "¡Acción Destructiva!",
+    "description": "Esta acción escanea todas las definiciones de módulos y elimina duplicados o documentos obsoletos, consolidándolos en un estado limpio basado en su ID único (slug).",
+    "button": "Limpiar y Consolidar",
+    "dialogTitle": "Confirmar Limpieza",
+    "dialogDescription": "Esto eliminará permanentemente las definiciones de módulos duplicadas o antiguas. Esta acción no se puede deshacer.",
+    "dialogAction": "Sí, Consolidar"
+  },
+  "confirmDialog": {
+    "defaultActionText": "Confirmar",
+    "cancel": "Cancelar"
+  },
+  "toasts": {
+    "permissionDenied": "Permiso Denegado",
+    "syncSuccessTitle": "¡Módulos Sincronizados!",
+    "syncErrorTitle": "Sincronización Fallida",
+    "cleanupSuccessTitle": "¡Limpieza Completada!",
+    "cleanupErrorTitle": "Limpieza Fallida",
+    "seedSuccessTitle": "¡Carga Exitosa!",
+    "seedErrorTitle": "Carga Fallida"
+  }
+}

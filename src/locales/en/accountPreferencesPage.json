@@ -1,0 +1,12 @@
+
+{
+  "pageTitle": "My Preferences",
+  "pageDescription": "Adjust your language and visual theme settings.",
+  "languageLabel": "Language",
+  "themeLabel": "Theme",
+  "toasts": {
+    "saveSuccessTitle": "Preferences Saved!",
+    "saveSuccessDesc": "Your settings have been updated.",
+    "saveErrorTitle": "Error Saving"
+  }
+}

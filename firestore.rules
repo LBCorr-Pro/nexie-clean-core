@@ -1,0 +1,26 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow logged-in users to read their own user document
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+
+      // CORREÇÃO: Esta regra agora permite que um usuário autenticado
+      // modifique QUALQUER campo DENTRO do mapa 'settings' em seu próprio
+      // documento, mas impede a modificação de outros campos como 'email' ou 'fullName'.
+      // A função `diff()` compara o documento antes e depois da operação.
+      // `affectedKeys()` lista os campos de nível superior que foram alterados.
+      // `hasOnly(['settings'])` garante que a operação de escrita só toca no mapa 'settings'.
+      allow write: if request.auth != null && request.auth.uid == userId
+                   && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['settings']);
+    }
+
+    // By default, deny all other reads and writes
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "pageTitle": "Configurar Campos de Registro de Empresa",
+  "pageDescription": "Define los campos que aparecerán en el formulario de registro y edición de empresas.",
+  "addNewFieldButton": "Añadir Nuevo Campo",
+  "saveButton": "Guardar Campos",
+  "revertButton": "Revertir a Predeterminado",
+  "newFieldDefaultLabel": "Nuevo Campo Personalizado",
+  "contextAlert": {
+    "masterTitle": "Editando Configuración Global",
+    "masterDescription": "Esta es la configuración predeterminada para todo el sistema.",
+    "instanceTitle": "Editando Configuración de la Instancia: {instanceName}",
+    "instanceDescription": "Estás sobrescribiendo la configuración predeterminada para esta instancia.",
+    "subInstanceTitle": "Editando Configuración de la Sub-instancia",
+    "subInstanceDescription": "Estás sobrescribiendo la configuración de la instancia padre para esta sub-instancia.",
+    "inheritingFromMasterTitle": "Heredando Configuración del Master",
+    "inheritingFromInstanceTitle": "Heredando de la Instancia",
+    "saveToCustomizeDescription": "Los cambios se guardarán como una configuración personalizada para este contexto."
+  },
+  "permissionNeededAlert": {
+    "title": "Permiso Requerido",
+    "description": "No tienes permiso ('{permissionId}') para editar estos campos."
+  },
+  "fieldItem": {
+    "tooltipSystemField": "Campo Predeterminado del Sistema (no se puede eliminar)",
+    "tooltipRequired": "Campo Obligatorio",
+    "tooltipOptional": "Campo Opcional",
+    "tooltipVisible": "Visible en el Formulario",
+    "tooltipHidden": "Oculto del Formulario",
+    "menuEdit": "Editar Detalles",
+    "menuDelete": "Eliminar Campo"
+  },
+  "fieldEditor": {
+    "labelLabel": "Etiqueta",
+    "fieldKeyLabel": "Clave del Campo (ID)",
+    "fieldKeyDescription": "No cambiar para campos predefinidos.",
+    "fieldTypeLabel": "Tipo de Campo",
+    "descriptionLabel": "Descripción (Opcional)",
+    "descriptionPlaceholder": "Instrucción para el usuario o una nota.",
+    "visibleLabel": "¿Visible en el Formulario?",
+    "requiredLabel": "¿Campo Obligatorio?",
+    "uniqueLabel": "¿Valor Único?",
+    "validationLabel": "¿Habilitar Validación?"
+  },
+  "revertDialog": {
+    "title": "Confirmar Reversión",
+    "description": "¿Estás seguro de que deseas revertir la configuración al valor predeterminado heredado? Cualquier personalización hecha en este contexto se perderá.",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  }
+}

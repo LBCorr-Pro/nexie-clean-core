@@ -1,0 +1,23 @@
+{
+  "pageTitle": "General Statistics",
+  "pageDescription": "Overview of system activity and usage.",
+  "permissionDenied": "You do not have permission to view general statistics.",
+  "activeUsers": "Active Users",
+  "createdInstances": "Created Instances",
+  "activeModules": "Active Modules",
+  "recentActivity": "Recent Activity",
+  "recentActivityDescription": "A summary of key events in the last 7 days.",
+  "moreChartsComingSoon": "More charts and statistics coming soon...",
+  "logins": "Logins",
+  "newUsers": "New Users",
+  "totalActions": "Total Actions",
+  "days": {
+    "seg": "Mon",
+    "ter": "Tue",
+    "qua": "Wed",
+    "qui": "Thu",
+    "sex": "Fri",
+    "sáb": "Sat",
+    "dom": "Sun"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "pageTitle": "Planos de Assinatura",
+  "pageDescription": "Crie e gerencie os planos que podem ser atribuídos às instâncias.",
+  "createNew": "Criar Novo Plano",
+  "searchPlaceholder": "Buscar por nome...",
+  "noResults": "Nenhum plano encontrado.",
+  "table": {
+    "name": "Nome",
+    "status": "Status",
+    "order": "Ordem",
+    "actions": "Ações"
+  },
+  "statusBadge": {
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "legacy": "Legado"
+  },
+  "editAction": "Editar",
+  "deleteAction": "Excluir",
+  "accessDenied": {
+    "title": "Acesso Restrito",
+    "message": "A gestão de planos é uma funcionalidade do nível Master."
+  },
+  "deleteDialog": {
+    "title": "Confirmar Exclusão",
+    "description": "Tem certeza que deseja excluir o plano \"{planName}\"? Esta ação não pode ser desfeita.",
+    "confirm": "Excluir"
+  },
+  "toasts": {
+    "deleteSuccess": "Plano excluído com sucesso!",
+    "deleteError": "Erro ao excluir o plano."
+  },
+  "create": {
+    "pageTitle": "Criar Novo Plano",
+    "pageDescription": "Defina um nome e descrição. Após salvar, você será redirecionado para a edição completa.",
+    "form": {
+      "nameLabel": "Nome do Plano",
+      "namePlaceholder": "Ex: Plano Básico, Plano Pro",
+      "descriptionLabel": "Descrição (Opcional)",
+      "descriptionPlaceholder": "Para quem ou para que este plano se destina.",
+      "statusLabel": "Status",
+      "orderLabel": "Ordem"
+    },
+    "saveAndContinue": "Salvar e Continuar"
+  },
+  "edit": {
+    "pageTitle": "Editar Plano",
+    "pageDescription": "Ajuste os detalhes, recursos e permissões deste plano.",
+    "successTitle": "Plano Atualizado",
+    "errorTitle": "Erro ao Atualizar",
+    "tabs": {
+      "details": "Detalhes",
+      "features": "Recursos",
+      "permissions": "Permissões"
+    },
+    "detailsForm": {
+      "title": "Detalhes do Plano",
+      "description": "Informações básicas do plano de assinatura."
+    }
+  },
+  "common": {
+    "save": "Salvar"
+  }
+}

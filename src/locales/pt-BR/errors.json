@@ -1,0 +1,13 @@
+{
+  "invalidEmail": "O formato do e-mail é inválido.",
+  "passwordTooShort": "A senha deve ter pelo menos {min} caracteres.",
+  "loginFailed": "Erro no Login",
+  "sessionCreationError": "Não foi possível criar uma sessão segura.",
+  "invalidCredentials": "E-mail ou senha inválidos. Por favor, verifique e tente novamente.",
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "description": "Oops! A página que você está procurando não existe ou foi movida.",
+    "backButton": "Voltar",
+    "homeLink": "Ir para a Página Inicial"
+  }
+}

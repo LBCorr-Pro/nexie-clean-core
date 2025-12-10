@@ -1,0 +1,146 @@
+/* src/styles/sidebar.css */
+
+/* Define as variáveis de largura para consistência */
+:root {
+  --sidebar-width-expanded: 16rem; /* 256px */
+  --sidebar-width-collapsed: 4.5rem; /* 72px */
+  --sidebar-transition-duration: 300ms;
+  --sidebar-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base styles for the main sidebar container */
+.main-sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: hsl(var(--sidebar-foreground));
+  border-right-width: var(--sidebar-border-width, 0px);
+  width: 100%;
+  transition: transform var(--sidebar-transition-duration) var(--sidebar-transition-timing), width var(--sidebar-transition-duration) var(--sidebar-transition-timing);
+  /* A cor de fundo agora é controlada dinamicamente pelo JS, removida daqui para evitar conflitos */
+}
+
+.main-sidebar.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+/* Esconde o texto e outros elementos dentro do menu de forma suave quando colapsado */
+.main-sidebar .sidebar-header .app-name-span,
+.main-sidebar .sidebar-content-area .nav-link-text,
+.main-sidebar .sidebar-footer .footer-text {
+    transition: opacity 150ms ease-in-out;
+    opacity: 1;
+}
+
+.main-sidebar.collapsed .sidebar-header .app-name-span,
+.main-sidebar.collapsed .sidebar-content-area .nav-link-text,
+.main-sidebar.collapsed .sidebar-footer .footer-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Header section containing the logo */
+.sidebar-header {
+  flex-shrink: 0; 
+}
+
+/* Scrollable content area */
+.sidebar-content-area {
+  flex-grow: 1; 
+  overflow-y: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+.sidebar-content-area::-webkit-scrollbar {
+  display: none; 
+}
+
+/* Footer section */
+.sidebar-footer {
+  flex-shrink: 0; 
+  padding: 0.5rem; 
+  font-size: 0.75rem; 
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  border-top: 1px solid hsl(var(--sidebar-border));
+}
+
+/* Modify the main page content's margin when the sidebar is present on desktop */
+@media (min-width: 768px) { /* md breakpoint */
+  .main-sidebar-peer {
+    width: var(--sidebar-width-expanded);
+    transition: width var(--sidebar-transition-duration) var(--sidebar-transition-timing);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 40;
+  }
+
+  .main-sidebar-peer.collapsed {
+    width: var(--sidebar-width-collapsed);
+  }
+
+  .main-sidebar-peer ~ .main-content-wrapper {
+    margin-left: var(--sidebar-width-expanded);
+    transition: margin-left var(--sidebar-transition-duration) var(--sidebar-transition-timing);
+  }
+
+  .main-sidebar-peer.collapsed ~ .main-content-wrapper {
+    margin-left: var(--sidebar-width-collapsed);
+  }
+}
+
+/* Ajustes no SheetContent para o menu móvel */
+.mobile-sidebar-sheet {
+    padding: 0 !important;
+    display: flex !important; 
+    border: none !important;
+    height: 100vh !important; 
+    box-shadow: none !important;
+}
+
+
+/* Garante que o overlay do Sheet não seja exibido no mobile */
+.mobile-sidebar-sheet ~ div[data-radix-dialog-overlay] {
+  display: none;
+}
+
+/* --- ESTILOS CONTROLADOS POR DATA ATTRIBUTES --- */
+/* Estes estilos são aplicados pelo JS através do DynamicThemeApplicator */
+
+.main-sidebar[data-style='flat'] { /* No extra styles needed besides background */ }
+
+.main-sidebar[data-style='glass'] {
+  border-color: hsla(var(--sidebar-border-color-1, var(--border)), 0.2);
+}
+
+.main-sidebar[data-style='bordered'] { 
+    border-color: hsl(var(--sidebar-border-color-1)); 
+}
+.main-sidebar[data-style='inner-shadow'] { 
+    box-shadow: inset -2px 0 4px 0 rgb(0 0 0 / 0.05); 
+}
+.main-sidebar[data-style='outer-shadow'] { 
+    box-shadow: 4px 0 6px -1px rgb(0 0 0 / 0.1), 2px 0 4px -2px rgb(0 0 0 / 0.1); 
+}
+.main-sidebar[data-style='border-gradient'] {
+  border-image-source: linear-gradient(var(--sidebar-border-gradient-direction, to bottom), hsl(var(--sidebar-border-color-1)), hsl(var(--sidebar-border-color-2))) !important;
+  border-image-slice: 1 !important;
+  border-right-width: var(--sidebar-border-width, 1px) !important;
+  border-left-width: 0 !important;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-style: solid;
+}
+.main-sidebar[data-style='border-accent'] { 
+    border-color: hsl(var(--accent)) !important; 
+}
+
+/* Left Sidebar App Name Typography */
+.main-sidebar .app-name-span {
+    font-family: var(--left-sidebar-app-name-font, var(--font-family-body));
+    font-weight: var(--left-sidebar-app-name-font-weight, 600);
+    letter-spacing: var(--left-sidebar-app-name-letter-spacing, 0em);
+    color: hsl(var(--left-sidebar-app-name-color));
+}

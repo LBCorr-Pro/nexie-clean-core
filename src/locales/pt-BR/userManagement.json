@@ -1,0 +1,97 @@
+
+{
+  "title": "Gerenciamento de Usuários",
+  "description": "Crie, visualize e gerencie os usuários do sistema.",
+  "createButton": "Criar Novo Usuário",
+  "instanceContext": "Contexto de Instância",
+  "masterContextRequired": "A gestão de usuários é uma funcionalidade do nível Master. Você está atualmente atuando como uma instância.",
+  "permissionNeeded": "Permissão Necessária",
+  "viewPermissionError": "Você não tem permissão ('master.users.view_all') para visualizar usuários globais.",
+  "createPermissionError": "Você não tem a permissão ('master.users.create_global') para esta ação.",
+  "searchPlaceholder": "Buscar por nome, e-mail ou CPF...",
+  "noUsersFound": "Nenhum usuário encontrado para sua busca.",
+  "noUsersCreated": "Nenhum usuário global cadastrado.",
+  "totalUsers": "Total de usuários: {count}",
+  "globalTitle": "Gerenciamento de Usuários Globais",
+  "globalDescription": "Visualize, filtre e gerencie usuários que não estão atrelados a instâncias específicas.",
+  "table": {
+    "loading": "Carregando usuários...",
+    "noUsersFound": "Nenhum usuário encontrado.",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "header": {
+      "name": "Nome",
+      "email": "E-mail",
+      "registeredAt": "Registrado em",
+      "status": "Status",
+      "actions": "Ações"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Excluir",
+      "openMenu": "Abrir menu"
+    }
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirmar Exclusão",
+    "deleteConfirmDescription": "Tem certeza que deseja excluir o usuário \"{userName}\"? Esta ação removerá o usuário do sistema, mas não o deletará do provedor de autenticação (Firebase Auth).",
+    "deleteConfirmAction": "Excluir"
+  },
+  "toasts": {
+    "actionNotAllowed": "Ação não permitida",
+    "deleteSuccessTitle": "Usuário Excluído",
+    "deleteSuccessDescription": "O usuário \"{userName}\" foi removido do sistema.",
+    "deleteErrorTitle": "Erro ao excluir",
+    "deleteErrorDescription": "Não foi possível remover o usuário.",
+    "userNotFound": "Usuário não encontrado.",
+    "formInitError": "Erro ao configurar o formulário de usuário",
+    "userUpdatedSuccessTitle": "Usuário Atualizado!",
+    "userUpdatedErrorTitle": "Erro ao Atualizar Usuário",
+    "userCreatedSuccessTitle": "Usuário Criado!",
+    "userCreatedSuccessDescription": "Um e-mail de verificação foi enviado para {email}.",
+    "userCreatedErrorTitle": "Erro ao Criar Usuário",
+    "userCreatedErrorDescription": "Ocorreu um erro ao tentar criar o usuário.",
+    "emailInUse": "Este e-mail já está em uso por outra conta.",
+    "weakPassword": "A senha é muito fraca.",
+    "validationErrorTitle": "Erro de Validação",
+    "validationErrorDescription": "Por favor, corrija os campos marcados em vermelho.",
+    "verificationEmailSentTitle": "E-mail Enviado",
+    "verificationEmailSentDescription": "Um novo e-mail de verificação foi enviado para você."
+  },
+  "createTitle": "Criar Novo Usuário Global",
+  "createDescription": "Preencha os campos para adicionar um usuário ao nível Master. Os campos são definidos nas configurações.",
+  "editTitle": "Editar Usuário Global",
+  "editDescription": "Editando o perfil de um usuário global do sistema.",
+  "editPermissionError": "Você não tem a permissão ('master.users.update_global') para esta ação.",
+  "saveChangesButton": "Salvar Alterações",
+  "saveUserButton": "Salvar Usuário",
+  "form": {
+    "emailLabel": "E-mail",
+    "emailDescription_part1": "Para alterar o e-mail, acesse a ",
+    "emailDescription_link": "página de segurança",
+    "emailDescription_part2": " por motivos de segurança.",
+    "passwordPlaceholderEdit": "Deixe em branco para manter a senha atual",
+    "passwordPlaceholderCreate": "Mínimo 6 caracteres",
+    "genderPlaceholder": "Selecione um gênero...",
+    "placeholderGeneric": "Digite {label}",
+    "fullNameLabel": "Nome Completo",
+    "fullNamePlaceholder": "Nome completo do usuário",
+    "passwordLabel": "Senha",
+    "statusLabel": "Status",
+    "statusPlaceholder": "Selecione um status",
+    "statusDescription": "Define o estado da conta do usuário."
+  },
+  "instanceTitle": "Gerenciamento de Usuários da Instância",
+  "instanceDescription": "Usuários pertencentes a esta instância específica.",
+  "status": {
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "suspended": "Suspenso"
+  },
+  "error": {
+    "genericTitle": "Ocorreu um Erro"
+  },
+  "resendVerificationButton": "Reenviar E-mail",
+  "emailNotVerifiedTitle": "E-mail não verificado",
+  "emailNotVerifiedDescription": "O e-mail deste usuário ainda não foi verificado."
+}

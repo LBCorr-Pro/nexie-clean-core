@@ -1,0 +1,49 @@
+
+{
+  "pageTitle": "Gestionar Manual de Usuario",
+  "pageDescription": "Crea, edita, ordena y gestiona los artículos del manual en diferentes contextos.",
+  "accessDenied": {
+    "title": "Acceso Denegado",
+    "description": "No tienes permiso ({permissionId}) para gestionar el manual de usuario."
+  },
+  "createArticleButton": "Crear Artículo",
+  "noArticles": "No hay artículos creados en este contexto.",
+  "editButton": "Editar",
+  "deleteButton": "Eliminar",
+  "toasts": {
+    "loadError": "Error al cargar los artículos",
+    "saveSuccess": "Artículo guardado con éxito",
+    "saveError": "Error al guardar el artículo",
+    "deleteSuccess": "Artículo eliminado con éxito",
+    "deleteError": "Error al eliminar el artículo",
+    "slugInUse": "Este slug ya está en uso en este contexto."
+  },
+  "form": {
+    "editTitle": "Editar Artículo",
+    "createTitle": "Crear Nuevo Artículo",
+    "description": "Rellena los detalles del artículo del manual.",
+    "titleLabel": "Título",
+    "slugLabel": "Slug",
+    "slugDescription": "Identificador único. Se generará a partir del título.",
+    "contentLabel": "Contenido (Soporta Markdown)",
+    "orderLabel": "Orden",
+    "parentSlugLabel": "Slug Padre (Opcional)",
+    "parentSlugPlaceholder": "Dejar en blanco para que sea un tema raíz",
+    "requiredPermissionLabel": "Permiso Requerido (Opcional)",
+    "requiredPermissionPlaceholder": "Ninguno",
+    "requiredModuleLabel": "Módulo Requerido (Opcional)",
+    "requiredModulePlaceholder": "Ninguno",
+    "cancel": "Cancelar",
+    "save": "Guardar"
+  },
+  "deleteDialog": {
+    "title": "Confirmar Eliminación",
+    "description": "¿Estás seguro de que quieres eliminar el artículo \"{title}\"? Esta acción es irreversible.",
+    "confirm": "Eliminar"
+  },
+  "validation": {
+    "titleRequired": "El título es obligatorio (mín. 3 caracteres).",
+    "slugRequired": "El slug es obligatorio (mín. 3 caracteres).",
+    "slugPattern": "El slug debe contener solo letras minúsculas, números y guiones."
+  }
+}

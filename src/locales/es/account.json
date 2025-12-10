@@ -1,0 +1,50 @@
+{
+  "pageTitle": "Segurança da Conta",
+  "pageDescription": "Gerencie sua senha e e-mail.",
+  "passwordCard": {
+    "title": "Alterar Senha",
+    "description": "Recomenda-se usar uma senha forte e única.",
+    "currentPasswordLabel": "Senha Atual",
+    "currentPasswordPlaceholder": "Digite sua senha atual",
+    "newPasswordLabel": "Nova Senha",
+    "newPasswordPlaceholder": "Digite sua nova senha",
+    "confirmPasswordLabel": "Confirmar Nova Senha",
+    "confirmPasswordPlaceholder": "Confirme sua nova senha",
+    "saveButton": "Salvar Senha"
+  },
+  "emailCard": {
+    "title": "Alterar E-mail",
+    "description": "Seu e-mail atual é <strong>{email}</strong>. Após a alteração, você precisará verificar o novo endereço.",
+    "loadingEmail": "carregando...",
+    "newEmailLabel": "Novo E-mail",
+    "newEmailPlaceholder": "novo@email.com",
+    "currentPasswordLabel": "Senha Atual",
+    "currentPasswordPlaceholder": "Digite sua senha para confirmar",
+    "passwordDescription": "Para sua segurança, por favor, confirme sua senha para alterar seu e-mail.",
+    "saveButton": "Salvar Novo E-mail"
+  },
+  "validation": {
+    "currentPasswordRequired": "A senha atual é obrigatória.",
+    "newPasswordLength": "A nova senha deve ter pelo menos 6 caracteres.",
+    "passwordsMismatch": "As senhas não coincidem.",
+    "invalidEmailFormat": "Por favor, insira um endereço de e-mail válido.",
+    "passwordForEmailRequired": "A senha é obrigatória para alterar o e-mail."
+  },
+  "toast": {
+    "authErrorTitle": "Erro de Autenticação",
+    "userNotAuthenticated": "Usuário não autenticado ou sessão expirada.",
+    "passwordSuccessTitle": "Senha Atualizada!",
+    "passwordSuccessDesc": "Sua senha foi alterada com sucesso.",
+    "passwordErrorGeneric": "Ocorreu um erro desconhecido ao alterar a senha.",
+    "passwordErrorWrong": "A senha atual que você digitou está incorreta.",
+    "tooManyRequests": "Muitas tentativas recentes de login. Por favor, tente novamente mais tarde.",
+    "passwordErrorTitle": "Erro ao Alterar Senha",
+    "emailWarningTitle": "Aviso",
+    "emailIsSame": "O novo endereço de e-mail é o mesmo que o atual.",
+    "emailVerificationTitle": "Verificação Necessária",
+    "emailVerificationDesc": "Um link de verificação foi enviado para {newEmail}. Por favor, verifique sua caixa de entrada (e pasta de spam).",
+    "emailErrorGeneric": "Ocorreu um erro desconhecido ao alterar o e-mail.",
+    "emailInUse": "Este endereço de e-mail já está em uso por outra conta.",
+    "emailErrorTitle": "Erro ao Alterar E-mail"
+  }
+}

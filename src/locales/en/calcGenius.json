@@ -1,0 +1,296 @@
+
+{
+  "title": "Calc Genius",
+  "description": "A generic calculation engine to consume data and apply custom formulas.",
+  "errors": {
+    "masterOnlyTitle": "Access Denied",
+    "masterOnlyDescription": "This module is for global configuration and can only be accessed in the 'Master' context."
+  },
+  "tabs": {
+    "groups": "Groups",
+    "fields": "Fields",
+    "formulas": "Formulas",
+    "analyzer": "Analyzer",
+    "tests": "Tests"
+  },
+  "toasts": {
+    "permissionDenied": "You do not have permission to perform this action.",
+    "deleteSuccess": "Deleted successfully."
+  },
+  "zod": {
+    "validation": {
+      "idMin": "ID must be at least 3 characters long.",
+      "idRegex": "ID must only contain lowercase letters and underscores.",
+      "labelRequired": "Label is required.",
+      "expressionRequired": "Expression is required.",
+      "nameMin": "Group name must be at least 3 characters.",
+      "slugMin": "The ID (slug) is required.",
+      "slugRegex": "Slug must contain only lowercase letters, numbers, hyphens, and underscores.",
+      "iconRequired": "Icon is required.",
+      "invalidColor": "Invalid color.",
+      "slugInUse": "This slug is already in use. Please choose another one."
+    },
+    "idInUse": "This ID is already in use.",
+    "fieldIdInUse": "This Field ID is already in use.",
+    "formulaIdInUse": "This Formula ID is already in use."
+  },
+  "groupsTab": {
+    "title": "Manage Groups",
+    "description": "Create, edit, sort, and customize the groupers for your fields and formulas.",
+    "createButton": "Create New Group",
+    "emptyState": "No groups created.",
+    "defaultBadge": "Default",
+    "saveOrderButton": "Save Order",
+    "fieldsCount": "fields",
+    "actions": {
+      "edit": "Edit",
+      "viewFields": "View Fields",
+      "delete": "Delete"
+    },
+    "dialog": {
+      "editTitle": "Edit Group",
+      "createTitle": "Create New Group",
+      "description": "Set the properties for your menu group.",
+      "style": {
+        "title": "Style"
+      },
+      "name": {
+        "label": "Group Name",
+        "placeholder": "e.g., Fixed Costs, Sales Metrics"
+      },
+      "slug": {
+        "label": "ID (Slug)",
+        "placeholder": "e.g., fixed_costs",
+        "description": "Unique identifier. Cannot be changed after creation."
+      },
+      "icon": {
+        "label": "Icon"
+      },
+      "applyColorTo": {
+        "label": "Color Application",
+        "description": "Defines where the custom color will be applied.",
+        "options": {
+          "none": "None (inherit from theme)",
+          "groupOnly": "Only on Group Title",
+          "groupAndItems": "On Group and its Items"
+        }
+      },
+      "unifiedColor": {
+        "label": "Use same color for icon and text?",
+        "description": "Applies a single color to both the icon and the text.",
+        "colorLabel": "Main Color"
+      },
+      "iconColor": {
+        "label": "Icon Color"
+      },
+      "textColor": {
+        "label": "Text Color"
+      }
+    },
+    "styleSuggestion": {
+      "button": "Suggest Style with AI",
+      "nameRequired": "Please enter a name with at least 3 characters.",
+      "apiError": "Error fetching suggestion."
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete the group \"{groupName}\"? Fields associated with this group will become ungrouped.",
+      "confirmButton": "Delete"
+    },
+    "toasts": {
+      "orderSaveSuccess": "Group order saved!",
+      "saveSuccessTitle": "Success!",
+      "saveSuccessDescription": "Group saved successfully.",
+      "createSuccessTitle": "Group Created!",
+      "deleteSuccessTitle": "Group Deleted",
+      "deleteSuccessDescription": "The group has been successfully removed."
+    }
+  },
+  "fieldsTab": {
+    "title": "Manage Fields",
+    "description": "Create, edit, and organize the fields that will serve as the basis for calculations.",
+    "createButton": "Create Field",
+    "loading": "Loading...",
+    "emptyState": "No fields found.",
+    "table": {
+      "headers": {
+        "label": "Label",
+        "id": "ID",
+        "type": "Type",
+        "actions": "Actions"
+      }
+    },
+    "item": {
+      "groupTooltip": "Group: {groupName}"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "toolbar": {
+      "searchPlaceholder": "Search by name or ID...",
+      "selectAll": "Select all",
+      "deleteSelected": "Delete ({count})",
+      "allGroups": "All Groups",
+      "noGroup": "No Group"
+    },
+    "deleteDialog": {
+      "title": "Confirm Action",
+      "description": "Are you sure you want to delete {count, plural, one {this field} other {# fields}}?",
+      "confirmButton": "Confirm"
+    },
+    "dataType": {
+      "number": "Number",
+      "string": "Text",
+      "boolean": "Boolean",
+      "date": "Date",
+      "datetime": "Date/Time",
+      "time": "Time"
+    },
+    "originType": {
+      "manual": "Manual",
+      "fixed": "Fixed",
+      "formula": "Formula",
+      "linked": "Linked",
+      "spreadsheet": "Spreadsheet",
+      "json": "JSON",
+      "xml": "XML",
+      "api": "API"
+    }
+  },
+  "formulasTab": {
+    "title": "Calculation Formulas",
+    "description": "Create and manage the expressions that transform your fields into results.",
+    "createButton": "Create New Formula",
+    "emptyState": "No formulas found.",
+    "toolbar": {
+      "searchPlaceholder": "Search by name or ID...",
+      "groupFilterPlaceholder": "Filter by group...",
+      "allGroups": "All Groups",
+      "noGroup": "No Group",
+      "resultTypeFilterPlaceholder": "Filter by result type...",
+      "allResultTypes": "All Result Types"
+    },
+    "table": {
+      "headers": {
+        "label": "Label",
+        "id": "ID",
+        "resultType": "Result Type",
+        "formulaType": "Formula Type",
+        "groups": "Groups",
+        "actions": "Actions"
+      },
+      "emptyState": "No formulas match the current filters."
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description_single": "Are you sure you want to delete the formula \"{formulaName}\"?",
+      "description": "Are you sure you want to delete {count, plural, one {this formula} other {# formulas}}?"
+    },
+    "dataTypes": {
+      "number": "Number",
+      "string": "Text",
+      "boolean": "Boolean (Yes/No)",
+      "date": "Date"
+    }
+  },
+  "fieldForm": {
+    "createTitle": "Create Field",
+    "editTitle": "Edit Field",
+    "label": {
+      "label": "Label / Name",
+      "placeholder": "e.g., Working Hours, Unit Cost"
+    },
+    "id": {
+      "label": "Field ID (for formulas)",
+      "placeholder": "e.g., working_hours",
+      "description": "Unique ID. Auto-generated from the label."
+    },
+    "description": {
+      "label": "Description (Optional)",
+      "placeholder": "What this field represents."
+    },
+    "dataType": {
+      "label": "Data Type",
+      "options": {
+        "number": "Number",
+        "string": "Text",
+        "boolean": "Boolean (Yes/No)",
+        "date": "Date",
+        "datetime": "Date and Time",
+        "time": "Time"
+      }
+    },
+    "originType": {
+      "label": "Data Origin",
+      "options": {
+        "manual": "Manual Input",
+        "spreadsheet": "Spreadsheet",
+        "json": "JSON",
+        "xml": "XML",
+        "api": "API",
+        "fixed": "Fixed Value",
+        "formula": "Formula",
+        "linked": "Linked Field"
+      }
+    },
+    "groups": {
+      "label": "Groups",
+      "placeholder": "Select one or more groups..."
+    },
+    "mainGroup": {
+      "label": "Main Group (for icon)",
+      "placeholder": "Select a main group...",
+      "description": "Select a main group if you have chosen more than one."
+    },
+    "editableByUser": {
+      "label": "Editable by User?",
+      "description": "Allows the end-user to change this value during simulation."
+    }
+  },
+  "formulaForm": {
+    "createTitle": "Create Formula",
+    "editTitle": "Edit Formula",
+    "label": {
+      "label": "Label / Name"
+    },
+    "id": {
+      "label": "Formula ID"
+    },
+    "expression": {
+      "label": "Expression"
+    },
+    "resultType": {
+      "label": "Result Type"
+    },
+    "formulaType": {
+      "label": "Formula Type"
+    },
+    "groups": {
+      "label": "Groups"
+    }
+  },
+  "analyzerTab": {
+    "title": "File Analyzer",
+    "description": "Upload an XML, JSON, CSV, or XLSX file to inspect its fields and structure.",
+    "fileUploadLabel": "Upload a file",
+    "selectedFile": "Selected file",
+    "analyzeButton": "Analyze File",
+    "analyzingButton": "Analyzing...",
+    "analysisStarted": "Analysis started...",
+    "analysisDescription": "Processing the file in the background.",
+    "analysisComplete": "Analysis complete!",
+    "errors": {
+      "invalidFileTypeTitle": "Invalid File Type",
+      "invalidFileTypeDescription": "Please select a valid Excel file (.xlsx or .xls)."
+    }
+  },
+  "testsTab": {
+    "title": "Testing Environment",
+    "description": "Select fields, enter values, and simulate the calculations of your formulas.",
+    "explanation": "This section is under construction and will allow you to test your entire calculation engine.",
+    "runButton": "Run Tests",
+    "runningButton": "Running...",
+    "resultsTitle": "Test Results"
+  }
+}

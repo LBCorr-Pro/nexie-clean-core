@@ -1,0 +1,68 @@
+
+{
+  "title": "Gestión de Empresas",
+  "description": "Crear, ver y gestionar los registros de empresas globales en el sistema.",
+  "createButton": "Registrar Nueva Empresa",
+  "searchPlaceholder": "Buscar por nombre comercial, razón social o ID fiscal...",
+  "noCompaniesFound": "No se encontraron empresas para su búsqueda.",
+  "noCompaniesCreated": "Aún no hay empresas registradas.",
+  "totalCompanies": "Total de empresas: {count}",
+  "active": "Activa",
+  "inactive": "Inactiva",
+  "tableHeaders": {
+    "tradeName": "Nombre Comercial",
+    "legalName": "Razón Social",
+    "cnpj": "ID Fiscal",
+    "status": "Estado",
+    "createdAt": "Fecha de Creación",
+    "actions": "Acciones"
+  },
+  "actions": {
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "openMenu": "Abrir menú"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirmar Eliminación",
+    "deleteConfirmDescription": "¿Está seguro de que desea eliminar la empresa \"{companyName}\"? Esta acción no se puede deshacer.",
+    "deleteConfirmAction": "Eliminar"
+  },
+  "createTitle": "Registrar Nueva Empresa Global",
+  "createDescription": "Complete los campos para agregar una nueva empresa a nivel Maestro.",
+  "editTitle": "Editar Empresa Global",
+  "editDescription": "Editando el perfil de una empresa global del sistema.",
+  "deleting": "Eliminando...",
+  "deleteSuccess": "¡Empresa eliminada con éxito!",
+  "savingChanges": "Guardando cambios...",
+  "creatingCompany": "Creando empresa...",
+  "saveSuccess": "¡Empresa guardada con éxito!",
+  "createSuccess": "¡Empresa creada con éxito!",
+  "errors": {
+    "accessDenied": "No tiene permiso para ver empresas.",
+    "fetch": "Error al cargar las empresas.",
+    "deletePermission": "No tiene permiso para eliminar empresas.",
+    "delete": "Error al eliminar la empresa: {error}",
+    "required": "Este campo es obligatorio"
+  },
+  "saveCompanyButton": "Guardar Empresa",
+  "saveChangesButton": "Guardar Cambios",
+  "form": {
+    "fields": {
+      "companyName": "Razón Social",
+      "fantasyName": "Nombre Comercial",
+      "cnpj": "ID Fiscal",
+      "email": "Correo Principal",
+      "phone": "Teléfono",
+      "website": "Sitio Web",
+      "status": "Estado",
+      "addressGroup": "Dirección",
+      "addressStreet": "Calle",
+      "addressNumber": "Número",
+      "addressComplement": "Complemento",
+      "addressNeighborhood": "Barrio",
+      "addressCity": "Ciudad",
+      "addressState": "Estado",
+      "addressZipCode": "Código Postal"
+    }
+  }
+}

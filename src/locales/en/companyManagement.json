@@ -1,0 +1,68 @@
+
+{
+  "title": "Company Management",
+  "description": "Create, view, and manage global company records in the system.",
+  "createButton": "Register New Company",
+  "searchPlaceholder": "Search by trade name, legal name, or Tax ID...",
+  "noCompaniesFound": "No companies found for your search.",
+  "noCompaniesCreated": "No companies registered yet.",
+  "totalCompanies": "Total companies: {count}",
+  "active": "Active",
+  "inactive": "Inactive",
+  "tableHeaders": {
+    "tradeName": "Trade Name",
+    "legalName": "Legal Name",
+    "cnpj": "Tax ID",
+    "status": "Status",
+    "createdAt": "Created At",
+    "actions": "Actions"
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "openMenu": "Open menu"
+  },
+  "dialog": {
+    "deleteConfirmTitle": "Confirm Deletion",
+    "deleteConfirmDescription": "Are you sure you want to delete the company \"{companyName}\"? This action cannot be undone.",
+    "deleteConfirmAction": "Delete"
+  },
+  "createTitle": "Register New Global Company",
+  "createDescription": "Fill in the fields to add a new company at the Master level.",
+  "editTitle": "Edit Global Company",
+  "editDescription": "Editing the profile of a global system company.",
+  "deleting": "Deleting...",
+  "deleteSuccess": "Company deleted successfully!",
+  "savingChanges": "Saving changes...",
+  "creatingCompany": "Creating company...",
+  "saveSuccess": "Company saved successfully!",
+  "createSuccess": "Company created successfully!",
+  "errors": {
+    "accessDenied": "You do not have permission to view companies.",
+    "fetch": "Failed to load companies.",
+    "deletePermission": "You do not have permission to delete companies.",
+    "delete": "Failed to delete company: {error}",
+    "required": "This field is required"
+  },
+  "saveCompanyButton": "Save Company",
+  "saveChangesButton": "Save Changes",
+  "form": {
+    "fields": {
+      "companyName": "Legal Name",
+      "fantasyName": "Trade Name",
+      "cnpj": "Tax ID",
+      "email": "Main Email",
+      "phone": "Phone",
+      "website": "Website",
+      "status": "Status",
+      "addressGroup": "Address",
+      "addressStreet": "Street",
+      "addressNumber": "Number",
+      "addressComplement": "Complement",
+      "addressNeighborhood": "Neighborhood",
+      "addressCity": "City",
+      "addressState": "State",
+      "addressZipCode": "Zip Code"
+    }
+  }
+}

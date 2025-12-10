@@ -1,0 +1,49 @@
+
+{
+  "pageTitle": "Manage User Manual",
+  "pageDescription": "Create, edit, order, and manage manual articles in different contexts.",
+  "accessDenied": {
+    "title": "Access Denied",
+    "description": "You do not have permission ({permissionId}) to manage the user manual."
+  },
+  "createArticleButton": "Create Article",
+  "noArticles": "No articles created in this context.",
+  "editButton": "Edit",
+  "deleteButton": "Delete",
+  "toasts": {
+    "loadError": "Error loading articles",
+    "saveSuccess": "Article saved successfully",
+    "saveError": "Error saving article",
+    "deleteSuccess": "Article deleted successfully",
+    "deleteError": "Error deleting article",
+    "slugInUse": "This slug is already in use in this context."
+  },
+  "form": {
+    "editTitle": "Edit Article",
+    "createTitle": "Create New Article",
+    "description": "Fill in the details for the manual article.",
+    "titleLabel": "Title",
+    "slugLabel": "Slug",
+    "slugDescription": "Unique identifier. Will be generated from the title.",
+    "contentLabel": "Content (Supports Markdown)",
+    "orderLabel": "Order",
+    "parentSlugLabel": "Parent Slug (Optional)",
+    "parentSlugPlaceholder": "Leave blank to be a root topic",
+    "requiredPermissionLabel": "Required Permission (Optional)",
+    "requiredPermissionPlaceholder": "None",
+    "requiredModuleLabel": "Required Module (Optional)",
+    "requiredModulePlaceholder": "None",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "deleteDialog": {
+    "title": "Confirm Deletion",
+    "description": "Are you sure you want to delete the article \"{title}\"? This action is irreversible.",
+    "confirm": "Delete"
+  },
+  "validation": {
+    "titleRequired": "Title is required (min. 3 characters).",
+    "slugRequired": "Slug is required (min. 3 characters).",
+    "slugPattern": "Slug must contain only lowercase letters, numbers, and hyphens."
+  }
+}

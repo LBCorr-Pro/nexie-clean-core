@@ -1,0 +1,23 @@
+{
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "back": "Voltar",
+  "goBackLabel": "Voltar",
+  "manage": "Gerenciar",
+  "edit": "Editar",
+  "delete": "Excluir",
+  "confirm": "Confirmar",
+  "noResults": "Nenhum resultado encontrado.",
+  "accessDenied": {
+    "title": "Acesso Negado",
+    "description": "Você não tem permissão para acessar esta página."
+  },
+  "statusActive": "Ativo",
+  "statusInactive": "Inativo",
+  "notAvailable": "N/D",
+  "saving": "Salvando...",
+  "deleting": "Excluindo...",
+  "upload": "Enviar",
+  "sending": "Enviando...",
+  "uploadDisabled": "O upload de arquivos está desativado nas configurações do módulo de armazenamento."
+}

@@ -1,0 +1,35 @@
+{
+  "pageTitle": "Login Page Behavior",
+  "pageDescription": "Control the access flow and the default landing page after login.",
+  "common": {
+    "save": "Save Changes"
+  },
+  "form": {
+    "loginPageActive": {
+      "label": "Login Page Active?",
+      "description": "If inactive, users will be redirected to the Fallback URL."
+    },
+    "fallbackPageUrl": {
+      "label": "Fallback URL",
+      "description": "Page where the user is taken if the login page is inactive.",
+      "loading": "Loading pages...",
+      "placeholder": "Select a page...",
+      "noPages": "No pages configured"
+    }
+  },
+  "infoBox": "These settings directly affect the authentication flow and the user's first access.",
+  "toasts": {
+    "loadError": "Error loading settings.",
+    "saveSuccessTitle": "Settings Saved!",
+    "saveSuccessDescription": "The login page behavior has been updated.",
+    "saveErrorTitle": "Error Saving"
+  },
+  "contextAlert": {
+    "instanceTitle": "Editing Instance Settings",
+    "instanceDescription": "You are overriding the default settings for this instance.",
+    "subInstanceTitle": "Editing Sub-instance Settings",
+    "subInstanceDescription": "You are overriding the parent instance settings for this sub-instance.",
+    "inheritingFromMasterTitle": "Inheriting Settings from Master",
+    "saveToCustomizeDescription": "Changes will be saved as a custom configuration for this context."
+  }
+}

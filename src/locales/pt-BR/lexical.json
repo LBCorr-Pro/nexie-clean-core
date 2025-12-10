@@ -1,0 +1,104 @@
+{
+  "title": "Módulo Editor Lexical",
+  "description": "Configure a barra de ferramentas e teste o editor de texto rico baseado no framework Lexical.",
+  "configureToolbar": "Configurar Barra de Ferramentas",
+  "toolbarAccordionTitle": "Ferramentas da Barra",
+  "addSeparatorButton": "Adicionar Separador",
+  "separatorLabel": "Separador",
+  "saveDefaultConfigButton": "Salvar Configuração Padrão",
+  "previewTitle": "Pré-visualização do Editor",
+  "placeholder": "Comece a escrever aqui para testar...",
+  "configureDenied": "Você não tem permissão para configurar a barra de ferramentas.",
+  "presets": {
+    "accordionTitle": "Gerenciar Presets",
+    "savePresetButton": "Salvar como Preset",
+    "noPresetsMessage": "Nenhum preset salvo.",
+    "loadPreset": "Carregar Preset",
+    "actions": {
+      "srLabel": "Ações para {presetName}",
+      "load": "Carregar",
+      "overwrite": "Sobrescrever com Atual",
+      "delete": "Excluir"
+    }
+  },
+  "dialogs": {
+    "savePreset": {
+      "title": "Salvar Configuração como Preset",
+      "description": "Dê um nome para a configuração atual da barra de ferramentas.",
+      "label": "Nome do Preset",
+      "cancelButton": "Cancelar",
+      "savingButton": "Salvando...",
+      "contextLabel": "Salvar preset para qual contexto?",
+      "noContextOption": "Salvar como Preset Genérico",
+      "customNameLabel": "Nome do Preset (se genérico)"
+    },
+    "deletePreset": {
+      "title": "Confirmar Exclusão",
+      "description": "Tem certeza que deseja excluir o preset \"{name}\"? Esta ação não pode ser desfeita.",
+      "cancelButton": "Cancelar",
+      "deleteButton": "Excluir"
+    },
+    "overwritePreset": {
+      "title": "Sobrescrever Preset?",
+      "description": "Já existe um preset com o nome \"{name}\". Deseja substituí-lo com a configuração atual?",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sobrescrever"
+    }
+  },
+  "toasts": {
+    "loadConfigErrorTitle": "Erro ao Carregar Configuração",
+    "loadConfigErrorDesc": "Usando configurações padrão.",
+    "saveConfigSuccessTitle": "Configuração Padrão Salva!",
+    "saveConfigSuccessDesc": "A barra de ferramentas do editor foi atualizada.",
+    "saveConfigErrorTitle": "Erro ao Salvar",
+    "savePresetSuccessTitle": "Preset Salvo!",
+    "savePresetSuccessDesc": "O preset \"{name}\" foi salvo com sucesso.",
+    "invalidPresetNameTitle": "Nome Inválido",
+    "invalidPresetNameDesc": "Por favor, insira um nome para o preset.",
+    "savePresetErrorTitle": "Erro ao Salvar Preset",
+    "loadPresetsErrorTitle": "Erro",
+    "loadPresetsErrorDesc": "Não foi possível carregar os presets.",
+    "loadPresetSuccessTitle": "Preset Carregado",
+    "loadPresetSuccessDesc": "A configuração \"{name}\" foi aplicada. Clique em 'Salvar Padrão' para confirmar.",
+    "deletePresetSuccessTitle": "Preset Excluído!",
+    "deletePresetErrorTitle": "Erro ao Excluir"
+  },
+  "toolbar": {
+    "undo": "Desfazer",
+    "redo": "Refazer",
+    "bold": "Negrito",
+    "italic": "Itálico",
+    "underline": "Sublinhado",
+    "strikethrough": "Tachado",
+    "code": "Código em Linha",
+    "h1": "Título 1",
+    "h2": "Título 2",
+    "h3": "Título 3",
+    "alignLeft": "Alinhar à Esquerda",
+    "alignCenter": "Centralizar",
+    "alignRight": "Alinhar à Direita",
+    "alignJustify": "Justificar",
+    "bulletList": "Lista com Marcadores",
+    "numberList": "Lista Numerada",
+    "checkList": "Lista de Tarefas",
+    "quote": "Citação",
+    "codeBlock": "Bloco de Código",
+    "link": "Inserir Link",
+    "image": "Inserir Imagem",
+    "fontFamily": "Família da Fonte",
+    "fontSize": "Tamanho da Fonte",
+    "fontColor": "Cor da Fonte",
+    "fontBgColor": "Cor de Fundo da Fonte",
+    "prompts": {
+      "enterUrl": "Inserir URL"
+    },
+    "placeholders": {
+      "fontFamily": "Fonte...",
+      "fontSize": "Tamanho..."
+    },
+    "ariaLabels": {
+      "fontColor": "Selecionar cor da fonte",
+      "fontBgColor": "Selecionar cor de fundo da fonte"
+    }
+  }
+}

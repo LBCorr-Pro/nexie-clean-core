@@ -1,0 +1,11 @@
+
+{
+  "pageTitle": "Manual de Usuario",
+  "pageDescription": "Encuentra guías, tutoriales y respuestas a tus preguntas.",
+  "topicsCardTitle": "Temas",
+  "noTopics": "No hay temas disponibles.",
+  "initialStateTitle": "Bienvenido al Manual",
+  "initialStateDescription": "Selecciona un tema del menú de la izquierda para comenzar.",
+  "articleDescription": "Guía para \"{articleTitle}\"",
+  "loading": "Cargando manual..."
+}

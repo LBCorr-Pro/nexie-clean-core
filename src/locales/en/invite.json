@@ -1,0 +1,119 @@
+
+{
+  "title": "Invite Module",
+  "description": "Manage settings for generating invitations and view already created invitations.",
+  "tabs": {
+    "manage": "Manage Invites",
+    "settings": "Module Settings"
+  },
+  "settingsTab": {
+    "title": "Invitation Module Settings",
+    "description": "Define the default behavior for generating invitation codes.",
+    "accessDenied": "Permission Denied",
+    "accessDeniedMessage": "You do not have the permission '{permission}' to configure the invitation module.",
+    "prefixLabel": "Code Prefix",
+    "prefixPlaceholder": "e.g., MYAPP-",
+    "codeLengthLabel": "Code Length (Random Part)",
+    "noExpirationLabel": "Does Not Expire?",
+    "noExpirationDescription": "If checked, invitations will be valid indefinitely.",
+    "validityLabel": "Validity Period",
+    "validityTypes": {
+      "hours": "Hours",
+      "days": "Days",
+      "months": "Months"
+    },
+    "templatesTitle": "Message Templates",
+    "emailTemplateLabel": "Email Template",
+    "whatsappTemplateLabel": "WhatsApp Template",
+    "placeholders": {
+      "title": "Available Variables",
+      "titleEmail": "Available Variables (Email)",
+      "titleMessage": "Available Variables (Message)",
+      "inviteCode": "Invitation Code",
+      "inviteCodeDesc": "The unique generated code.",
+      "inviteLink": "Invitation Link",
+      "inviteLinkDesc": "The full registration URL with the invitation code.",
+      "senderName": "Sender's Name",
+      "senderNameDesc": "Your name ({name}).",
+      "senderEmail": "Sender's Email",
+      "senderEmailDesc": "Your email ({email}).",
+      "systemName": "System Name",
+      "systemNameDesc": "Name of the platform ({name}).",
+      "instanceName": "Instance Name",
+      "instanceNameDesc": "Name of the current instance ({name}).",
+      "systemLogo": "System Logo",
+      "systemLogoDesc": "URL of the main logo."
+    },
+    "saveButton": "Save Settings",
+    "defaultTemplates": {
+      "whatsapp": "Hello! You have been invited to join our platform. Use this link to register: {{invite_link}}",
+      "email": "<h1>You're Invited!</h1><p>Hello, {{user_name}}!</p><p>You have been invited to join our platform. Click the link below to complete your registration:</p><p><a href=\"{{invite_link}}\">Accept Invitation</a></p><p>If the button doesn't work, copy and paste this URL into your browser: {{invite_link}}</p>"
+    },
+    "toasts": {
+      "saveSuccessTitle": "Settings Saved!",
+      "saveSuccessDescription": "The invitation module settings have been updated.",
+      "saveErrorTitle": "Error Saving",
+      "permissionDenied": "You do not have permission to perform this action."
+    }
+  },
+  "manageTab": {
+    "generateTitle": "Generate New Invite",
+    "emailLabel": "Issue to a Specific Email (Optional)",
+    "emailPlaceholder": "user@example.com",
+    "emailDescription": "If left blank, the invitation will be open for anyone with the code.",
+    "accessLevelLabel": "Target Access Level (Optional)",
+    "accessLevelPlaceholder": "Select a level...",
+    "noAccessLevelOption": "Default Level",
+    "generateButton": "Generate Invite",
+    "generatingButton": "Generating...",
+    "generatedTitle": "Generated Invites",
+    "noInvitesMessage": "No invites have been generated in this context yet.",
+    "table": {
+      "code": "Code",
+      "status": "Status",
+      "recipient": "Recipient",
+      "targetLevel": "Target Level",
+      "createdAt": "Created At",
+      "expiresAt": "Expires At",
+      "actions": "Actions"
+    },
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "expired": "Expired",
+      "revoked": "Revoked"
+    },
+    "recipientTypes": {
+      "open": "Open",
+      "na": "N/A",
+      "defaultLevel": "Default"
+    },
+    "neverExpires": "Never",
+    "actions": {
+      "revoke": "Revoke"
+    },
+    "toasts": {
+      "generationErrorTitle": "Generation Error",
+      "generationError": "Could not generate a unique code. Please try again.",
+      "revokeSuccess": "Invite Revoked!",
+      "revokeError": "Error Revoking Invite"
+    },
+    "dialogs": {
+      "generatedTitle": "Invite Generated!",
+      "generatedDescription": "Share the code or the link below with the user.",
+      "generatedCodeLabel": "Code:",
+      "generatedLinkLabel": "Link:",
+      "copySuccessToast": "Code copied!",
+      "linkCopySuccessToast": "Link copied!",
+      "generatedHelpText": "The user will need this to register.",
+      "closeButton": "Close",
+      "revokeTitle": "Confirm Revocation",
+      "revokeDescription": "Are you sure you want to revoke the invitation <strong>{code}</strong>? It can no longer be used.",
+      "cancelButton": "Cancel",
+      "confirmRevokeButton": "Confirm Revocation"
+    },
+    "zod": {
+      "invalidEmail": "Please enter a valid email address."
+    }
+  }
+}
