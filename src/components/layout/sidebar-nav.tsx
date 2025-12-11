@@ -27,51 +27,16 @@ export function SidebarNav() {
   const params = useParams(); 
   const locale = params.locale as string; 
 
-  const { currentUser, isLoadingPermissions } = useUserPermissions(); // Adicionado
-  const isMasterAdmin = useMemo(() => currentUser?.uid === process.env.NEXT_PUBLIC_MASTER_UID, [currentUser]);
+  const { isLoadingPermissions } = useUserPermissions(); // Adicionado
 
   const {
-    finalGroups: originalFinalGroups,
+    finalGroups,
     ungroupedTopLevelItems,
     isLoading: isLoadingMenu,
   } = useMenuData();
 
   const { appearanceSettings, isLoading: isLoadingAppearance } = useNxAppearance();
   
-  const finalGroups = useMemo(() => {
-    if (isMasterAdmin) {
-      const adminGroup: MenuGroupFromFirestore = {
-        docId: 'master-tools',
-        name: 'Ferramentas Master',
-        icon: 'ShieldCheck',
-        order: 9999, // Garante que fique por último
-        colorApplyTo: 'none', // Propriedade obrigatória adicionada
-        isColorUnified: false, // Propriedade obrigatória adicionada
-        items: [
-          {
-            menuKey: 'db-management',
-            displayName: 'Gerenciar Banco de Dados',
-            originalHref: '/admin/database',
-            originalIcon: 'Database',
-            level: 0,
-            isHidden: false,
-            order: 1,
-            subItems: [],
-            // Propriedades obrigatórias de UserMenuItemConfig
-            groupId: 'master-tools',
-            parentId: '',
-            isModule: false,
-            originalName: 'Gerenciar Banco de Dados',
-            isColorUnified: false,
-          } as ConfiguredMenuItem
-        ],
-      };
-      return [...originalFinalGroups, adminGroup];
-    }
-    return originalFinalGroups;
-  }, [originalFinalGroups, isMasterAdmin]);
-
-
   const handleLinkClick = useCallback(() => {
       if (window.innerWidth < 768) { // md breakpoint
         setOpen(false);

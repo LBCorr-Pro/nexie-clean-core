@@ -4,67 +4,63 @@ import * as admin from 'firebase-admin';
 import { getFirestore, Firestore } from 'firebase-admin/firestore';
 import { getAuth, Auth } from 'firebase-admin/auth';
 
+// Variáveis para armazenar as instâncias, garantindo que a inicialização ocorra apenas uma vez.
 let app: admin.app.App | null = null;
-let db: Firestore | null = null;
-let auth: Auth | null = null;
 
 function initializeFirebaseAdmin() {
+  // Evita re-inicialização se já estiver conectado.
+  if (app) return;
+
+  // Verifica se já existe uma app padrão inicializada (padrão comum em alguns ambientes Vercel/Next.js)
   if (admin.apps.length > 0 && admin.apps[0]) {
     app = admin.apps[0];
-  } else {
-    const projectId = process.env.FIREBASE_PROJECT_ID;
-    const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
-    const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\n/g, '\n');
-
-    if (!projectId || !clientEmail || !privateKey) {
-      console.warn('[Firebase Admin] Credentials not set. Admin features disabled.');
-      return;
-    }
-
-    try {
-      app = admin.initializeApp({
-        credential: admin.credential.cert({ projectId, clientEmail, privateKey }),
-        storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-      });
-      console.log('[Firebase Admin] SDK initialized successfully.');
-    } catch (error: any) {
-      console.error('[Firebase Admin] CRITICAL: Error initializing SDK:', error);
-      app = null; // Ensure app is null on failure
-    }
+    return;
   }
 
-  // Initialize db and auth only if app is valid
-  if (app) {
-    db = getFirestore(app);
-    auth = getAuth(app);
+  // Obtém as credenciais do ambiente.
+  const projectId = process.env.FIREBASE_PROJECT_ID;
+  const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+  // A chave privada precisa de um tratamento para substituir os literais '\n' pela quebra de linha real.
+  const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+
+  // Se as credenciais essenciais não estiverem definidas, a inicialização não pode ocorrer.
+  if (!projectId || !clientEmail || !privateKey) {
+    // Lança um erro claro em vez de um aviso silencioso. Isso garante que o problema seja visível.
+    throw new Error('[Firebase Admin] Credenciais do servidor (FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY) não foram encontradas no ambiente. A inicialização do Admin SDK falhou.');
+  }
+
+  try {
+    // Inicializa o app do Firebase Admin com as credenciais fornecidas.
+    app = admin.initializeApp({
+      credential: admin.credential.cert({ projectId, clientEmail, privateKey }),
+      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    });
+    console.log('[Firebase Admin] SDK inicializado com sucesso.');
+  } catch (error: any) {
+    // Se a inicialização falhar por qualquer outro motivo, lança um erro detalhado.
+    console.error('[Firebase Admin] CRITICAL: Erro ao inicializar o SDK:', error);
+    throw new Error(`[Firebase Admin] Falha crítica ao inicializar o SDK: ${error.message}`);
   }
 }
 
-// Initialize on first import on the server.
-initializeFirebaseAdmin();
+// Removida a chamada de inicialização automática daqui.
 
-export function getAdminApp(): admin.app.App | null {
-  return app;
+// As funções 'get' agora são responsáveis por garantir a inicialização.
+
+export function getAdminApp(): admin.app.App {
+  if (!app) {
+    initializeFirebaseAdmin();
+  }
+  // Neste ponto, o app deve ter sido inicializado ou um erro foi lançado.
+  return app!;
 }
 
 export function getAdminDb(): Firestore {
-  if (!db) {
-    // This might re-run initialization, but it's better to have a clear error
-    // if it still fails.
-    initializeFirebaseAdmin(); 
-    if (!db) {
-      throw new Error("Firestore could not be initialized. Check admin credentials.");
-    }
-  }
-  return db;
+  const currentApp = getAdminApp(); // Garante que a inicialização ocorreu.
+  return getFirestore(currentApp);
 }
 
 export function getAdminAuth(): Auth {
-  if (!auth) {
-    initializeFirebaseAdmin();
-    if (!auth) {
-        throw new Error("Firebase Auth could not be initialized. Check admin credentials.");
-    }
-  }
-  return auth;
+  const currentApp = getAdminApp(); // Garante que a inicialização ocorreu.
+  return getAuth(currentApp);
 }

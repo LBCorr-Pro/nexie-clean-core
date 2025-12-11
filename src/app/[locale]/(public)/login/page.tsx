@@ -13,7 +13,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { PublicLogo } from "@/components/layout/public-logo";
 import { AlertTriangle } from 'lucide-react';
-import { SessionDebugger } from '@/components/dev/SessionDebugger';
 
 function LoginPageContent() {
     const t = useTranslations('loginPage');
@@ -73,12 +72,6 @@ export default function LoginPage() {
        <Suspense fallback={<Skeleton className="h-[400px] w-full max-w-md" />}>
           <LoginPageContent />
        </Suspense>
-       {/* Área de debug adicionada abaixo do card de login */}
-       {process.env.NODE_ENV === 'development' && (
-           <div className="mt-8 w-full max-w-md">
-              <SessionDebugger />
-           </div>
-        )}
     </div>
   );
 }

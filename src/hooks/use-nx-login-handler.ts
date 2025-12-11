@@ -8,7 +8,7 @@ import * as z from 'zod';
 import { useToast } from '@/hooks/nx-use-toast';
 import { useTranslations } from 'next-intl';
 import { useRouter, useParams } from 'next/navigation';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 import { createSessionCookieAction } from '@/lib/actions/auth-actions';
 import { useNxLoginPageLoader } from './use-nx-login-page-loader';
@@ -37,6 +37,7 @@ export function useNxLoginHandler({ callbackUrl }: UseNxLoginHandlerProps) {
   const locale = params.locale as string;
   const { toast } = useToast();
   const { app } = useFirebase();
+  // `tenantId` is now `undefined` until the check is complete.
   const { handleRedirect, tenantId } = useNxLoginPageLoader();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +48,34 @@ export function useNxLoginHandler({ callbackUrl }: UseNxLoginHandlerProps) {
     resolver: zodResolver(loginSchema),
     defaultValues: { email: '', password: '', rememberMe: false },
   });
+
+  const handleSuccessfulLogin = async (idToken: string, rememberMe: boolean) => {
+    const result = await createSessionCookieAction(idToken, tenantId, rememberMe);
+
+    if (result.success) {
+      toast({
+        title: tLogin('loginSuccessTitle'),
+        description: tLogin('loginSuccessDescription'),
+      });
+      router.refresh(); // Crucial to update server-side session state
+      handleRedirect(locale, callbackUrl);
+    } else {
+      throw new Error(result.error || tAuth('errors.default'));
+    }
+  };
+
+  const handleError = (error: any) => {
+    const errorMessage = error.code === 'auth/invalid-credential' 
+      ? tAuth('errors.invalidCredentials')
+      : (error.message || tAuth('errors.default'));
+
+    setAuthError(errorMessage);
+    toast({
+        variant: 'destructive',
+        title: tAuth('loginPage.loginFailed'),
+        description: errorMessage,
+    });
+  };
 
   const handleEmailLogin = async (data: LoginFormValues) => {
     setIsSubmitting(true);
@@ -66,37 +95,38 @@ export function useNxLoginHandler({ callbackUrl }: UseNxLoginHandlerProps) {
       
       const userCredential = await signInWithEmailAndPassword(localAuth, data.email, data.password);
       const idToken = await userCredential.user.getIdToken();
-
-      const result = await createSessionCookieAction(idToken, tenantId, data.rememberMe || false);
-
-      if (result.success) {
-        toast({
-          title: tLogin('loginSuccessTitle'),
-          description: tLogin('loginSuccessDescription'),
-        });
-        
-        // CORREÇÃO: Força a atualização do estado do servidor no cliente.
-        // Isso resolve o problema de "loading infinito" na dashboard.
-        router.refresh();
-
-        // O redirecionamento pode ocorrer logo em seguida.
-        handleRedirect(locale, callbackUrl);
-
-      } else {
-        throw new Error(result.error || tAuth('errors.default'));
-      }
+      await handleSuccessfulLogin(idToken, data.rememberMe || false);
 
     } catch (error: any) {
-        const errorMessage = error.code === 'auth/invalid-credential' 
-            ? tAuth('errors.invalidCredentials')
-            : (error.message || tAuth('errors.default'));
+        handleError(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
+  const handleGoogleLogin = async () => {
+    setIsSubmitting(true);
+    setAuthError(null);
+
+    if (tenantId === undefined) {
+        const errorMessage = "Verificando informações... Por favor, tente novamente em alguns segundos.";
         setAuthError(errorMessage);
-        toast({
-            variant: 'destructive',
-            title: tAuth('loginPage.loginFailed'),
-            description: errorMessage,
-        });
+        toast({ variant: 'destructive', title: "Aguarde", description: errorMessage });
+        setIsSubmitting(false);
+        return;
+    }
+
+    try {
+      const localAuth = getAuth(app);
+      localAuth.tenantId = tenantId;
+      const provider = new GoogleAuthProvider();
+      
+      const userCredential = await signInWithPopup(localAuth, provider);
+      const idToken = await userCredential.user.getIdToken();
+      await handleSuccessfulLogin(idToken, form.getValues('rememberMe') || false);
+
+    } catch (error: any) {
+        handleError(error);
     } finally {
       setIsSubmitting(false);
     }
@@ -107,6 +137,7 @@ export function useNxLoginHandler({ callbackUrl }: UseNxLoginHandlerProps) {
   return {
     form,
     handleEmailLogin,
+    handleGoogleLogin,
     isSubmitting: isLoginDisabled,
     authError,
   };

@@ -3,7 +3,6 @@
 
 import React from 'react';
 import { Navbar } from "@/components/nav/navbar";
-import { PublicRedirect } from '@/components/auth/public-redirect';
 
 /**
  * A new dedicated layout for the main public homepage.
@@ -15,15 +14,13 @@ export default function PublicHomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <PublicRedirect>
-        <div className="relative min-h-screen w-full">
-        <div className="flex flex-col">
-            <Navbar />
-            <main className="flex-1">
-                {children}
-            </main>
-        </div>
-        </div>
-    </PublicRedirect>
+    <div className="relative min-h-screen w-full">
+      <div className="flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+            {children}
+        </main>
+      </div>
+    </div>
   );
 }

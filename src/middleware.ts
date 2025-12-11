@@ -2,9 +2,9 @@
 import createMiddleware from 'next-intl/middleware';
 import { locales, defaultLocale } from './i18n/i18n-config';
 
-// The middleware is now configured to use 'as-needed' for the locale prefix.
-// This means the prefix will be omitted for the default locale (e.g., /dashboard)
-// but will be present for all other locales (e.g., /en/dashboard).
+// The middleware is reverted to its simplest and most reliable form.
+// It only handles default locale redirection and path prefixing.
+// The complex logic of detecting user preference is now handled on the client-side.
 export default createMiddleware({
   locales,
   defaultLocale,

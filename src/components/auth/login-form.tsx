@@ -13,6 +13,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Loader2, LogIn, Mail, Lock, AlertTriangle } from "lucide-react";
 import { AccessMethods } from '@/hooks/use-nx-login-page-loader';
 import { useNxLoginHandler } from '@/hooks/use-nx-login-handler';
+import { Icon } from '@/components/ui/icon';
 
 interface LoginFormProps {
   callbackUrl?: string;
@@ -26,7 +27,7 @@ export function LoginForm({
 
   const t = useTranslations('loginPage');
   
-  const { form, handleEmailLogin, isSubmitting, authError } = useNxLoginHandler({ callbackUrl });
+  const { form, handleEmailLogin, handleGoogleLogin, isSubmitting, authError } = useNxLoginHandler({ callbackUrl });
 
   return (
     <Form {...form}>
@@ -103,7 +104,8 @@ export function LoginForm({
               </Button>
             )}
             {(accessMethods?.allowGoogle) && (
-              <Button variant="outline" type="button" className="w-full" disabled={true}>
+              <Button variant="outline" type="button" className="w-full" onClick={handleGoogleLogin} disabled={isSubmitting}>
+                {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Icon name="google" className="mr-2 h-4 w-4"/>}
                 {t('loginWithGoogleButton')}
               </Button>
             )}

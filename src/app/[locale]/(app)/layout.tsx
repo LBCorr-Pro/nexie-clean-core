@@ -10,8 +10,7 @@ import { Header } from "@/components/layout/header";
 import { BottomNavigationBar } from "@/components/layout/bottom-navigation-bar";
 import { useNxAppearance } from '@/hooks/use-nx-appearance';
 import { cn } from "@/lib/utils";
-
-// RouteGuard is no longer needed here, as the new AppOrchestrator handles it globally.
+import { AuthGuard } from "@/components/auth/auth-guard"; // Corrigido para AuthGuard
 
 const pageVariants: Record<string, Variants> = {
   none: { initial: { opacity: 1 }, animate: { opacity: 1 }, exit: { opacity: 1 } },
@@ -37,28 +36,29 @@ export default function AppLayout({ children }: { children: ReactNode }) {
     : 0.3;
 
   return (
-    // The RouteGuard wrapper is removed from here.
-    <div className="relative min-h-screen w-full">
-      <Sidebar />
-      <div className="main-content-wrapper flex flex-col">
-        <Header />
-        <AnimatePresence mode="wait">
-          <motion.main
-            key={pathname}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants={selectedTransition}
-            transition={{ duration: transitionDuration, ease: "easeInOut" }}
-            className={cn("flex-1 overflow-y-auto", "pb-16 md:pb-0")}
-          >
-            <div className="container mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex-1">
-              {children}
-            </div>
-          </motion.main>
-        </AnimatePresence>
+    <AuthGuard>
+      <div className="relative min-h-screen w-full">
+        <Sidebar />
+        <div className="main-content-wrapper flex flex-col">
+          <Header />
+          <AnimatePresence mode="wait">
+            <motion.main
+              key={pathname}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={selectedTransition}
+              transition={{ duration: transitionDuration, ease: "easeInOut" }}
+              className={cn("flex-1 overflow-y-auto", "pb-16 md:pb-0")}
+            >
+              <div className="container mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex-1">
+                {children}
+              </div>
+            </motion.main>
+          </AnimatePresence>
+        </div>
+        <BottomNavigationBar />
       </div>
-      <BottomNavigationBar />
-    </div>
+    </AuthGuard>
   );
 }

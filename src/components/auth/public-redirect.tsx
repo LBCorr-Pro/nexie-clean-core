@@ -2,18 +2,10 @@
 'use client';
 
 import { useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useAuthContext } from '@/context/AuthContext';
 import { useLocale } from 'next-intl';
-import { Loader2 } from 'lucide-react';
-
-function FullPageLoader() {
-    return (
-        <div className="flex h-screen w-full items-center justify-center bg-background">
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        </div>
-    );
-}
+import { SplashScreen } from '../splash-screen'; // Assuming SplashScreen exists
 
 interface PublicRedirectProps {
   children: ReactNode;
@@ -22,21 +14,34 @@ interface PublicRedirectProps {
 export function PublicRedirect({ children }: PublicRedirectProps) {
   const { user, loading } = useAuthContext();
   const router = useRouter();
+  const pathname = usePathname();
   const locale = useLocale();
 
   useEffect(() => {
-    // Se não estiver a carregar e o utilizador estiver logado, redireciona.
-    if (!loading && user) {
+    // If the page is loading or there's no user, do nothing.
+    if (loading || !user) {
+      return;
+    }
+    
+    // Check if the current path is the database page.
+    const isDatabasePage = pathname.includes('/database');
+
+    // If the user is logged in AND is NOT on the database page, redirect them.
+    if (user && !isDatabasePage) {
       router.replace(`/${locale}/dashboard`);
     }
-  }, [user, loading, router, locale]);
 
-  // Enquanto carrega ou se o utilizador está logado (e será redirecionado), mostra um loader.
-  // Isto evita que a página pública "pisque" para o utilizador logado.
-  if (loading || user) {
-    return <FullPageLoader />;
+  }, [user, loading, router, locale, pathname]);
+  
+  const isDatabasePage = pathname.includes('/database');
+
+  // If auth is loading, or if the user is logged in (and about to be redirected),
+  // show a loading screen to prevent a flash of the public page content.
+  // We make an exception for the database page, which should render its content for the logged-in dev user.
+  if ((loading || user) && !isDatabasePage) {
+    return <SplashScreen onComplete={() => {}} />;
   }
 
-  // Se o utilizador não está autenticado, renderiza a página pública.
+  // If the user is not authenticated, or if it's the database page, render the public page.
   return <>{children}</>;
 }

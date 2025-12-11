@@ -1,0 +1,61 @@
+# GitHub Action para sincronizar o repositório de desenvolvimento com o Clean Core
+#
+# O que este workflow faz:
+# 1. É acionado sempre que há um push na branch 'master' do repositório de desenvolvimento (este).
+# 2. Clona este repositório (Dev).
+# 3. Clona o repositório 'nexie-clean-core' para uma pasta ao lado.
+# 4. Executa o script 'promote-to-clean.sh' que copia apenas os arquivos limpos.
+# 5. Se houver alguma alteração no Clean Core, a Action faz o commit e o push automaticamente.
+
+name: Distribute to Clean Core
+
+on:
+  push:
+    branches:
+      - master  # Corrigido de 'main' para 'master'
+
+jobs:
+  build-and-distribute:
+    runs-on: ubuntu-latest  # Usa a versão mais recente do Ubuntu
+
+    steps:
+      - name: 1. Checkout do Repositório Dev (Nexie-REC)
+        uses: actions/checkout@v3
+        with:
+          path: nexie-dev # Clona o código para um subdiretório
+
+      - name: 2. Checkout do Repositório Clean Core
+        uses: actions/checkout@v3
+        with:
+          repository: LBCorr-Pro/nexie-clean-core # SEU REPOSITÓRIO CLEAN CORE
+          path: nexie-clean-core # Clona para um diretório ao lado
+          token: ${{ secrets.GH_PAT }} # Token de acesso para poder fazer push
+
+      - name: 3. Dar Permissão e Executar o Script de Promoção
+        run: |
+          # Navega para o diretório do dev-core
+          cd nexie-dev
+          
+          # Dá permissão de execução ao script
+          chmod +x ./scripts/promote-to-clean.sh
+          
+          # Executa o script. O destino (../nexie-clean-core) já está correto.
+          ./scripts/promote-to-clean.sh
+
+      - name: 4. Fazer Commit e Push das Mudanças para o Clean Core
+        run: |
+          cd nexie-clean-core
+          
+          # Configura o usuário do Git para o commit
+          git config --global user.name 'GitHub Action Bot'
+          git config --global user.email 'action-bot@github.com'
+          
+          # Adiciona, faz o commit e o push SOMENTE se houver mudanças
+          if [[ `git status --porcelain` ]]; then
+            git add .
+            git commit -m "chore: Sincronização automática a partir do repositório Dev"
+            git push
+            echo "🚀 Alterações sincronizadas com sucesso para o repositório nexie-clean-core."
+          else
+            echo "✅ Repositório nexie-clean-core já está atualizado. Nenhuma ação necessária."
+          fi

@@ -26,18 +26,14 @@ export async function createSessionCookieAction(
   }
   
   try {
-    // CORREÇÃO: A verificação de status do usuário (getUserStatus) foi removida daqui.
-    // A única responsabilidade desta ação agora é validar o token e criar o cookie.
-    // A validação de acesso (se o usuário está ativo, etc.) será feita pelo middleware
-    // ou pelo RouteGuard ao carregar a próxima página.
-
     const expiresIn = rememberMe 
       ? 60 * 60 * 24 * 14 * 1000 // 14 days
       : 60 * 60 * 24 * 1 * 1000; // 1 day
 
     const sessionCookie = await adminAuth.createSessionCookie(idToken, { expiresIn });
 
-    (await cookies()).set('session', sessionCookie, {
+    // CORREÇÃO: O nome do cookie foi alterado para '__session' para corresponder ao que o `getCurrentUserUid` espera.
+    (await cookies()).set('__session', sessionCookie, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       maxAge: expiresIn,
@@ -49,14 +45,13 @@ export async function createSessionCookieAction(
 
   } catch (error: any) {
     console.error('[createSessionCookieAction] Error creating session cookie:', error);
-    // Retorna o erro específico do Firebase/servidor.
     return { success: false, error: error.message || 'Failed to create session.', errorCode: error.code };
   }
 }
 
 export async function signOutAction(): Promise<{ success: boolean, error?: string }> {
     try {
-        (await cookies()).delete('session');
+        (await cookies()).delete('__session');
         return { success: true };
     } catch(error: any) {
         console.error('[AuthActions] Error signing out:', error);
