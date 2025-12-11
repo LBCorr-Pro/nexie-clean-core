@@ -1,43 +1,39 @@
-// src/app/api/auth/dev-login/route.ts
-import { NextResponse } from 'next/server';
-import { getAdminAuth } from '@/lib/firebase-admin-helpers';
-import { cookies } from 'next/headers';
+import { getAdminAuth } from '@/lib/firebase-admin';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
-  const { idToken } = await request.json();
+export async function POST(req: NextRequest) {
+    try {
+        const body = await req.json();
+        const idToken = body.idToken;
 
-  if (!idToken) {
-    return NextResponse.json({ error: 'ID token is required.' }, { status: 400 });
-  }
-  
-  const devEmails = (process.env.NEXT_PUBLIC_DEV_EMAILS || '').split(',');
-  const adminAuth = getAdminAuth();
+        if (!idToken) {
+            return NextResponse.json({ error: 'idToken não fornecido.' }, { status: 400 });
+        }
 
-  try {
-    const decodedToken = await adminAuth.verifyIdToken(idToken);
-    
-    if (!decodedToken.email || !devEmails.includes(decodedToken.email)) {
-      return NextResponse.json({ error: 'Unauthorized user for dev login.' }, { status: 403 });
+        // Define o tempo de expiração do cookie. 5 dias em milissegundos.
+        const expiresIn = 60 * 60 * 24 * 5 * 1000;
+
+        // Cria o cookie de sessão com o idToken fornecido.
+        const sessionCookie = await getAdminAuth().createSessionCookie(idToken, { expiresIn });
+
+        // Define as opções do cookie.
+        const options = {
+            name: '__session', // O nome do cookie que a Ação de Servidor está procurando
+            value: sessionCookie,
+            maxAge: expiresIn / 1000, // maxAge em segundos
+            httpOnly: true, // Impede o acesso via JavaScript no cliente
+            secure: process.env.NODE_ENV === 'production', // Usar `secure` em produção
+            path: '/', // O cookie estará disponível em todo o site
+        };
+
+        // Cria a resposta e define o cookie no cabeçalho.
+        const response = NextResponse.json({ success: true, message: 'Sessão de desenvolvimento criada com sucesso.' });
+        response.cookies.set(options);
+
+        return response;
+
+    } catch (error: any) {
+        console.error('Erro ao criar sessão de DEV:', error);
+        return NextResponse.json({ error: `Falha ao criar o cookie de sessão: ${error.message}` }, { status: 500 });
     }
-    
-    const expiresIn = 60 * 60 * 24 * 1 * 1000; // 1 day
-
-    const sessionCookie = await adminAuth.createSessionCookie(idToken, { expiresIn });
-
-    const response = NextResponse.json({ success: true });
-    
-    // CORREÇÃO: O cookie agora é nomeado '__session' para ser consistente com as Server Actions.
-    response.cookies.set('__session', sessionCookie, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: expiresIn / 1000,
-      path: '/',
-      sameSite: 'lax',
-    });
-
-    return response;
-  } catch (error: any) {
-    console.error('Dev Session Login Error:', error);
-    return NextResponse.json({ error: 'Failed to create dev session.' }, { status: 401 });
-  }
 }

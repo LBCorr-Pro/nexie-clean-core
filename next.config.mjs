@@ -25,3 +25,5 @@ const nextConfig = {
 };
 
 export default withNextIntl(nextConfig);
+
+// Teste de sincronização automática para o clean-core.

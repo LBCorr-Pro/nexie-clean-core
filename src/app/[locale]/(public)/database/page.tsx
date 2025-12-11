@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -6,7 +5,8 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import { useFirebase } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { getRootCollectionIds, getTopLevelDocs, exportDocumentTree, exportSingleCollection, importDatabaseFromJsonDev } from '@/lib/actions/dev-database-actions';
+import { getRootCollectionIds, getTopLevelDocs, exportDocumentTree, exportSingleCollection, importDatabaseFromJsonDev, testDeveloperPermissions, devLogout } from '@/lib/actions/dev-database-actions';
+import { useRouter } from 'next/navigation';
 
 import { AuthView } from './AuthView';
 import { ImportStage } from './ImportStage';
@@ -24,9 +24,11 @@ const COMPLEX_COLLECTIONS = ['Global', 'companies'];
 
 export default function DatabasePage() {
     const { auth } = useFirebase();
+    const router = useRouter();
     const [user, setUser] = useState<User | null>(null);
     const [isAuthorized, setIsAuthorized] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true); 
+    const [isTestRunning, setIsTestRunning] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [log, setLog] = useState<string[]>([]);
     const [stagedImport, setStagedImport] = useState<StagedImport | null>(null);
@@ -34,21 +36,62 @@ export default function DatabasePage() {
     const enableDbDevOverride = process.env.NEXT_PUBLIC_ENABLE_DB_DEV_OVERRIDE === 'true';
     const devEmails = process.env.NEXT_PUBLIC_DEV_EMAILS?.split(',') || [];
 
+    // Hook de autenticação principal
     useEffect(() => {
-        if (!enableDbDevOverride) { setError('Acesso desabilitado.'); return; }
-        if (!auth) return;
+        if (!enableDbDevOverride) {
+            router.push('/');
+            return;
+        }
+
+        if (!auth) {
+            setIsLoading(false);
+            return;
+        };
+        
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             if (currentUser && devEmails.includes(currentUser.email || '')) {
                 setIsAuthorized(true);
+            } else {
+                setIsAuthorized(false);
             }
+            setIsLoading(false);
         });
+
         return () => unsubscribe();
-    }, [auth, enableDbDevOverride, devEmails]);
+    }, [auth, enableDbDevOverride, router]);
 
     const appendLog = (message: string) => setLog(prev => [...prev, `[${new Date().toLocaleTimeString()}] > ${message}`]);
 
-    // --- LÓGICA DE EXPORTAÇÃO FUNCIONAL (RESTAURADA) ---
+    const handleTestConnection = async () => {
+        setIsTestRunning(true);
+        setError(null);
+        appendLog("Iniciando teste de conexão e permissão do servidor...");
+        const result = await testDeveloperPermissions();
+        if (result.success) {
+            appendLog(`✅ SUCESSO: ${result.message}`);
+            alert(`Sucesso: ${result.message}`);
+        } else {
+            const errorMessage = `❌ FALHA: ${result.error}`
+            appendLog(errorMessage);
+            setError(errorMessage);
+            alert(errorMessage);
+        }
+        setIsTestRunning(false);
+    }
+
+    const handleLogout = async () => {
+        if(auth) await auth.signOut();
+        await devLogout();
+        setIsAuthorized(false);
+        setUser(null);
+        setLog([]);
+        setError(null);
+        appendLog('Sessão do cliente e do servidor limpas. Recarregando...');
+        router.refresh();
+    };
+
+    // --- LÓGICA DE EXPORTAÇÃO ---
     const handleGranularExport = async () => {
         setIsLoading(true);
         setError(null);
@@ -91,14 +134,13 @@ export default function DatabasePage() {
             const a = document.createElement('a');
             a.href = url;
             a.download = `database-backup-${new Date().toISOString()}.json`;
-            document.body.appendChild(a); // Adiciona ao corpo
-            a.click(); // Dispara o clique
+            document.body.appendChild(a);
+            a.click();
             
-            // O alert() era crucial, pois pausava a execução e dava tempo para o download começar
             alert('Exportação concluída! O seu download começará em breve.');
 
-            document.body.removeChild(a); // Limpa o elemento
-            URL.revokeObjectURL(url); // Limpa a URL
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
             appendLog('Recursos de download limpos.');
 
         } catch (error: any) {
@@ -111,7 +153,7 @@ export default function DatabasePage() {
         }
     };
 
-    // --- LÓGICA DE IMPORTAÇÃO FUNCIONAL (COM ESTÁGIO DE CONFIRMAÇÃO) ---
+    // --- LÓGICA DE IMPORTAÇÃO ---
     const handleFileSelection = (event: React.ChangeEvent<HTMLInputElement>, mode: 'merge' | 'overwrite') => {
         const file = event.target.files?.[0];
         event.target.value = '';
@@ -140,25 +182,19 @@ export default function DatabasePage() {
         if (!stagedImport) return;
         const { content, mode } = stagedImport;
 
-        if (mode === 'overwrite') {
-            if (prompt("AÇÃO DESTRUTIVA! Para confirmar o RESET TOTAL, digite 'OVERWRITE':") !== 'OVERWRITE') {
-                alert("Importação cancelada.");
-                setStagedImport(null);
-                return;
-            }
-        }
+        // O prompt de confirmação para OVERWRITE foi removido conforme solicitado.
 
         setIsLoading(true);
         setError(null);
-        appendLog(`Iniciando importação no servidor...`);
+        appendLog(`Iniciando importação no servidor em modo ${mode.toUpperCase()}...`);
 
         try {
             const result = await importDatabaseFromJsonDev(content, mode);
             if (!result.success) throw new Error(result.error || "Erro desconhecido no servidor.");
-            appendLog(`SUCESSO: ${result.message}`);
+            appendLog(`✅ SUCESSO: ${result.message}`);
             alert(result.message);
         } catch (error: any) {
-            appendLog(`ERRO: ${error.message}`);
+            appendLog(`❌ ERRO: ${error.message}`);
             setError(error.message);
             alert(error.message);
         } finally {
@@ -167,19 +203,33 @@ export default function DatabasePage() {
         }
     };
 
-    if (!enableDbDevOverride) return <div className="p-4 font-bold text-center text-red-500">Acesso desabilitado.</div>;
+    if (isLoading && !user) {
+        return <div className="p-4 text-center">Verificando permissões...</div>;
+    }
+
     if (!isAuthorized) {
-        return <AuthView onAuthorized={setIsAuthorized} devEmails={devEmails} />;
+        return <AuthView auth={auth} devEmails={devEmails} />;
     }
 
     return (
       <div className="p-4 max-w-4xl mx-auto">
-        <h1 className="text-xl font-bold">Gerenciamento de Banco de Dados (DEV)</h1>
-        <p className="mb-4 text-muted-foreground">Bem-vindo, {user?.email}!</p>
+          <div className="flex justify-between items-start mb-4">
+            <div>
+                <h1 className="text-xl font-bold">Gerenciamento de Banco de Dados (DEV)</h1>
+                <p className="text-muted-foreground">Bem-vindo, {user?.email}!</p>
+            </div>
+            <div className='flex items-center gap-2'>
+                <Button onClick={handleTestConnection} disabled={isTestRunning || isLoading} variant="outline"> 
+                    {isTestRunning ? 'Testando...' : 'Testar Conexão'}
+                </Button>
+                <Button onClick={handleLogout} variant="destructive">Logout</Button>
+            </div>
+        </div>
+
         {error && <p className="p-2 mb-4 text-red-500 bg-red-100 rounded">{error}</p>}
         
         <div className="flex flex-col gap-4">
-            <Button onClick={handleGranularExport} disabled={isLoading || !!stagedImport}>1. Exportar Cópia de Segurança</Button>
+            <Button onClick={handleGranularExport} disabled={isTestRunning || isLoading || !!stagedImport}>1. Exportar Cópia de Segurança</Button>
             
             <hr className="my-2"/>
 
@@ -195,12 +245,12 @@ export default function DatabasePage() {
                     <div className="p-3 border rounded-lg">
                         <h3 className="font-semibold">2. Restaurar com MERGE (Seguro)</h3>
                         <p className="text-sm text-muted-foreground mb-2">Adiciona/atualiza dados. Não apaga.</p>
-                        <Input id="import-merge" type="file" accept=".json" onChange={(e) => handleFileSelection(e, 'merge')} disabled={isLoading} />
+                        <Input id="import-merge" type="file" accept=".json" onChange={(e) => handleFileSelection(e, 'merge')} disabled={isTestRunning || isLoading} />
                     </div>
                     <div className="p-3 border rounded-lg border-destructive bg-destructive/10">
                         <h3 className="font-semibold text-destructive">OU Restaurar com OVERWRITE (Reset)</h3>
                         <p className="text-sm text-destructive/80 mb-2">APAGA TUDO antes de importar.</p>
-                        <Input id="import-overwrite" type="file" accept=".json" onChange={(e) => handleFileSelection(e, 'overwrite')} disabled={isLoading} />
+                        <Input id="import-overwrite" type="file" accept=".json" onChange={(e) => handleFileSelection(e, 'overwrite')} disabled={isTestRunning || isLoading} />
                     </div>
                 </div>
             )}

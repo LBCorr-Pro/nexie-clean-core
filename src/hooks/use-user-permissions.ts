@@ -60,10 +60,7 @@ export function useUserPermissions() {
   const [isFetching, setIsFetching] = useState(true);
 
   // --- MASTER ADMIN OVERRIDE ---
-  // The master admin check is now two-tiered.
-  // 1. A preliminary check based on UID for immediate UI responses.
   const isMasterAdminByUID = useMemo(() => currentUser?.uid === process.env.NEXT_PUBLIC_MASTER_UID, [currentUser]);
-  // 2. A definitive check after confirming the user profile exists in the database.
   const isConfirmedMasterAdmin = useMemo(() => isMasterAdminByUID && userProfile !== null, [isMasterAdminByUID, userProfile]);
   
   const hasOverride = useMemo(() => {
@@ -74,7 +71,6 @@ export function useUserPermissions() {
   const isLoading = isAuthLoading || isInstanceCtxLoading || isFetching;
 
   useEffect(() => {
-    // No user or still loading basic contexts, reset state.
     if (authStatus !== 'authenticated' || !currentUser) {
       setIsFetching(false);
       setAccessState('checking');
@@ -89,7 +85,6 @@ export function useUserPermissions() {
       setDenialInfo(null);
 
       try {
-        // --- 1. Fetch User Profile (CRITICAL) ---
         const profileSnap = await getDoc(refs.user.doc(currentUser.uid));
         if (!profileSnap.exists()) {
           console.warn(`[Permissions] User UID ${currentUser.uid} not in Firestore. Access denied.`);
@@ -97,28 +92,24 @@ export function useUserPermissions() {
           setFetchedPermissions({});
           setAccessState('denied');
           setDenialInfo({ reason: 'NO_PROFILE' });
+          setIsFetching(false); // Make sure to stop loading
           return;
         }
         
         const profileData = profileSnap.data() as UserProfileData;
         setUserProfile(prev => dequal(prev, profileData) ? prev : profileData);
 
-        // --- 2. Master Admin Check (Absolute Priority) ---
         if (currentUser.uid === process.env.NEXT_PUBLIC_MASTER_UID) {
             setAccessState('master');
-            setIsFetching(false); // No more checks needed
-            // Even master admin needs permissions for UI elements
             const permissionsSnap = await getDoc(refs.user.masterPermissions(currentUser.uid));
             const permissionsData = permissionsSnap?.exists() ? (permissionsSnap.data() as PermissionsMap) : {};
             setFetchedPermissions(prev => dequal(prev, permissionsData) ? prev : permissionsData);
+            setIsFetching(false);
             return;
         }
         
-        // --- 3. Regular User & Instance Logic ---
         if (!actingAsInstanceId) {
-          // If a regular user is not acting in an instance, they have no permissions.
-          // This can happen during login transition.
-           setAccessState('granted'); // Technically granted, but with no permissions
+           setAccessState('granted');
            setFetchedPermissions({});
            setIsFetching(false);
            return;
@@ -130,7 +121,6 @@ export function useUserPermissions() {
         }
         const instanceData = instanceSnap.data() as InstanceData;
         
-        // --- 4. Subscription Validation based on billingModel ---
         if (instanceData.billingModel === 'instance') {
             const subscriptionSnap = await getDoc(refs.instance.subscriptionDoc(actingAsInstanceId));
             const subscriptionData = subscriptionSnap.data() as SubscriptionData | undefined;
@@ -143,10 +133,10 @@ export function useUserPermissions() {
                     instanceName: instanceData.name 
                 });
                 setFetchedPermissions({});
-                return; // Stop processing
+                setIsFetching(false);
+                return;
             }
         } else if (instanceData.billingModel === 'user') {
-            // In the 'user' model, we can check a denormalized status on the user profile first for speed.
             if (profileData.subscriptionStatus !== 'active') {
                 setAccessState('denied');
                 setDenialInfo({ 
@@ -155,13 +145,12 @@ export function useUserPermissions() {
                     instanceName: instanceData.name 
                 });
                 setFetchedPermissions({});
-                return; // Stop processing
+                setIsFetching(false);
+                return;
             }
         }
 
-        // --- 5. If all checks pass, grant access and fetch permissions ---
         setAccessState('granted');
-
         const permissionsSnap = await getDoc(refs.user.instancePermissions(currentUser.uid, actingAsInstanceId));
         const permissionsData = permissionsSnap?.exists() ? (permissionsSnap.data() as PermissionsMap) : {};
         setFetchedPermissions(prev => dequal(prev, permissionsData) ? prev : permissionsData);
@@ -180,7 +169,7 @@ export function useUserPermissions() {
   }, [currentUser, authStatus, actingAsInstanceId, toast]);
 
   const hasPermission = useCallback((permissionId: PermissionId): boolean => {
-    if (isLoading || accessState !== 'granted' && accessState !== 'master') return false;
+    if (isLoading || (accessState !== 'granted' && accessState !== 'master')) return false;
     if (hasOverride) return true;
     return fetchedPermissions?.[permissionId] === true;
   }, [hasOverride, isLoading, accessState, fetchedPermissions]);
@@ -196,12 +185,8 @@ export function useUserPermissions() {
     isLoadingPermissions: isLoading,
     hasPermission,
     permissionsLoaded: !isLoading,
-    
-    // --- New exported values ---
-    accessState, // 'checking', 'granted', 'denied', 'master'
-    denialInfo,  // { reason, contactEmail, instanceName }
-
-    // Deprecated but kept for compatibility during transition
+    accessState,
+    denialInfo,
     userAccessLevelId: userProfile?.userAccessLevelId || '',
     activeModuleStatuses: activeModuleStatusesMap,
   };
