@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, User } from 'firebase/auth';
@@ -6,14 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Auth } from 'firebase/auth';
+import { useTranslations } from 'next-intl'; // Importado
 
 interface AuthViewProps {
     auth: Auth | null;
     devEmails: string[];
 }
 
-// Função para criar a sessão do servidor
-async function createDevSession(idToken: string): Promise<{ success: boolean; error?: string }> {
+// Função para criar a sessão do servidor (com tradução de erro)
+async function createDevSession(idToken: string, t: (key: string) => string): Promise<{ success: boolean; error?: string }> {
     try {
         const response = await fetch('/api/auth/dev-login', {
             method: 'POST',
@@ -22,7 +23,7 @@ async function createDevSession(idToken: string): Promise<{ success: boolean; er
         });
         if (!response.ok) {
             const data = await response.json();
-            return { success: false, error: data.error || 'Falha ao criar sessão de desenvolvimento.' };
+            return { success: false, error: data.error || t('sessionCreationError') };
         }
         return { success: true };
     } catch (e: any) {
@@ -31,6 +32,7 @@ async function createDevSession(idToken: string): Promise<{ success: boolean; er
 }
 
 export function AuthView({ auth, devEmails }: AuthViewProps) {
+    const t = useTranslations('auth'); // Carrega o namespace 'auth'
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [emailInput, setEmailInput] = useState(devEmails[0] || '');
@@ -38,9 +40,8 @@ export function AuthView({ auth, devEmails }: AuthViewProps) {
 
     const handleSuccessfulLogin = async (user: User) => {
         const idToken = await user.getIdToken();
-        const sessionResult = await createDevSession(idToken);
+        const sessionResult = await createDevSession(idToken, t);
         if (sessionResult.success) {
-            // Recarrega a página para o useEffect principal reavaliar o acesso
             window.location.reload();
         } else {
             setError(sessionResult.error);
@@ -57,12 +58,11 @@ export function AuthView({ auth, devEmails }: AuthViewProps) {
             if (devEmails.includes(userCredential.user.email || '')) {
                 await handleSuccessfulLogin(userCredential.user);
             } else {
-                setError('A sua conta Google não está na lista de e-mails de desenvolvedor permitidos.');
-                // Desconecta o usuário do Firebase Auth, mas não o exclui
+                setError(t('googleSignInError'));
                 await auth.signOut();
             }
         } catch (error: any) {
-            setError(`Falha no login com Google: ${error.message}`);
+            setError(t('loginError', { error: error.message }));
         } finally {
             setIsLoading(false);
         }
@@ -71,30 +71,28 @@ export function AuthView({ auth, devEmails }: AuthViewProps) {
     const handlePasswordSignIn = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!auth) {
-            setError("Firebase Auth não está disponível.");
+            setError("Firebase Auth não está disponível."); // Mensagem para dev, não precisa de tradução
             return;
         }
         setIsLoading(true);
         setError(null);
 
         try {
-            // Tenta fazer login primeiro
             const userCredential = await signInWithEmailAndPassword(auth, emailInput, passwordInput);
             await handleSuccessfulLogin(userCredential.user);
         } catch (error: any) {
             if (error.code === 'auth/user-not-found') {
-                // Se o usuário não existe, tenta criá-lo (comum em ambiente de dev)
                 try {
                     const newUserCredential = await createUserWithEmailAndPassword(auth, emailInput, passwordInput);
                     await handleSuccessfulLogin(newUserCredential.user);
                 } catch (creationError: any) {
-                    setError(`Falha ao criar usuário de dev: ${creationError.message}`);
+                    setError(t('devUserCreationError', { error: creationError.message }));
                 }
             } else if (error.code === 'auth/invalid-credential' || error.code === 'auth/wrong-password') {
-                setError("Credenciais inválidas. Use um usuário cadastrado na aba 'Authentication' do Firebase.");
+                setError(t('invalidCredentialsError'));
             }
             else {
-                setError(`Erro de login: ${error.message}`);
+                setError(t('loginError', { error: error.message }));
             }
         } finally {
             setIsLoading(false);
@@ -104,35 +102,35 @@ export function AuthView({ auth, devEmails }: AuthViewProps) {
     return (
         <div className="p-4 flex flex-col items-center justify-center min-h-screen bg-gray-50">
             <div className="w-full max-w-sm p-6 bg-white border rounded-lg shadow-md">
-                <h1 className="text-2xl font-bold mb-2 text-center">Acesso Restrito de DEV</h1>
+                <h1 className="text-2xl font-bold mb-2 text-center">{t('restrictedAccessTitle')}</h1>
                 <p className="text-sm text-center text-muted-foreground mb-4">
-                    Esta página usa as credenciais do <strong>Firebase Authentication</strong>, não as contas de usuário do sistema.
+                    {t('pageDescription')}
                 </p>
                 
                 {error && <p className="text-red-500 mb-4 text-center bg-red-100 p-2 rounded">{error}</p>}
                 
                 <form onSubmit={handlePasswordSignIn} className="flex flex-col gap-4 mb-4">
                     <div>
-                        <Label htmlFor="email">Email de Desenvolvedor</Label>
+                        <Label htmlFor="email">{t('devEmailLabel')}</Label>
                         <Input id="email" type="email" value={emailInput} onChange={(e) => setEmailInput(e.target.value)} required placeholder="dev@example.com" />
                     </div>
                     <div>
-                        <Label htmlFor="password">Senha</Label>
+                        <Label htmlFor="password">{t('passwordLabel')}</Label>
                         <Input id="password" type="password" value={passwordInput} onChange={(e) => setPasswordInput(e.target.value)} required />
                     </div>
-                    <Button type="submit" disabled={isLoading}>{isLoading ? 'Verificando...' : 'Entrar'}</Button>
+                    <Button type="submit" disabled={isLoading}>{isLoading ? t('signingInButton') : t('signInButton')}</Button>
                 </form>
 
                 <div className="relative my-4">
                     <div className="absolute inset-0 flex items-center"><span className="w-full border-t"></span></div>
-                    <div className="relative flex justify-center text-xs uppercase"><span className="bg-white px-2 text-muted-foreground">Ou</span></div>
+                    <div className="relative flex justify-center text-xs uppercase"><span className="bg-white px-2 text-muted-foreground">{t('orSeparator')}</span></div>
                 </div>
 
                 <Button onClick={handleGoogleSignIn} disabled={isLoading} className="w-full" variant="outline">
-                    Login com Google
+                    {t('googleSignInButton')}
                 </Button>
                  <p className="text-xs text-center text-gray-500 mt-4">
-                    E-mails autorizados: {devEmails.join(', ')}
+                    {t('authorizedEmails', { emails: devEmails.join(', ') })}
                 </p>
             </div>
         </div>

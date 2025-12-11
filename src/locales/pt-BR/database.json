@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Gerenciamento de Banco de Dados (DEV)",
+  "welcomeMessage": "Bem-vindo, {email}!",
+  "testConnectionBtn": "Testar Conexão",
+  "testingConnectionBtn": "Testando...",
+  "exportBackupBtn": "1. Exportar Cópia de Segurança",
+  "importMergeTitle": "2. Restaurar com MERGE (Seguro)",
+  "importMergeDescription": "Adiciona/atualiza dados. Não apaga.",
+  "importOverwriteTitle": "OU Restaurar com OVERWRITE (Reset)",
+  "importOverwriteDescription": "APAGA TUDO antes de importar.",
+  "loadingPermissions": "Verificando permissões...",
+  "confirmImportTitle": "Confirmar Importação",
+  "selectedFileLabel": "Arquivo selecionado:",
+  "operationModeLabel": "Modo de operação:",
+  "overwriteWarning": "ATENÇÃO: Esta ação é irreversível e apagará todos os dados existentes.",
+  "executeButton": "Executar {mode}",
+  "executingButton": "Executando..."
+}

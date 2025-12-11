@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Database Management (DEV)",
+  "welcomeMessage": "Welcome, {email}!",
+  "testConnectionBtn": "Test Connection",
+  "testingConnectionBtn": "Testing...",
+  "exportBackupBtn": "1. Export Backup",
+  "importMergeTitle": "2. Restore with MERGE (Safe)",
+  "importMergeDescription": "Adds/updates data. Does not delete.",
+  "importOverwriteTitle": "OR Restore with OVERWRITE (Reset)",
+  "importOverwriteDescription": "DELETES EVERYTHING before importing.",
+  "loadingPermissions": "Checking permissions...",
+  "confirmImportTitle": "Confirm Import",
+  "selectedFileLabel": "Selected file:",
+  "operationModeLabel": "Operation mode:",
+  "overwriteWarning": "WARNING: This action is irreversible and will erase all existing data.",
+  "executeButton": "Execute {mode}",
+  "executingButton": "Executing..."
+}

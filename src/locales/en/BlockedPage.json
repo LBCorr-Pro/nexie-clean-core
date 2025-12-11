@@ -9,7 +9,7 @@
     },
     "noProfile": {
         "title": "User Profile Not Found",
-        "description": "We couldn\'t find a user profile associated with your account. This might be a configuration error. Please try signing out and back in."
+        "description": "We couldn't find a user profile associated with your account. This might be a configuration error. Please try signing out and back in."
     },
     "unknown": {
         "title": "Access Denied",

@@ -3,9 +3,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import React, { ReactNode } from 'react';
-import { Providers } from '@/app/providers'; // Importa o novo provedor central
+import { Providers } from '@/app/providers';
 import { Bebas_Neue, Inter } from 'next/font/google';
-import { locales } from '@/i18n/i18n-config';
+// import { locales } from '@/i18n/i18n-config'; // Removido - O middleware agora controla isso
 import { DebugMenu } from '@/components/layout/DebugMenu';
 
 import '@/app/globals.css';
@@ -20,14 +20,22 @@ const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'], 
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string }; // Simplificado
 }
 
-export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = await params;
-  if (!locales.includes(locale)) notFound();
+export default async function LocaleLayout({ children, params: { locale } }: LocaleLayoutProps) {
+  // A validação de locale agora é feita no middleware.
+  // if (!locales.includes(locale)) notFound(); // Removido
 
-  const messages = await getMessages();
+  let messages;
+  try {
+    messages = await getMessages();
+  } catch (error) {
+    // Se as traduções não puderem ser carregadas (ex: locale inválido),
+    // o que não deve acontecer graças ao middleware, redirecionamos para notFound.
+    notFound();
+  }
+
   const fontVariables = [bebas_neue.variable, inter.variable].join(' ');
 
   return (
